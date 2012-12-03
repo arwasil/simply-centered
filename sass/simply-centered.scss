@@ -1,0 +1,98 @@
+@import "compass/layout/sticky-footer";
+@import "compass";
+@import "compass/css3";
+
+@import "keyframes";
+
+$footer-size: 244px;
+@include sticky-footer($footer-size);
+
+header{
+
+  // The logo should allways be in the top left of the screen
+  #logo{
+    height: 68px;
+    line-height: 68px;
+    background-image: inline-image('logo.png');
+    background-repeat: no-repeat;
+    padding-left: 118px;
+    font-size: 24px;
+    margin: 0;
+    float: left;
+  }
+
+  nav{
+
+    // Adjust the icons to be in line with the text
+    span{
+      display: inline-block;
+      margin: 0 8px -2px 0;
+    }
+
+    span.icons-movement, span.icons-awareness{
+      margin-bottom: -1px;
+    }
+
+  }
+
+  // border-background-image isn't widespread enough, fake it
+  div.border-bottom{
+    height: 4px;
+    display: block;
+    @include background(linear-gradient(top left, #c35423, #f26a2d));
+  }
+
+}
+
+#root{
+  // margin-bottom: $footer-size;
+} 
+
+footer{
+  background-color: $topBarBgColor;
+  color: $headerFontColor;
+
+  a{
+    color: $headerFontColor;
+  }
+
+  #info{
+    box-sizing: border-box;
+    height: 200px;
+    padding-top: 40px;
+  }
+
+  ul{
+    margin: 0;
+  }
+
+  #copyright{
+    height: 44px;
+    line-height: 44px;
+    background-color: #202020;
+    background-image: inline-image('copyright-bg.png');
+    font-size: 10px;
+  }
+
+  #social li{ 
+    display: inline-block;
+    margin: 11px 0 0 10px;
+    opacity: 0.4;
+
+    &:hover{
+      opacity: 1;
+    }
+  }
+
+  #social a{
+    width: 20px;
+    height: 20px;
+    display: block;
+  }
+
+  li{
+    color: $topBarBgColor;
+    font-size: 10px;
+  }
+
+}
