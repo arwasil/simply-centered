@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Simply Centered</title>
+
+  <!-- Included CSS Files -->
+  <link rel="stylesheet" href="stylesheets/app.css">
+
+  <script src="javascripts/foundation/modernizr.foundation.js"></script>
+
+</head>
+<body class='collection'>
+  <!-- The main page content, wrapped to support stick footers -->
+  <div id='root'>
+    <header class="top-bar">
+      <a href='index.html'>
+        <h1 id='logo'>
+          Simply Centered
+        </h1>
+      </a>
+      <!-- Main site navigation -->
+      <nav class='row'>
+        <ul class='right 4 columns'>
+          <li class='column'>
+            <a href='#'>
+              <span class='icons-awareness'></span>
+              Awareness
+            </a>
+          </li>
+          <li class='column'>
+            <a href='#'>
+              <span class='icons-movement'></span>
+              Movement
+            </a>
+          </li>
+          <li class='column'>
+            <a href='#'>
+              <span class='icons-reflection'></span>
+              Reflection
+            </a>
+          </li>
+          <li class='column'>
+            <a href='#'>
+              <span class='icons-energy'></span>
+              Energy
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- <div id='login' class='right'>
+        <button>Login</button>
+        <small>or</small>
+        <button>Register</button>
+      </div> -->
+      <div class='border-bottom'></div>
+    </header>
+    <section>
+      <iframe src='http://spling.com/user/SimplyCentered/collections-widget'></iframe>
+    </section>
+    <div id="root_footer"></div>
+  </div>
+  <!-- The footer, stuck to the bottom of the page -->
+  <footer id='footer'>
+    <section class='row' id='info'>
+      <div class='three columns'>
+        <h4>Simply Connected</h4>
+        <ul>
+          <li>
+            <a href='#'>Home</a>
+          </li><li>
+            <a href='#'>Awareness</a>
+          </li><li>
+            <a href='#'>Movement</a>
+          </li><li>
+            <a href='#'>Reflection</a>
+          </li><li>
+            <a href='#'>Energy</a>
+          </li>
+        </ul>
+      </div>
+      <div class='three columns'>
+        <h4>About Us</h4>
+        <ul>
+          <li>
+            <a href='#'>Home</a>
+          </li><li>
+            <a href='#'>Awareness</a>
+          </li>
+        </ul>
+      </div>
+      <div class='three columns'>
+        <h4>Join</h4>
+        <ul>
+          <li>
+            <a href='#'>Home</a>
+          </li><li>
+            <a href='#'>Awareness</a>
+          </li>
+        </ul>
+      </div>
+      <div class='three columns'>
+        <h4>Connect</h4>
+        <ul>
+          <li>
+            <a href='#'>Home</a>
+          </li><li>
+            <a href='#'>Awareness</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <div id='copyright'>
+      <section class='row'>
+        <span class='1 column'>&copy; 2012 Simply Connected</span>
+        <ul class='10 columns'>
+
+        </ul>
+        <ul class='1 columns right' id='social'>
+          <li>
+            <a href='http://facebook.com' title='Simply Connecteds facebook page' class='icons-facebook'></a>
+          </li><li>
+            <a href='http://twitter.com' title='Simply Connecteds twitter' class='icons-twitter'></a>
+          </li><li>
+            <a href='http://pintrest.com' title='Simply Connecteds pintrest' class='icons-pintrest'></a>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </footer>
+  <!-- Included JS Files (Uncompressed) -->
+  <script src="javascripts/foundation/jquery.js"></script>
+  
+  <script src="javascripts/foundation/jquery.cookie.js"></script>
+  
+  <script src="javascripts/foundation/jquery.foundation.reveal.js"></script>
+  
+  <script src="javascripts/foundation/jquery.event.move.js"></script>
+  
+  <script src="javascripts/foundation/jquery.foundation.alerts.js"></script>
+  
+  <script src="javascripts/foundation/jquery.foundation.tabs.js"></script>
+  
+  <script src="javascripts/foundation/jquery.foundation.mediaQueryToggle.js"></script>
+  
+  <script src="javascripts/foundation/jquery.foundation.joyride.js"></script>
+  
+  <script src="javascripts/foundation/jquery.foundation.buttons.js"></script>
+  
+  <script src="javascripts/foundation/jquery.foundation.orbit.js"></script>
+  
+  <script src="javascripts/foundation/jquery.foundation.forms.js"></script>
+  
+  <script src="javascripts/foundation/jquery.foundation.topbar.js"></script>
+  
+  <script src="javascripts/foundation/jquery.foundation.navigation.js"></script>
+  
+  <script src="javascripts/foundation/jquery.foundation.accordion.js"></script>
+  
+  <script src="javascripts/foundation/jquery.placeholder.js"></script>
+  
+  <script src="javascripts/foundation/jquery.event.swipe.js"></script>
+  
+  <script src="javascripts/foundation/jquery.foundation.tooltips.js"></script>
+  
+  <script src="javascripts/foundation/jquery.foundation.clearing.js"></script>
+  
+  <script src="javascripts/foundation/jquery.foundation.magellan.js"></script>
+  
+
+  <script type="text/javascript" src="//use.typekit.net/hjb5xvc.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+  <script type='text/javascript'>
+    $('#mandala').on('mouseenter', function(e){
+      $('#mandala').addClass('active');
+    });
+    $('#mandala').on('mouseleave', function(e){
+      $('#mandala').removeClass('active');
+    });
+  </script>
+
+  <!-- Application Javascript, safe to override -->
+  <script src="javascripts/foundation/app.js"></script>
+</body>
+</html>

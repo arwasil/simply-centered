@@ -1,0 +1,284 @@
+#mandala + div{
+  margin-top: -150px;
+} 
+
+$mandala-size: 620px;
+
+#mandala{
+
+  height: 780px;
+  overflow: hidden;
+
+  &.active{
+    $active-mandala-size: ($mandala-size + 300);
+
+    #orbitals{
+      width: $active-mandala-size;
+      // Adjust the margin to keep the mandala-box stationary
+      margin: -110px 40px 0 40px;
+
+      // And increase the padding around it
+      #orbit4{
+        padding: 165px;
+      }
+    }
+
+    div.planets div{
+      @include box-shadow(rgba(0,0,0,0.20) 0px 0px 0px 2px);
+    }
+
+    #orbit4{
+      @include background(inline-image('warhol.png'),
+                          image-url('orbitals.png'));
+      background-size: cover;
+    }
+
+    #mandala-box{
+      img{
+        opacity: 0.8;
+      }
+    }
+
+    & + div{
+      display: none;
+    }
+
+    #mandala-sections{
+      display: inline;
+    }
+
+  }
+
+}
+
+#orbitals{
+  width: $mandala-size;
+  margin: 40px 190px 0 190px;
+
+  @include transition-property(margin);
+  @include transition-duration(2s);
+
+  div.orbit{
+    border: 1px solid #e4e4e4;
+    @include border-radius(1000px);
+    padding: 50px;
+    position: inherit;
+    margin: 0;
+    width: auto !important;
+    height: auto;
+    box-sizing: content-box;
+    float: left;
+  }
+
+  #orbit1{
+    
+    @include background(linear-gradient(#eceded, #ffffff));
+    border: 0;
+    @include box-shadow(rgba(0,0,0,0.10) 0px -1px 0px 0px);
+    overflow: hidden;
+    position: auto;
+  }
+
+  #orbit4{
+    @include background(
+      linear-gradient(rgba(0,0,0,0.13), rgba(255,255,255,0.13)));
+    @include box-shadow(rgba(0,0,0,0.13) 0px 2px 0px 0px inset,
+                        white 0 2px 0 0);
+    @include transition-property(padding);
+    @include transition-duration(2s);
+    padding: 15px;
+  }
+
+  #orbit5{
+    width: ($mandala-size - 330px) !important;
+    height: ($mandala-size - 330px);
+    padding: 0;
+    border: 0;
+    @include background(
+      image-url('labyrinth.png'),
+      linear-gradient(rgba(0,0,0,0.23), rgba(255,255,255,0.23)));
+    @include box-shadow(rgba(0,0,0,0.59) 0px 1px 3px 2px inset);
+  }
+
+  div.planets{
+    div{
+      @include border-radius(14px);
+      position: absolute;
+    }
+    #planet-energy{
+      width: 14px;
+      height: 14px;
+      background-color: rgba(242,121,107,0.8);
+      top: 69px;
+      left: 69px;
+    }
+    #planet-movement{
+      width: 11px;
+      height: 11px;
+      background-color: rgba(52,103,192,0.8);
+      top: 437px;
+      left: 437px;
+    }
+    #planet-awareness{
+      width: 10px;
+      height: 10px;
+      background-color: rgba(243,193,42,0.8);
+      top: 50px;
+      left: 345px;
+    }
+    #planet-reflection{
+      width: 8px;
+      height: 8px;
+      background-color: rgba(211,210,210,0.8);
+      top: 373px;
+      left: 80px;
+    }
+  }
+
+}
+
+$outer-orbital-size: 620px;
+$mandala-box-size: 204px;
+
+#mandala-center{
+  width: $outer-orbital-size;
+  height: $outer-orbital-size;
+  margin: 117px 193px;
+  position: absolute;
+  top: 0;
+
+  #mandala-box{
+    width: $mandala-box-size;
+    height: $mandala-box-size;
+    background-color: #eb682d;
+    display: block;
+    margin: 207px auto 0 auto;
+
+    img{
+      opacity: 0.5;
+    }
+
+    span{
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      text-transform: uppercase;
+      width: inherit;
+      height: inherit;
+      text-shadow: 0px 1px 0px rgba(0,0,0,0.25);
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      position: absolute;
+      margin-top: -140px;
+    }
+  }
+}
+
+#mandala-sections{
+  width: $outer-orbital-size;
+  height: $outer-orbital-size;
+  // margin-top: -$outer-orbital-size;
+  margin: 110px 190px;
+  position: absolute;
+  top: 0;
+  display: none;
+
+  > div{
+    width: 162px;
+    height: 162px;
+    padding: 15px;
+    background-color: rgba(0,0,0,0.25);
+    position: absolute;
+    @include border-radius(85px);
+    @include box-shadow(rgba(0,0,0,0.30) 0px 1px 2px 1px inset,
+                        rgba(255,255,255,0.20) 0px 1px 0px 0px);
+
+    &:hover div.arrows{
+      // Show spinning arrows when the user mouses over
+      -webkit-animation: rotate 2s linear infinite;
+      @include background(image-url('rotating-arrows.png') no-repeat);
+    }
+
+    div.arrows{
+      width: 170px;
+      height: 170px;
+      margin: -16px;
+      display: block;
+      padding: 14px;
+      
+    }
+
+    div.content{
+      width: 135px;
+      height: 135px;
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      text-transform: uppercase;
+      text-shadow: 0px 1px 0px rgba(0,0,0,0.25);
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      @include border-radius(70px);
+      @include box-shadow(rgba(0,0,0,0.15) 0px 2px 5px 5px,
+                          rgba(255,255,255,0.20) 0px 1px 0px 0px inset);
+      margin-top: -140px;
+      position: absolute;
+      padding-top: 50px;
+
+      span{
+        display: inline-block;
+        margin-top: 12px; 
+      }
+    }
+  }
+
+  #section-awareness{
+    top: 27px;
+    left: 27px;
+    div.content{
+      background-color: #f3c12a
+    }
+  }
+  #section-energy{
+    top: 27px;
+    right: 27px;
+    div.content{
+      background-color: #f2796b
+    }
+  }
+  #section-reflection{
+    right: 27px;
+    bottom: 27px;
+    div.content{
+      background-color: #c6cdcd
+    }
+  }
+  #section-movement{
+    bottom: 27px;
+    left: 27px;
+    div.content{
+      background-color: #3467c0
+    }
+  }
+}
+
+h2{
+  margin-bottom: 45px !important;
+  font-size: 24px;
+  color: $bodyFontColor; 
+  text-align: center;
+}
+
+#register-call-to-action{
+  display: block;
+  margin-bottom: 45px;
+
+  span{
+    display: inline-block;
+    margin: 0 10px -2px 0;
+  }
+}
