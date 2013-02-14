@@ -13,58 +13,49 @@
   <title>Simply Centered</title>
 
   <!-- Included CSS Files -->
+  <link href='http://fonts.googleapis.com/css?family=Cabin:400,600' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="stylesheets/app.css">
 
   <script src="javascripts/foundation/modernizr.foundation.js"></script>
 
 </head>
-<body class='collection'>
+<body>
   <!-- The main page content, wrapped to support stick footers -->
   <div id='root'>
     <header class="top-bar">
       <a href='index.html'>
         <h1 id='logo'>
-          Simply Centered
+          7G Portal
         </h1>
       </a>
       <!-- Main site navigation -->
       <nav class='row'>
+        <div id='login' class='right'>
+          <!--<button>Login</button>
+          <small>or</small>-->
+          <button class='button'><i class='icons-fist'></i>Join</button>
+        </div>
         <ul class='right 4 columns'>
           <li class='column'>
-            <a href='#'>
-              <span class='icons-awareness'></span>
-              Awareness
+            <a href='collection.html'>
+              Blogs
             </a>
           </li>
           <li class='column'>
-            <a href='#'>
-              <span class='icons-movement'></span>
-              Movement
+            <a href='collection.html'>
+              7GLive
             </a>
           </li>
           <li class='column'>
-            <a href='#'>
-              <span class='icons-reflection'></span>
-              Reflection
-            </a>
-          </li>
-          <li class='column'>
-            <a href='#'>
-              <span class='icons-energy'></span>
-              Energy
+            <a href='collection.html'>
+              Login
             </a>
           </li>
         </ul>
       </nav>
-      <!-- <div id='login' class='right'>
-        <button>Login</button>
-        <small>or</small>
-        <button>Register</button>
-      </div> -->
-      <div class='border-bottom'></div>
     </header>
     <section>
-      <iframe src='http://spling.com/user/SimplyCentered/collections-widget'></iframe>
+      <iframe src='http://spling.com/app/user/SimplyCentered/splingboards-widget/healthy-holiday-treats'></iframe>
     </section>
     <div id="root_footer"></div>
   </div>
@@ -72,7 +63,7 @@
   <footer id='footer'>
     <section class='row' id='info'>
       <div class='three columns'>
-        <h4>Simply Connected</h4>
+        <h4>Alternative Depot</h4>
         <ul>
           <li>
             <a href='#'>Home</a>
@@ -180,12 +171,17 @@
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
   <script type='text/javascript'>
-    $('#mandala').on('mouseenter', function(e){
-      $('#mandala').addClass('active');
+    $(window).load(function () {
+      setTimeout(function () {
+        $('#mandala').addClass('active');
+      }, 1000);
     });
-    $('#mandala').on('mouseleave', function(e){
-      $('#mandala').removeClass('active');
-    });
+    // $('#mandala').on('mouseenter', function(e){
+    //   $('#mandala').addClass('active');
+    // });
+    // $('#mandala').on('mouseleave', function(e){
+    //   $('#mandala').removeClass('active');
+    // });
   </script>
 
   <!-- Application Javascript, safe to override -->

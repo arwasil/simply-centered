@@ -1,8 +1,26 @@
 @-webkit-keyframes rotate {
-  from{
+  0% {
     -webkit-transform: rotate(0deg);
   }
-  to{
+  100% {
     -webkit-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    width: 134px;
+    height: 134px;
+    margin: 14px;
+  }
+  50%{
+    width: 154px;
+    height: 154px;
+    margin: 4px;
+  }
+  100%{
+    width: 134px;
+    height: 134px;
+    margin: 13px;
   }
 }

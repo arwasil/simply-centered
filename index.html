@@ -13,6 +13,7 @@
   <title>Simply Centered</title>
 
   <!-- Included CSS Files -->
+  <link href='http://fonts.googleapis.com/css?family=Cabin:400,600' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="stylesheets/app.css">
 
   <script src="javascripts/foundation/modernizr.foundation.js"></script>
@@ -24,44 +25,34 @@
     <header class="top-bar">
       <a href='index.html'>
         <h1 id='logo'>
-          Simply Centered
+          7G Portal
         </h1>
       </a>
       <!-- Main site navigation -->
       <nav class='row'>
+        <div id='login' class='right'>
+          <!--<button>Login</button>
+          <small>or</small>-->
+          <button class='button'><i class='icons-fist'></i>Join</button>
+        </div>
         <ul class='right 4 columns'>
           <li class='column'>
             <a href='collection.html'>
-              <span class='icons-awareness'></span>
-              Awareness
+              Blogs
             </a>
           </li>
           <li class='column'>
             <a href='collection.html'>
-              <span class='icons-movement'></span>
-              Movement
+              7GLive
             </a>
           </li>
           <li class='column'>
             <a href='collection.html'>
-              <span class='icons-reflection'></span>
-              Reflection
-            </a>
-          </li>
-          <li class='column'>
-            <a href='collection.html'>
-              <span class='icons-energy'></span>
-              Energy
+              Login
             </a>
           </li>
         </ul>
       </nav>
-      <!-- <div id='login' class='right'>
-        <button>Login</button>
-        <small>or</small>
-        <button>Register</button>
-      </div> -->
-      <div class='border-bottom'></div>
     </header>
     <section>
       <div id='mandala' class='row'>
@@ -78,8 +69,9 @@
                   <div id='planet-reflection'></div>
                 </div> -->
                 <div id='orbit4' class='orbit'>
-                  <div id='orbit5' class='orbit'></div>
+                    <div id='orbit5' class='orbit'></div>
                 </div>
+                <!-- <div id='lines'></div> -->
               </div>
             </div>
           </div>
@@ -87,14 +79,14 @@
         <div id='mandala-center'>
           <div id='mandala-box'>
             <img src='images/mandala-default.png' alt=''/>
-            <span id='mandala-text'>simply connected</span>
+            <span id='mandala-text'>Alternative Depot</span>
           </div>
         </div>
         <div id='mandala-sections'>
           <div id='section-awareness'>
             <a href='collection.html'>
-              <div class='arrows'></div>
-              <div class='content'>
+              <div class='background'></div>
+              <div class='align'>
                 Awareness<br />
                 <span class='icons-awareness-large'></span>
               </div>
@@ -102,28 +94,28 @@
           </div>
           <div id='section-energy'>
             <a href='collection.html'>
-              <div class='arrows'></div>
-              <div class='content'>
-                Energy<br />
-                <span class='icons-energy-large'></span>
+              <div class='background'></div>
+              <div class='align'>
+                  Energy<br />
+                  <span class='icons-energy-large'></span>
               </div>
             </a>
           </div>
           <div id='section-reflection'>
             <a href='collection.html'>
-              <div class='arrows'></div>
-              <div class='content'>
-                Reflection<br />
-                <span class='icons-reflection-large'></span>
+              <div class='background'></div>
+              <div class='align'>
+                  Reflection<br />
+                  <span class='icons-reflection-large'></span>
               </div>
             </a>
           </div>
           <div id='section-movement'>
             <a href='collection.html'>
-              <div class='arrows'></div>
-              <div class='content'>
-                Movement<br />
-                <span class='icons-movement-large'></span>
+              <div class='background'></div>
+              <div class='align'>
+                  Movement<br />
+                  <span class='icons-movement-large'></span>
               </div>
             </a>
           </div>
@@ -134,7 +126,7 @@
         Pictures, videos, songs, articles which related to healthy living and well being</h2>
       </div>
       <div class='row'>
-        <a class='button large four columns centered' id='register-call-to-action'><span class='icons-fist-large'></span></i>Call To Action</a>
+        <a class='button large four columns centered' id='register-call-to-action'><span class='icons-explore'></span></i>Explore</a>
       </div>
     </section>
     <div id="root_footer"></div>
@@ -143,7 +135,7 @@
   <footer id='footer'>
     <section class='row' id='info'>
       <div class='three columns'>
-        <h4>Simply Connected</h4>
+        <h4>Alternative Depot</h4>
         <ul>
           <li>
             <a href='#'>Home</a>
@@ -251,12 +243,17 @@
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
   <script type='text/javascript'>
-    $('#mandala').on('mouseenter', function(e){
-      $('#mandala').addClass('active');
+    $(window).load(function () {
+      setTimeout(function () {
+        $('#mandala').addClass('active');
+      }, 1000);
     });
-    $('#mandala').on('mouseleave', function(e){
-      $('#mandala').removeClass('active');
-    });
+    // $('#mandala').on('mouseenter', function(e){
+    //   $('#mandala').addClass('active');
+    // });
+    // $('#mandala').on('mouseleave', function(e){
+    //   $('#mandala').removeClass('active');
+    // });
   </script>
 
   <!-- Application Javascript, safe to override -->

@@ -1,11 +1,34 @@
 @-webkit-keyframes rotate {
   /* line 2, ../sass/keyframes.scss */
-  from {
+  0% {
     -webkit-transform: rotate(0deg);
   }
 
   /* line 5, ../sass/keyframes.scss */
-  to {
+  100% {
     -webkit-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes pulse {
+  /* line 11, ../sass/keyframes.scss */
+  0% {
+    width: 134px;
+    height: 134px;
+    margin: 14px;
+  }
+
+  /* line 16, ../sass/keyframes.scss */
+  50% {
+    width: 154px;
+    height: 154px;
+    margin: 4px;
+  }
+
+  /* line 21, ../sass/keyframes.scss */
+  100% {
+    width: 134px;
+    height: 134px;
+    margin: 13px;
   }
 }
