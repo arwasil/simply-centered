@@ -3,9 +3,10 @@ from django.shortcuts import render
 def index(request):
   return render(request, 'main/index.html')
 
-def board(request, name):
+def board(request, slug):
   context = {
-    'name' : name
+    'name' : " ".join([v.capitalize() for v in name.split("-")]),
+    'slug' : name
   }
 
   return render(request, 'main/board.html', context)

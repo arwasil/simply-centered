@@ -9,9 +9,6 @@ PROJECT_ROOT = path(__file__ ).dirname()
 SITE_ROOT = path(PROJECT_ROOT / '..').abspath()
 sys.path.insert(0, str(SITE_ROOT))
 
-DEBUG = True
-TEMPLATE_DEBUG = DEBUG
-
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
 )
@@ -80,7 +77,6 @@ STATIC_URL = 'http://localhost:80/simply/'
 # django-mediagenerate needs dev/prod or throws null error
 MEDIA_URL = '/s/m/'
 
-MEDIA_DEV_MODE = False
 DEV_MEDIA_URL = PRODUCTION_MEDIA_URL = STATIC_URL
 DEV_MEDIA_ROOT = (PROJECT_ROOT / '_generated_media').abspath()
 
@@ -169,6 +165,14 @@ IGNORE_APP_MEDIA_DIRS = INSTALLED_APPS
 
 # where is the static coming from
 # AWS_STORAGE_BUCKET_NAME = os.environ['AWS_STORAGE_BUCKET_NAME']
+
+try:
+    from settings_local import *
+except ImportError:
+    logging.warn("no settings_local found, using defaults")
+    DEBUG = False
+    TEMPLATE_DEBUG = False
+    MEDIA_DEV_MODE = TEMPLATE_DEBUG
 
 if not DEBUG:
     AWS_STORAGE_BUCKET_NAME = os.environ['AWS_STORAGE_BUCKET_NAME']
