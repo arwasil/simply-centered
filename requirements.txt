@@ -1,0 +1,5 @@
+Django
+-e hg+https://bitbucket.org/splingadmin/django-mediagenerator@a34ef2e36b62004082ddc621d035caa3411c558a#egg=django-mediagenerator
+path.py==2.2.2
+django-storages
+boto

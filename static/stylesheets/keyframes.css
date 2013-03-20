@@ -1,0 +1,22 @@
+@-webkit-keyframes pulse {
+  /* line 13, ../sass/keyframes.scss */
+  0% {
+    width: 134px;
+    height: 134px;
+    margin: 14px;
+  }
+
+  /* line 18, ../sass/keyframes.scss */
+  50% {
+    width: 154px;
+    height: 154px;
+    margin: 4px;
+  }
+
+  /* line 23, ../sass/keyframes.scss */
+  100% {
+    width: 134px;
+    height: 134px;
+    margin: 13px;
+  }
+}

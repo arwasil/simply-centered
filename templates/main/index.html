@@ -1,0 +1,139 @@
+{% extends 'main/_base.html' %}
+
+{% load media %}
+
+{% block headExtra %}
+  {% include_media 'app.css' %}
+  {% include_media 'index.js' %}
+{% endblock %}
+
+{% block content %}
+  <section>
+    <div id='mandala' class='row'>
+
+      <div id='orbitals' class='centered'>
+        <div id='orbit1' class='orbit'>
+          <div id='planets'>
+            <a href='http://shopsimplycentered.com'
+               id='planet-knowledge' 
+               class='has-tip'
+               title='knowledge product'></a>
+            <a href='http://shopsimplycentered.com'
+               id='planet-energy' 
+               class='has-tip'
+               title='energy product'></a>
+            <a href='http://shopsimplycentered.com'
+               id='planet-reflection' 
+               class='has-tip'
+               title='reflection product'></a>
+            <a href='http://shopsimplycentered.com'
+               id='planet-movement' 
+               class='has-tip'
+               title='movement product'></a>
+          </div>
+          <div id='orbit2' class='orbit'>
+            <div id='orbit3' class='orbit'>
+              <div id='orbit4' class='orbit'>
+                  <div id='orbit5' class='orbit'></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id='mandala-center'>
+        <a href='http://shopsimplycentered.com' target='_blank'>
+          <div id='mandala-box'>
+            <img src='{{STATIC_URL}}images/spice-market.jpg' alt=''/>
+            <span id='mandala-text'>Shop <br />Simply Centered</span>
+          </div>
+        </a>
+      </div>
+      <div id='mandala-sections'>
+        <div id='section-knowledge'>
+          <a href='{% url 'board' name='knowledge' %}' data-nav='nav-knowledge'>
+            <div class='background'></div>
+            <div class='align'>
+              Knowledge<br />
+              <small>Learning Center</small><br />
+              <span class='icons-knowledge-large'></span>
+            </div>
+          </a>
+        </div>
+        <div id='section-energy'>
+          <a href='{% url 'board' name='energy' %}' data-nav='nav-energy'>
+            <div class='background'></div>
+            <div class='align'>
+                Energy<br />
+                <small>Diet, Health, Healing</small><br />
+                <span class='icons-energy-large'></span>
+            </div>
+          </a>
+        </div>
+        <div id='section-reflection'>
+          <a href='{% url 'board' name='reflection' %}l' data-nav='nav-reflection'>
+            <div class='background'></div>
+            <div class='align'>
+                Reflection<br />
+                <small>Green Lifestyle</small><br />
+                <span class='icons-reflection-large'></span>
+            </div>
+          </a>
+        </div>
+        <div id='section-movement'>
+          <a href='{% url 'board' name='movement' %}' data-nav='nav-movement'>
+            <div class='background'></div>
+            <div class='align'>
+                Movement<br />
+                <small>Mind-Body Fitness</small><br />
+                <span class='icons-movement-large'></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- <div class='row'>
+      <h2 class='six columns centered'>We provide a platform for users to discovery and consume content.<br />
+      Pictures, videos, songs, articles which related to healthy living and well being</h2>
+    </div> -->
+    <div class='row' id='sub-nav'>
+      <!-- <a class='button large four columns centered' id='register-call-to-action' href='collection.html'><span class='icons-explore'></span></i>Explore</a> -->
+      <span id='nav-default'>
+        <h3>Links Natural Alternative Knowledge and Solutions. <br />Activates Change for Better Living.</h3>
+      </span>
+      <span id='nav-knowledge'>
+        <a href='sub-collection.html'>Menu 1</a>
+        <a href='sub-collection.html'>Menu 2</a>
+        <a href='sub-collection.html'>Menu 3</a>
+        <a href='sub-collection.html'>Menu 4</a>
+        <a href='sub-collection.html'>Menu 5</a>
+        <a href='sub-collection.html'>Menu 6</a>
+      </span>
+      <span id='nav-energy'>
+        <a href='sub-collection.html'>Learning Center</a>
+        <a href='{% url 'board' name='healthy-diet' %}'>Healthy Diet</a>
+        <a href='sub-collection.html'>Healthy Aging</a>
+        <a href='sub-collection.html'>Recipes</a>
+        <a href='sub-collection.html'>Natural Health</a>
+        <a href='sub-collection.html'>Featured Book</a>
+        <a href='sub-collection.html'>Featured Article</a>
+        <a href='sub-collection.html'>Featured Product</a>
+      </span>
+      <span id='nav-reflection'>
+        <a href='sub-collection.html'>Menu 1</a>
+        <a href='sub-collection.html'>Menu 2</a>
+        <a href='sub-collection.html'>Menu 3</a>
+        <a href='sub-collection.html'>Menu 4</a>
+        <a href='sub-collection.html'>Menu 5</a>
+        <a href='sub-collection.html'>Menu 6</a>
+      </span>
+      <span id='nav-movement'>
+        <a href='sub-collection.html'>Menu 1</a>
+        <a href='sub-collection.html'>Menu 2</a>
+        <a href='sub-collection.html'>Menu 3</a>
+        <a href='sub-collection.html'>Menu 4</a>
+        <a href='sub-collection.html'>Menu 5</a>
+        <a href='sub-collection.html'>Menu 6</a>
+      </span>
+    </div>
+  </section>
+{% endblock %}

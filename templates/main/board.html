@@ -1,0 +1,22 @@
+{% extends 'main/_base.html' %}
+
+{% load media %}
+
+{% block headExtra %}
+  {% include_media 'app.css' %}
+  {% include_media 'index.js' %}
+{% endblock %}
+
+{% block content %}
+    <section>
+      {% if category %}
+        <h2>{{category}} - {{name}}</h2>
+      {% else %}
+        <h2>{{name}}</h2>
+      {% endif %}
+      <script type='text/javascript' id='spling-script'>
+          window.SPLING_URL = 'http://spling.com/app/user/7GPortal/splingboards-widget/{{name}}';
+      </script>
+      <script type="text/javascript" src="http://spling.com/s/g/widget.js"></script>
+    </section>
+{% endblock %}

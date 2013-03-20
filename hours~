@@ -27,25 +27,7 @@ start at  1:30 end at 3:00  90  90
 start at  4:50 end at 5:25  35  125
 start at  5:30 end at 6:20  50  175
 
-start at  6:25 end at 7:40  75  75
-
-start at  9:25 end at 9:45  20  20
-
-start at  4:40 end at 5:50  10  10
-start at  5:00 end at 6:25  85  95
-
-start at  9:35 end at 10:10 35  35
-start at 10:20 end at 11:00 40  75
-
-start at  9:00 end at 11:15 135 135
-
-start at  7:00 end at 7:50  50  50
-
-start at  9:15 end at 10:15 60  60
-start at 10:30 end at 11:00 30  90
-
-start at 10:45 end at 11:00 15  15
-start at 11:05 end at 11:55 50  65
+start at  6:25 end at 7:00  35  35
 
 meeting 30 min 30
 demos 60 min 60

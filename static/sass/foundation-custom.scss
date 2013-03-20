@@ -1,0 +1,21 @@
+header.top-bar{
+	background-color: transparent;
+}
+
+.button{
+
+  border: 0;
+
+  &.large{
+    @include border-radius(5px);
+  }
+}
+
+h1, h2, h4{
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.has-tip{
+  cursor: pointer;
+}

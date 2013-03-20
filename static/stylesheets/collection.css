@@ -1,0 +1,18 @@
+/* line 1, ../sass/collection.scss */
+body.collection {
+  background-color: black;
+}
+
+/* line 5, ../sass/collection.scss */
+h2 {
+  margin-bottom: 0 !important;
+  color: #eb682d;
+  font-size: 28px;
+}
+
+/* line 11, ../sass/collection.scss */
+#spling-widget {
+  float: none;
+  margin: auto;
+  margin-top: 10px;
+}

@@ -1,0 +1,114 @@
+@import "compass/layout/sticky-footer";
+@import "compass";
+@import "compass/css3";
+
+@import "keyframes";
+
+$footer-size: 244px;
+@include sticky-footer($footer-size);
+
+body{
+  background-color: #f3f4f4;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+header{
+
+  // The logo should allways be in the top left of the screen
+  #logo{
+    height: 68px;
+    line-height: 68px;
+    padding-left: 118px;
+    margin: 0;
+    float: left;
+    font-family: 'Cabin', sans-serif;
+
+    h1{
+      padding-top: 24px;
+      height: 20px;
+      font-size: 21px;
+      font-weight: 600;
+      margin: 0;
+    }
+  }
+
+  nav{
+    font-family: 'Cabin', sans-serif;
+  }
+
+  li.column:hover{
+    background-color: transparent !important;
+  }
+
+  #login{
+    margin-top: 20px;
+  }
+
+  .button{
+    font-family: 'Cabin', sans-serif;
+    @include border-radius(3px);
+    display: block;
+    padding: 8px 23px 8px 22px;
+
+    i{
+      display: block;
+      float: left;
+      margin-right: 8px;
+    }
+  }
+
+}
+
+#root{
+  // margin-bottom: $footer-size;
+} 
+
+footer{
+  background-color: $footerBgColor;
+  color: $footerFontColor;
+
+  a, h4{
+    color: $footerFontColor;
+  }
+
+  #info{
+    box-sizing: border-box;
+    height: 200px;
+    padding-top: 40px;
+  }
+
+  ul{
+    margin: 0;
+  }
+
+  #copyright{
+    height: 44px;
+    line-height: 44px;
+    background-color: #202020;
+    background-image: inline-image('copyright-bg.png');
+    font-size: 10px;
+  }
+
+  #social li{ 
+    display: inline-block;
+    margin: 11px 0 0 10px;
+    opacity: 0.4;
+
+    &:hover{
+      opacity: 1;
+    }
+  }
+
+  #social a{
+    width: 20px;
+    height: 20px;
+    display: block;
+  }
+
+  li{
+    color: $footerBgColor;
+    font-size: 10px;
+  }
+
+}
