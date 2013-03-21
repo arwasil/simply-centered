@@ -5,8 +5,8 @@ def index(request):
 
 def board(request, slug):
   context = {
-    'name' : " ".join([v.capitalize() for v in name.split("-")]),
-    'slug' : name
+    'name' : " ".join([v.capitalize() for v in slug.split("-")]),
+    'slug' : slug
   }
 
   return render(request, 'main/board.html', context)

@@ -1,1 +1,0 @@
-/home/spling/sites/simply centered/_generated_media/board-dba3a6d20e9ea8b642233731ab688f00ae8aa42d.js
