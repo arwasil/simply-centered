@@ -1,4 +1,4 @@
-Django
+Django==1.4.4
 django-mediagenerator==1.11
 path.py==2.2.2
 django-storages

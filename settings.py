@@ -211,8 +211,8 @@ LOGGING = {
     }
 }
 
-ALLOWED_HOSTS = (
-    'localhost',
-    'herokuapp.com',
-    'simply-centered.com',
-)
+# ALLOWED_HOSTS = (
+#     'localhost',
+#     'herokuapp.com',
+#     'simply-centered.com',
+# )
