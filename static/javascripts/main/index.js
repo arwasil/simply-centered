@@ -3,7 +3,7 @@ $(window).load(function () {
   $('#mandala').on('transitionend webkitTransitionEnd oTransitionEnd otransitionend', function(e){
     $('#mandala-text').css('opacity', 1);
     $('#mandala-sections a').on('mouseenter', function(e){
-      // $("#sub-nav span").hide();
+      $("#sub-nav span").not('#nav-default').hide();
       $("#"+$(this).data('nav')).show();
     });
     // $('#mandala-sections a').on('mouseleave', function(e){
