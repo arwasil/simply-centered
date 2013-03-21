@@ -77,7 +77,7 @@ STATIC_URL = 'http://localhost:80/simply/'
 # django-mediagenerate needs dev/prod or throws null error
 MEDIA_URL = '/s/m/'
 
-DEV_MEDIA_URL = PRODUCTION_MEDIA_URL = STATIC_URL
+DEV_MEDIA_URL = STATIC_URL
 DEV_MEDIA_ROOT = (PROJECT_ROOT / '_generated_media').abspath()
 
 # The main media directory for django-mediagenerator
@@ -180,7 +180,7 @@ if not DEBUG:
     AWS_STORAGE_BUCKET_NAME = os.environ['AWS_STORAGE_BUCKET_NAME']
     STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
     S3_URL = 'http://%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
-    STATIC_URL = S3_URL
+    PRODUCTION_MEDIA_URL = STATIC_URL = S3_URL
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
@@ -210,9 +210,3 @@ LOGGING = {
         },
     }
 }
-
-# ALLOWED_HOSTS = (
-#     'localhost',
-#     'herokuapp.com',
-#     'simply-centered.com',
-# )
