@@ -1,17 +1,9 @@
 $(document).bind("spling:navigate", function(e, url){
 
-  debugger;
-  
-  urls = {
-    '17647' : 'healthy-diet',
-    '19318' : 'mediterranean-diet',
-    '19323' : 'paleo-diet'
-  };
-
-  pattern = /user\/portal\/splingboards\/(.*)/;
+  pattern = /user\/7GPortal\/splingboards\/(.*)/;
   match = url.match(pattern);
 
-  if match && urls[match[1]]
-    window.location = '/'+urls[match[1]];
+  if (match && match[1])
+    window.location = match[1];
 
 });

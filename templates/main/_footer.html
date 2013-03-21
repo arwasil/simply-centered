@@ -5,15 +5,15 @@
       <h4>Simply Centered</h4>
       <ul>
         <li>
-          <a href='index.html'>Home</a>
+          <a href='{% url index %}'>Home</a>
         </li><li>
-          <a href='knowledge.html'>Knowledge</a>
+          <a href='{% url board slug='knowledge' %}'>Knowledge</a>
         </li><li>
-          <a href='movement.html'>Movement</a>
+          <a href='{% url board slug='movement' %}'>Movement</a>
         </li><li>
-          <a href='reflection.html'>Reflection</a>
+          <a href='{% url board slug='reflection' %}'>Reflection</a>
         </li><li>
-          <a href='energy.html'>Energy</a>
+          <a href='{% url board slug='energy' %}'>Energy</a>
         </li>
       </ul>
     </div>
