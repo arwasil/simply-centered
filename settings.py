@@ -6,7 +6,8 @@ import sys
 import logging
 
 PROJECT_ROOT = path(__file__ ).dirname()
-SITE_ROOT = path(PROJECT_ROOT / '..').abspath()
+# SITE_ROOT = path(PROJECT_ROOT / '..').abspath()
+SITE_ROOT = PROJECT_ROOT
 sys.path.insert(0, str(SITE_ROOT))
 
 ADMINS = (
@@ -78,7 +79,6 @@ STATIC_URL = 'http://localhost:80/simply/'
 MEDIA_URL = '/s/m/'
 
 DEV_MEDIA_URL = STATIC_URL
-DEV_MEDIA_ROOT = (PROJECT_ROOT / '_generated_media').abspath()
 
 # The main media directory for django-mediagenerator
 GLOBAL_MEDIA_DIRS = (
@@ -134,7 +134,8 @@ MEDIA_BUNDLES = (
      'stylesheets/app.css',),
     ('libraries.js',
      'javascripts/vendor/foundation/jquery.js',
-     ),
+     'javascripts/vendor/foundation/jquery.foundation.tooltips.js',
+     'javascripts/main/app.js',),
     ('index.js',
      'javascripts/main/index.js',),
     ('board.js',
@@ -169,9 +170,7 @@ try:
     from settings_local import *
 except ImportError:
     logging.warn("no settings_local found, using defaults")
-    DEBUG = False
-    TEMPLATE_DEBUG = False
-    MEDIA_DEV_MODE = TEMPLATE_DEBUG
+    DEBUG = MEDIA_DEV_MODE = TEMPLATE_DEBUG = False
 
 if not DEBUG:
     AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
