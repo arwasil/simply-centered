@@ -94,6 +94,7 @@ footer{
     display: inline-block;
     margin: 11px 0 0 10px;
     opacity: 0.4;
+    @include scale(1.2, 1.2);
 
     &:hover{
       opacity: 1;
