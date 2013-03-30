@@ -307,6 +307,10 @@ $mandala-box-size: 290px;
     div.background{
       background-color: #69ae37
     }
+    div.align{
+      font-size:13px;
+      padding-top:3px
+    }
   }
   #section-movement{
     bottom: 27px;
@@ -355,10 +359,10 @@ h2{
 
   a{
     display: inline-block;
-    margin-right: 40px;
+    margin-right: 20px;
     font-size: 12px;
 
-    &:last{
+    &:last-child{
       margin-right: 0;
     }
   }

@@ -6575,17 +6575,22 @@ footer li {
 #mandala-sections #section-reflection div.background {
   background-color: #69ae37;
 }
-/* line 311, ../sass/index.scss */
+/* line 310, ../sass/index.scss */
+#mandala-sections #section-reflection div.align {
+  font-size: 13px;
+  padding-top: 3px;
+}
+/* line 315, ../sass/index.scss */
 #mandala-sections #section-movement {
   bottom: 27px;
   left: 27px;
 }
-/* line 314, ../sass/index.scss */
+/* line 318, ../sass/index.scss */
 #mandala-sections #section-movement div.background {
   background-color: #3467c0;
 }
 
-/* line 320, ../sass/index.scss */
+/* line 324, ../sass/index.scss */
 h2 {
   margin-bottom: 45px !important;
   font-size: 24px;
@@ -6593,46 +6598,46 @@ h2 {
   text-align: center;
 }
 
-/* line 327, ../sass/index.scss */
+/* line 331, ../sass/index.scss */
 #register-call-to-action {
   display: block;
   margin-bottom: 45px;
 }
-/* line 331, ../sass/index.scss */
+/* line 335, ../sass/index.scss */
 #register-call-to-action span {
   display: inline-block;
   margin: 0 10px -2px 0;
 }
 
-/* line 337, ../sass/index.scss */
+/* line 341, ../sass/index.scss */
 #sub-nav {
   margin: -40px auto 50px;
   text-align: center;
 }
-/* line 341, ../sass/index.scss */
+/* line 345, ../sass/index.scss */
 #sub-nav span {
   display: none;
 }
-/* line 344, ../sass/index.scss */
+/* line 348, ../sass/index.scss */
 #sub-nav span.active {
   display: auto;
 }
-/* line 349, ../sass/index.scss */
+/* line 353, ../sass/index.scss */
 #sub-nav #nav-default {
   display: block;
 }
-/* line 351, ../sass/index.scss */
+/* line 355, ../sass/index.scss */
 #sub-nav #nav-default h3 {
   font-size: 20px !important;
 }
-/* line 356, ../sass/index.scss */
+/* line 360, ../sass/index.scss */
 #sub-nav a {
   display: inline-block;
-  margin-right: 40px;
+  margin-right: 20px;
   font-size: 12px;
 }
-/* line 361, ../sass/index.scss */
-#sub-nav a:last {
+/* line 365, ../sass/index.scss */
+#sub-nav a:last-child {
   margin-right: 0;
 }
 
