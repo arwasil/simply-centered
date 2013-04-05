@@ -2725,7 +2725,7 @@ div.orbit-wrapper span.rotator {
   position: absolute;
   top: 0;
   left: -20px;
-  background: url(http://localhost:80/simply/images/foundation/orbit/rotator-black-073486ca9fbe2e32737d85421fa923bb29c660de.png?1354393403) no-repeat;
+  background: url(http://7gportal.s3.amazonaws.com/images/foundation/orbit/rotator-black-073486ca9fbe2e32737d85421fa923bb29c660de.png?1354393403) no-repeat;
   z-index: 3;
 }
 /* line 27, ../../../../../../var/lib/gems/1.8/gems/zurb-foundation-3.2.2/scss/foundation/components/modules/_orbit.scss */
@@ -2747,7 +2747,7 @@ div.orbit-wrapper span.mask {
 div.orbit-wrapper span.mask.move {
   width: 40px;
   left: 0;
-  background: url(http://localhost:80/simply/images/foundation/orbit/timer-black-5449e29890c2638701761ec8293f0be3635ae21e.png?1354393403) repeat 0 0;
+  background: url(http://7gportal.s3.amazonaws.com/images/foundation/orbit/timer-black-5449e29890c2638701761ec8293f0be3635ae21e.png?1354393403) repeat 0 0;
 }
 /* line 32, ../../../../../../var/lib/gems/1.8/gems/zurb-foundation-3.2.2/scss/foundation/components/modules/_orbit.scss */
 div.orbit-wrapper span.pause {
@@ -2757,13 +2757,13 @@ div.orbit-wrapper span.pause {
   position: absolute;
   top: 0;
   left: 0;
-  background: url(http://localhost:80/simply/images/foundation/orbit/pause-black-3a28a3a2de3cbb374f6fcf75ae4c7e565f5ff554.png?1354393403) no-repeat;
+  background: url(http://7gportal.s3.amazonaws.com/images/foundation/orbit/pause-black-3a28a3a2de3cbb374f6fcf75ae4c7e565f5ff554.png?1354393403) no-repeat;
   z-index: 4;
   opacity: 0;
 }
 /* line 33, ../../../../../../var/lib/gems/1.8/gems/zurb-foundation-3.2.2/scss/foundation/components/modules/_orbit.scss */
 div.orbit-wrapper span.pause.active {
-  background: url(http://localhost:80/simply/images/foundation/orbit/pause-black-3a28a3a2de3cbb374f6fcf75ae4c7e565f5ff554.png?1354393403) no-repeat 0 -40px;
+  background: url(http://7gportal.s3.amazonaws.com/images/foundation/orbit/pause-black-3a28a3a2de3cbb374f6fcf75ae4c7e565f5ff554.png?1354393403) no-repeat 0 -40px;
 }
 /* line 35, ../../../../../../var/lib/gems/1.8/gems/zurb-foundation-3.2.2/scss/foundation/components/modules/_orbit.scss */
 div.orbit-wrapper div.timer:hover span.pause, div.orbit-wrapper span.pause.active {
@@ -2810,24 +2810,24 @@ div.orbit-wrapper div.slider-nav span {
 }
 /* line 48, ../../../../../../var/lib/gems/1.8/gems/zurb-foundation-3.2.2/scss/foundation/components/modules/_orbit.scss */
 div.orbit-wrapper div.slider-nav span.right {
-  background: url(http://localhost:80/simply/images/foundation/orbit/right-arrow-587d7a4f7c08d5cf31bc3b6edcbb55bac364783d.png?1354393403);
+  background: url(http://7gportal.s3.amazonaws.com/images/foundation/orbit/right-arrow-587d7a4f7c08d5cf31bc3b6edcbb55bac364783d.png?1354393403);
   background-size: 100%;
   right: 0;
 }
 /* line 49, ../../../../../../var/lib/gems/1.8/gems/zurb-foundation-3.2.2/scss/foundation/components/modules/_orbit.scss */
 div.orbit-wrapper div.slider-nav span.left {
-  background: url(http://localhost:80/simply/images/foundation/orbit/left-arrow-e78b844e672dd8ac245e301e68c6e4696a059073.png?1354393403);
+  background: url(http://7gportal.s3.amazonaws.com/images/foundation/orbit/left-arrow-e78b844e672dd8ac245e301e68c6e4696a059073.png?1354393403);
   background-size: 100%;
   left: 0;
 }
 
 /* line 54, ../../../../../../var/lib/gems/1.8/gems/zurb-foundation-3.2.2/scss/foundation/components/modules/_orbit.scss */
 .lt-ie9 div.orbit-wrapper div.slider-nav span.right {
-  background: url(http://localhost:80/simply/images/foundation/orbit/right-arrow-small-84f957648fb821b4b088f9206e077fda824bbe38.png?1354393403);
+  background: url(http://7gportal.s3.amazonaws.com/images/foundation/orbit/right-arrow-small-84f957648fb821b4b088f9206e077fda824bbe38.png?1354393403);
 }
 /* line 55, ../../../../../../var/lib/gems/1.8/gems/zurb-foundation-3.2.2/scss/foundation/components/modules/_orbit.scss */
 .lt-ie9 div.orbit-wrapper div.slider-nav span.left {
-  background: url(http://localhost:80/simply/images/foundation/orbit/left-arrow-small-34112af6a65ed74eb522ce89e34f9bf83bda649e.png?1354393403);
+  background: url(http://7gportal.s3.amazonaws.com/images/foundation/orbit/left-arrow-small-34112af6a65ed74eb522ce89e34f9bf83bda649e.png?1354393403);
 }
 
 /* Bullet Nav ---------------------- */
@@ -2848,7 +2848,7 @@ ul.orbit-bullets li {
   cursor: pointer;
   color: #999999;
   text-indent: -9999px;
-  background: url(http://localhost:80/simply/images/foundation/orbit/bullets-19c8662caf64650f2141d79df31c4e52d8d0c601.jpg?1354393403) no-repeat 4px 0;
+  background: url(http://7gportal.s3.amazonaws.com/images/foundation/orbit/bullets-19c8662caf64650f2141d79df31c4e52d8d0c601.jpg?1354393403) no-repeat 4px 0;
   width: 13px;
   height: 12px;
   overflow: hidden;
@@ -5888,7 +5888,7 @@ table.hide-for-medium {
 }
 /* line 146, icons/*.png */
 .icons-sprite, .icons-energy-large, .icons-energy, .icons-explore, .icons-facebook, .icons-fist-large, .icons-fist, .icons-knowledge-large, .icons-knowledge, .icons-movement-large, .icons-movement, .icons-pintrest, .icons-reflection-large, .icons-reflection, .icons-twitter {
-  background: url(http://localhost:80/simply/images/icons-saf389634d1-65e16e9e1a2e1cd2ccf9038f482cd9b3f90f42d3.png) no-repeat;
+  background: url(http://7gportal.s3.amazonaws.com/images/icons-saf389634d1-65e16e9e1a2e1cd2ccf9038f482cd9b3f90f42d3.png) no-repeat;
 }
 
 /* line 60, ../../../../../../var/lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
@@ -6200,12 +6200,12 @@ footer li {
 }
 /* line 36, ../sass/index.scss */
 #mandala.active #orbit4 {
-  background: url(http://localhost:80/simply/images/orbitals-b8aa8034d806afd688e9896649a927e16d7bc2c4.png?1360728242), url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAmwAAAJsAgMAAAA9+xe2AAAADFBMVEVUfcdprjfjhXvkvUhV7RUsAAABrUlEQVR4XuzOMREAAAgEIPtHMaKLlvjJgwTUJk0nfb25ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubldu3NMAwAAwgCMZxLxbwUTu0iroFOVbfp6c3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3NzO5IFAUTyh1mRAAAAAElFTkSuQmCC');
+  background: url(http://7gportal.s3.amazonaws.com/images/orbitals-b8aa8034d806afd688e9896649a927e16d7bc2c4.png?1360728242), url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAmwAAAJsAgMAAAA9+xe2AAAADFBMVEVUfcdprjfjhXvkvUhV7RUsAAABrUlEQVR4XuzOMREAAAgEIPtHMaKLlvjJgwTUJk0nfb25ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubldu3NMAwAAwgCMZxLxbwUTu0iroFOVbfp6c3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3NzO5IFAUTyh1mRAAAAAElFTkSuQmCC');
   background-size: cover;
 }
 /* line 42, ../sass/index.scss */
 #mandala.active #lines {
-  background: url(http://localhost:80/simply/images/orbitals-b8aa8034d806afd688e9896649a927e16d7bc2c4.png?1360728242);
+  background: url(http://7gportal.s3.amazonaws.com/images/orbitals-b8aa8034d806afd688e9896649a927e16d7bc2c4.png?1360728242);
   background-size: cover;
   width: 620px;
   height: 620px;
