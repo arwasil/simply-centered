@@ -2725,7 +2725,7 @@ div.orbit-wrapper span.rotator {
   position: absolute;
   top: 0;
   left: -20px;
-  background: url(http://7gportal.s3.amazonaws.com/images/foundation/orbit/rotator-black-073486ca9fbe2e32737d85421fa923bb29c660de.png?1354393403) no-repeat;
+  background: url(http://localhost:80/simply/images/foundation/orbit/rotator-black-073486ca9fbe2e32737d85421fa923bb29c660de.png?1354393403) no-repeat;
   z-index: 3;
 }
 /* line 27, ../../../../../../var/lib/gems/1.8/gems/zurb-foundation-3.2.2/scss/foundation/components/modules/_orbit.scss */
@@ -2747,7 +2747,7 @@ div.orbit-wrapper span.mask {
 div.orbit-wrapper span.mask.move {
   width: 40px;
   left: 0;
-  background: url(http://7gportal.s3.amazonaws.com/images/foundation/orbit/timer-black-5449e29890c2638701761ec8293f0be3635ae21e.png?1354393403) repeat 0 0;
+  background: url(http://localhost:80/simply/images/foundation/orbit/timer-black-5449e29890c2638701761ec8293f0be3635ae21e.png?1354393403) repeat 0 0;
 }
 /* line 32, ../../../../../../var/lib/gems/1.8/gems/zurb-foundation-3.2.2/scss/foundation/components/modules/_orbit.scss */
 div.orbit-wrapper span.pause {
@@ -2757,13 +2757,13 @@ div.orbit-wrapper span.pause {
   position: absolute;
   top: 0;
   left: 0;
-  background: url(http://7gportal.s3.amazonaws.com/images/foundation/orbit/pause-black-3a28a3a2de3cbb374f6fcf75ae4c7e565f5ff554.png?1354393403) no-repeat;
+  background: url(http://localhost:80/simply/images/foundation/orbit/pause-black-3a28a3a2de3cbb374f6fcf75ae4c7e565f5ff554.png?1354393403) no-repeat;
   z-index: 4;
   opacity: 0;
 }
 /* line 33, ../../../../../../var/lib/gems/1.8/gems/zurb-foundation-3.2.2/scss/foundation/components/modules/_orbit.scss */
 div.orbit-wrapper span.pause.active {
-  background: url(http://7gportal.s3.amazonaws.com/images/foundation/orbit/pause-black-3a28a3a2de3cbb374f6fcf75ae4c7e565f5ff554.png?1354393403) no-repeat 0 -40px;
+  background: url(http://localhost:80/simply/images/foundation/orbit/pause-black-3a28a3a2de3cbb374f6fcf75ae4c7e565f5ff554.png?1354393403) no-repeat 0 -40px;
 }
 /* line 35, ../../../../../../var/lib/gems/1.8/gems/zurb-foundation-3.2.2/scss/foundation/components/modules/_orbit.scss */
 div.orbit-wrapper div.timer:hover span.pause, div.orbit-wrapper span.pause.active {
@@ -2810,24 +2810,24 @@ div.orbit-wrapper div.slider-nav span {
 }
 /* line 48, ../../../../../../var/lib/gems/1.8/gems/zurb-foundation-3.2.2/scss/foundation/components/modules/_orbit.scss */
 div.orbit-wrapper div.slider-nav span.right {
-  background: url(http://7gportal.s3.amazonaws.com/images/foundation/orbit/right-arrow-587d7a4f7c08d5cf31bc3b6edcbb55bac364783d.png?1354393403);
+  background: url(http://localhost:80/simply/images/foundation/orbit/right-arrow-587d7a4f7c08d5cf31bc3b6edcbb55bac364783d.png?1354393403);
   background-size: 100%;
   right: 0;
 }
 /* line 49, ../../../../../../var/lib/gems/1.8/gems/zurb-foundation-3.2.2/scss/foundation/components/modules/_orbit.scss */
 div.orbit-wrapper div.slider-nav span.left {
-  background: url(http://7gportal.s3.amazonaws.com/images/foundation/orbit/left-arrow-e78b844e672dd8ac245e301e68c6e4696a059073.png?1354393403);
+  background: url(http://localhost:80/simply/images/foundation/orbit/left-arrow-e78b844e672dd8ac245e301e68c6e4696a059073.png?1354393403);
   background-size: 100%;
   left: 0;
 }
 
 /* line 54, ../../../../../../var/lib/gems/1.8/gems/zurb-foundation-3.2.2/scss/foundation/components/modules/_orbit.scss */
 .lt-ie9 div.orbit-wrapper div.slider-nav span.right {
-  background: url(http://7gportal.s3.amazonaws.com/images/foundation/orbit/right-arrow-small-84f957648fb821b4b088f9206e077fda824bbe38.png?1354393403);
+  background: url(http://localhost:80/simply/images/foundation/orbit/right-arrow-small-84f957648fb821b4b088f9206e077fda824bbe38.png?1354393403);
 }
 /* line 55, ../../../../../../var/lib/gems/1.8/gems/zurb-foundation-3.2.2/scss/foundation/components/modules/_orbit.scss */
 .lt-ie9 div.orbit-wrapper div.slider-nav span.left {
-  background: url(http://7gportal.s3.amazonaws.com/images/foundation/orbit/left-arrow-small-34112af6a65ed74eb522ce89e34f9bf83bda649e.png?1354393403);
+  background: url(http://localhost:80/simply/images/foundation/orbit/left-arrow-small-34112af6a65ed74eb522ce89e34f9bf83bda649e.png?1354393403);
 }
 
 /* Bullet Nav ---------------------- */
@@ -2848,7 +2848,7 @@ ul.orbit-bullets li {
   cursor: pointer;
   color: #999999;
   text-indent: -9999px;
-  background: url(http://7gportal.s3.amazonaws.com/images/foundation/orbit/bullets-19c8662caf64650f2141d79df31c4e52d8d0c601.jpg?1354393403) no-repeat 4px 0;
+  background: url(http://localhost:80/simply/images/foundation/orbit/bullets-19c8662caf64650f2141d79df31c4e52d8d0c601.jpg?1354393403) no-repeat 4px 0;
   width: 13px;
   height: 12px;
   overflow: hidden;
@@ -5888,7 +5888,7 @@ table.hide-for-medium {
 }
 /* line 146, icons/*.png */
 .icons-sprite, .icons-energy-large, .icons-energy, .icons-explore, .icons-facebook, .icons-fist-large, .icons-fist, .icons-knowledge-large, .icons-knowledge, .icons-movement-large, .icons-movement, .icons-pintrest, .icons-reflection-large, .icons-reflection, .icons-twitter {
-  background: url(http://7gportal.s3.amazonaws.com/images/icons-saf389634d1-65e16e9e1a2e1cd2ccf9038f482cd9b3f90f42d3.png) no-repeat;
+  background: url(http://localhost:80/simply/images/icons-saf389634d1-65e16e9e1a2e1cd2ccf9038f482cd9b3f90f42d3.png) no-repeat;
 }
 
 /* line 60, ../../../../../../var/lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
@@ -6177,43 +6177,49 @@ footer li {
 /* line 3, ../sass/index.scss */
 #mandala {
   height: 780px;
-  margin-bottom: 100px;
+  position: relative;
+  -webkit-transform: scale(0.9, 0.9);
+  -moz-transform: scale(0.9, 0.9);
+  -ms-transform: scale(0.9, 0.9);
+  -o-transform: scale(0.9, 0.9);
+  transform: scale(0.9, 0.9);
+  -webkit-transform-origin: top;
 }
-/* line 11, ../sass/index.scss */
+/* line 15, ../sass/index.scss */
 #mandala.active #orbitals {
   width: 920px;
   margin: -110px 40px 0 40px;
 }
-/* line 17, ../sass/index.scss */
+/* line 21, ../sass/index.scss */
 #mandala.active #orbitals #orbit4 {
   padding: 165px;
 }
-/* line 22, ../sass/index.scss */
+/* line 26, ../sass/index.scss */
 #mandala.active #orbitals:hover #planets a {
   -webkit-animation-play-state: paused;
 }
-/* line 32, ../sass/index.scss */
+/* line 36, ../sass/index.scss */
 #mandala.active #orbit4 {
-  background: url(http://7gportal.s3.amazonaws.com/images/orbitals-b8aa8034d806afd688e9896649a927e16d7bc2c4.png?1360728242), url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAmwAAAJsAgMAAAA9+xe2AAAADFBMVEVUfcdprjfjhXvkvUhV7RUsAAABrUlEQVR4XuzOMREAAAgEIPtHMaKLlvjJgwTUJk0nfb25ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubldu3NMAwAAwgCMZxLxbwUTu0iroFOVbfp6c3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3NzO5IFAUTyh1mRAAAAAElFTkSuQmCC');
+  background: url(http://localhost:80/simply/images/orbitals-b8aa8034d806afd688e9896649a927e16d7bc2c4.png?1360728242), url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAmwAAAJsAgMAAAA9+xe2AAAADFBMVEVUfcdprjfjhXvkvUhV7RUsAAABrUlEQVR4XuzOMREAAAgEIPtHMaKLlvjJgwTUJk0nfb25ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubldu3NMAwAAwgCMZxLxbwUTu0iroFOVbfp6c3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3NzO5IFAUTyh1mRAAAAAElFTkSuQmCC');
   background-size: cover;
 }
-/* line 38, ../sass/index.scss */
+/* line 42, ../sass/index.scss */
 #mandala.active #lines {
-  background: url(http://7gportal.s3.amazonaws.com/images/orbitals-b8aa8034d806afd688e9896649a927e16d7bc2c4.png?1360728242);
+  background: url(http://localhost:80/simply/images/orbitals-b8aa8034d806afd688e9896649a927e16d7bc2c4.png?1360728242);
   background-size: cover;
   width: 620px;
   height: 620px;
 }
-/* line 47, ../sass/index.scss */
+/* line 51, ../sass/index.scss */
 #mandala.active #mandala-box img {
   opacity: 0.7;
 }
-/* line 52, ../sass/index.scss */
+/* line 56, ../sass/index.scss */
 #mandala.active #mandala-sections {
   display: inline;
 }
 
-/* line 61, ../sass/index.scss */
+/* line 65, ../sass/index.scss */
 .transition-hidden {
   display: none;
 }
@@ -6266,7 +6272,7 @@ footer li {
   }
 }
 
-/* line 72, ../sass/index.scss */
+/* line 76, ../sass/index.scss */
 #orbitals {
   width: 620px;
   margin: 40px 190px 0 190px;
@@ -6279,7 +6285,7 @@ footer li {
   -o-transition-duration: 2s;
   transition-duration: 2s;
 }
-/* line 79, ../sass/index.scss */
+/* line 83, ../sass/index.scss */
 #orbitals div.orbit {
   border: 1px solid #e4e4e4;
   -webkit-border-radius: 1000px;
@@ -6295,12 +6301,12 @@ footer li {
   box-sizing: content-box;
   float: left;
 }
-/* line 91, ../sass/index.scss */
+/* line 95, ../sass/index.scss */
 #orbitals #orbit1 {
   overflow: hidden;
   position: auto;
 }
-/* line 96, ../sass/index.scss */
+/* line 100, ../sass/index.scss */
 #orbitals #orbit4 {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0.13)), color-stop(100%, rgba(255, 255, 255, 0.13)));
   background: -webkit-linear-gradient(rgba(0, 0, 0, 0.13), rgba(255, 255, 255, 0.13));
@@ -6325,7 +6331,7 @@ footer li {
   transition-duration: 2s;
   padding: 15px;
 }
-/* line 108, ../sass/index.scss */
+/* line 112, ../sass/index.scss */
 #orbitals #orbit5 {
   width: 290px !important;
   height: 290px;
@@ -6341,11 +6347,11 @@ footer li {
   -moz-box-shadow: rgba(0, 0, 0, 0.59) 0px 1px 3px 2px inset;
   box-shadow: rgba(0, 0, 0, 0.59) 0px 1px 3px 2px inset;
 }
-/* line 122, ../sass/index.scss */
+/* line 126, ../sass/index.scss */
 #orbitals #planets {
   display: none;
 }
-/* line 127, ../sass/index.scss */
+/* line 131, ../sass/index.scss */
 #orbitals #planets a {
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
@@ -6356,7 +6362,7 @@ footer li {
   display: block;
   -webkit-animation-play-state: running;
 }
-/* line 133, ../sass/index.scss */
+/* line 137, ../sass/index.scss */
 #orbitals #planets #planet-knowledge {
   width: 20px;
   height: 20px;
@@ -6369,7 +6375,7 @@ footer li {
   transform-origin: 338px 338px;
   -webkit-animation: rotate-0deg 16s linear infinite;
 }
-/* line 141, ../sass/index.scss */
+/* line 145, ../sass/index.scss */
 #orbitals #planets #planet-energy {
   width: 20px;
   height: 20px;
@@ -6382,7 +6388,7 @@ footer li {
   transform-origin: 301px 301px;
   -webkit-animation: rotate-100deg 22s linear infinite;
 }
-/* line 149, ../sass/index.scss */
+/* line 153, ../sass/index.scss */
 #orbitals #planets #planet-movement {
   width: 20px;
   height: 20px;
@@ -6395,7 +6401,7 @@ footer li {
   transform-origin: 301px 301px;
   -webkit-animation: rotate-300deg 14s linear infinite;
 }
-/* line 157, ../sass/index.scss */
+/* line 161, ../sass/index.scss */
 #orbitals #planets #planet-reflection {
   width: 20px;
   height: 20px;
@@ -6409,16 +6415,16 @@ footer li {
   -webkit-animation: rotate-200deg 18s linear infinite;
 }
 
-/* line 172, ../sass/index.scss */
+/* line 176, ../sass/index.scss */
 #mandala-center {
   width: 620px;
   height: 620px;
-  margin: 117px 193px;
+  margin: 44px 193px;
   position: absolute;
   top: 0;
   pointer-events: none;
 }
-/* line 180, ../sass/index.scss */
+/* line 184, ../sass/index.scss */
 #mandala-center #mandala-box {
   pointer-events: all;
   width: 290px;
@@ -6435,13 +6441,13 @@ footer li {
   -moz-box-shadow: rgba(0, 0, 0, 0.59) 0px 1px 0px 5px inset;
   box-shadow: rgba(0, 0, 0, 0.59) 0px 1px 0px 5px inset;
 }
-/* line 191, ../sass/index.scss */
+/* line 195, ../sass/index.scss */
 #mandala-center #mandala-box:hover {
   -webkit-box-shadow: rgba(183, 133, 0, 0.77) 0px 0px 20px 10px inset;
   -moz-box-shadow: rgba(183, 133, 0, 0.77) 0px 0px 20px 10px inset;
   box-shadow: rgba(183, 133, 0, 0.77) 0px 0px 20px 10px inset;
 }
-/* line 195, ../sass/index.scss */
+/* line 199, ../sass/index.scss */
 #mandala-center #mandala-box img {
   opacity: 0.7;
   -webkit-border-radius: 290px;
@@ -6450,7 +6456,7 @@ footer li {
   -o-border-radius: 290px;
   border-radius: 290px;
 }
-/* line 201, ../sass/index.scss */
+/* line 205, ../sass/index.scss */
 #mandala-center #mandala-box span {
   display: table-cell;
   vertical-align: middle;
@@ -6469,22 +6475,22 @@ footer li {
   opacity: 0;
 }
 
-/* line 222, ../sass/index.scss */
+/* line 226, ../sass/index.scss */
 #mandala-sections {
   width: 620px;
   height: 620px;
-  margin: 110px 190px;
+  margin: 44px 190px;
   position: absolute;
   top: 0;
   display: none;
   pointer-events: none;
 }
-/* line 232, ../sass/index.scss */
+/* line 236, ../sass/index.scss */
 #mandala-sections a {
   width: inherit;
   height: inherit;
 }
-/* line 237, ../sass/index.scss */
+/* line 241, ../sass/index.scss */
 #mandala-sections > div {
   position: absolute;
   width: 162px;
@@ -6500,7 +6506,7 @@ footer li {
   -moz-box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 2px 1px inset, rgba(255, 255, 255, 0.2) 0px 1px 0px 0px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 2px 1px inset, rgba(255, 255, 255, 0.2) 0px 1px 0px 0px;
 }
-/* line 247, ../sass/index.scss */
+/* line 251, ../sass/index.scss */
 #mandala-sections > div div.background {
   width: 134px;
   height: 134px;
@@ -6515,15 +6521,15 @@ footer li {
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 5px 5px, rgba(255, 255, 255, 0.2) 0px 1px 0px 0px inset;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 5px 5px, rgba(255, 255, 255, 0.2) 0px 1px 0px 0px inset;
 }
-/* line 256, ../sass/index.scss */
+/* line 260, ../sass/index.scss */
 #mandala-sections > div div.background:hover {
   -webkit-animation: pulse 1s linear infinite;
 }
-/* line 259, ../sass/index.scss */
+/* line 263, ../sass/index.scss */
 #mandala-sections > div div.background:hover + div small {
   display: inline-block;
 }
-/* line 266, ../sass/index.scss */
+/* line 270, ../sass/index.scss */
 #mandala-sections div.align {
   width: inherit;
   height: inherit;
@@ -6539,58 +6545,58 @@ footer li {
   pointer-events: none;
   padding-top: 20px;
 }
-/* line 281, ../sass/index.scss */
+/* line 285, ../sass/index.scss */
 #mandala-sections div.align small {
   display: none;
 }
-/* line 285, ../sass/index.scss */
+/* line 289, ../sass/index.scss */
 #mandala-sections div.align span {
   display: inline-block;
   margin-top: 4px;
 }
-/* line 290, ../sass/index.scss */
+/* line 294, ../sass/index.scss */
 #mandala-sections #section-knowledge {
   top: 27px;
   left: 27px;
 }
-/* line 293, ../sass/index.scss */
+/* line 297, ../sass/index.scss */
 #mandala-sections #section-knowledge div.background {
   background-color: #f3c12a;
 }
-/* line 297, ../sass/index.scss */
+/* line 301, ../sass/index.scss */
 #mandala-sections #section-energy {
   top: 27px;
   right: 27px;
 }
-/* line 300, ../sass/index.scss */
+/* line 304, ../sass/index.scss */
 #mandala-sections #section-energy div.background {
   background-color: #f2796b;
 }
-/* line 304, ../sass/index.scss */
+/* line 308, ../sass/index.scss */
 #mandala-sections #section-reflection {
   right: 27px;
   bottom: 27px;
 }
-/* line 307, ../sass/index.scss */
+/* line 311, ../sass/index.scss */
 #mandala-sections #section-reflection div.background {
   background-color: #69ae37;
 }
-/* line 310, ../sass/index.scss */
+/* line 314, ../sass/index.scss */
 #mandala-sections #section-reflection div.align {
   font-size: 13px;
   padding-top: 3px;
 }
-/* line 315, ../sass/index.scss */
+/* line 319, ../sass/index.scss */
 #mandala-sections #section-movement {
   bottom: 27px;
   left: 27px;
 }
-/* line 318, ../sass/index.scss */
+/* line 322, ../sass/index.scss */
 #mandala-sections #section-movement div.background {
   background-color: #3467c0;
 }
 
-/* line 324, ../sass/index.scss */
+/* line 328, ../sass/index.scss */
 h2 {
   margin-bottom: 45px !important;
   font-size: 24px;
@@ -6598,45 +6604,47 @@ h2 {
   text-align: center;
 }
 
-/* line 331, ../sass/index.scss */
+/* line 335, ../sass/index.scss */
 #register-call-to-action {
   display: block;
   margin-bottom: 45px;
 }
-/* line 335, ../sass/index.scss */
+/* line 339, ../sass/index.scss */
 #register-call-to-action span {
   display: inline-block;
   margin: 0 10px -2px 0;
 }
 
-/* line 341, ../sass/index.scss */
-#sub-nav {
-  margin: -40px auto 50px;
-  text-align: center;
-}
 /* line 345, ../sass/index.scss */
+#sub-nav {
+  height: 90px;
+  text-align: center;
+  position: relative;
+  z-index: 9999;
+}
+/* line 355, ../sass/index.scss */
 #sub-nav span {
   display: none;
 }
-/* line 348, ../sass/index.scss */
+/* line 358, ../sass/index.scss */
 #sub-nav span.active {
   display: auto;
 }
-/* line 353, ../sass/index.scss */
+/* line 363, ../sass/index.scss */
 #sub-nav #nav-default {
   display: block;
 }
-/* line 355, ../sass/index.scss */
+/* line 365, ../sass/index.scss */
 #sub-nav #nav-default h3 {
   font-size: 20px !important;
 }
-/* line 360, ../sass/index.scss */
+/* line 370, ../sass/index.scss */
 #sub-nav a {
   display: inline-block;
   margin-right: 20px;
   font-size: 12px;
 }
-/* line 365, ../sass/index.scss */
+/* line 375, ../sass/index.scss */
 #sub-nav a:last-child {
   margin-right: 0;
 }
