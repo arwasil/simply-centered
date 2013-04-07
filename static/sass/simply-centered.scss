@@ -37,6 +37,19 @@ header{
     font-family: 'Cabin', sans-serif;
   }
 
+  #slogan{
+    position: absolute;
+  }
+
+  // Start move slogan into nav
+  #slogan h3{
+    margin-left: 50px;
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: normal;
+  }
+  // End move slogan into nav
+
   li.column:hover{
     background-color: transparent !important;
   }

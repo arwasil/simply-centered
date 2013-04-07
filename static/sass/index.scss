@@ -3,11 +3,7 @@ $mandala-size: 620px;
 #mandala{
   height: 780px;
   // overflow: hidden;
-  // margin-bottom: 100px;
-
-  position: relative;
-  @include scale(0.9, 0.9);
-  -webkit-transform-origin: top;
+  margin-bottom: 100px;
 
   &.active{
     $active-mandala-size: ($mandala-size + 300);
@@ -37,7 +33,7 @@ $mandala-size: 620px;
       @include background(image-url('orbitals.png'),
                           inline-image('warhol.png'));
       background-size: cover;
-    }
+    } 
 
     #lines{
       @include background(image-url('orbitals.png'));
@@ -176,7 +172,7 @@ $mandala-box-size: 290px;
 #mandala-center{
   width: $outer-orbital-size;
   height: $outer-orbital-size;
-  margin: 44px 193px;
+  margin: 117px 193px;
   position: absolute;
   top: 0;
   pointer-events: none;
@@ -227,7 +223,7 @@ $mandala-box-size: 290px;
   width: $outer-orbital-size;
   height: $outer-orbital-size;
   // margin-top: -$outer-orbital-size;
-  margin: 44px 190px;
+  margin: 117px 190px;
   position: absolute;
   top: 0;
   display: none;
@@ -261,7 +257,7 @@ $mandala-box-size: 290px;
         -webkit-animation: pulse 1s linear infinite;
 
         + div small{
-          display: inline-block;
+          // display: inline-block;
         }
       }
     }
@@ -283,7 +279,8 @@ $mandala-box-size: 290px;
     padding-top: 20px;
 
     small{
-      display: none;
+      display: inline-block;
+      // display: none;
     }
     
     span{
@@ -343,14 +340,9 @@ h2{
 }
 
 #sub-nav{
-  // margin: -40px auto 50px;
-  height: 90px;
+  margin: -40px auto 50px;
+  // height: 90px;
   text-align: center;
-
-  // moving above mandala
-  position: relative;
-  z-index: 9999;
-  // end reposition
 
   span{
     display: none;
