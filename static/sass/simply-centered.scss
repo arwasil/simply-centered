@@ -19,43 +19,50 @@ header{
   #logo{
     height: 68px;
     line-height: 68px;
-    padding-left: 118px;
     margin: 0;
     float: left;
     font-family: 'Cabin', sans-serif;
+    position: absolute;
+    top: 0;
+    left: 118px;
 
-    h1{
+    h1{ 
       padding-top: 24px;
       height: 20px;
       font-size: 21px;
       font-weight: 600;
       margin: 0;
+      color: white;
     }
-  }
 
-  nav{
-    font-family: 'Cabin', sans-serif;
-  }
-
-  #slogan{
-    position: absolute;
+    sub{
+      color: #ec8454;
+    }
   }
 
   // Start move slogan into nav
   #slogan h3{
-    margin-left: 50px;
-    margin-top: 20px;
-    font-size: 22px;
+    text-align: center;
+    font-size: 14px;
     font-weight: normal;
+    color: #f3c12a;
+    line-height: 20px;
+    margin: 24px 0;
   }
   // End move slogan into nav
 
-  li.column:hover{
+  nav{
+    position: absolute;
+    top: 0;
+    right: 50px;
+  }
+
+  li:hover{
     background-color: transparent !important;
   }
 
   #login{
-    margin-top: 20px;
+    margin: 5px 0;
   }
 
   .button{
@@ -72,14 +79,16 @@ header{
   }
 
   li a{
-    height: 54px !important;
+    height: 44px !important;
+    line-height: 44px !important;
+    font-size: 14px !important;
   }
 
 }
 
 #root{
   // margin-bottom: $footer-size;
-} 
+}
 
 footer{
   background-color: $footerBgColor;

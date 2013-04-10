@@ -1,5 +1,9 @@
 $mandala-size: 620px;
 
+section{
+  overflow: hidden;
+}
+
 #mandala{
   height: 780px;
   // overflow: hidden;
@@ -172,7 +176,7 @@ $mandala-box-size: 290px;
 #mandala-center{
   width: $outer-orbital-size;
   height: $outer-orbital-size;
-  margin: 117px 193px;
+  margin: 132px 193px;
   position: absolute;
   top: 0;
   pointer-events: none;
@@ -223,7 +227,7 @@ $mandala-box-size: 290px;
   width: $outer-orbital-size;
   height: $outer-orbital-size;
   // margin-top: -$outer-orbital-size;
-  margin: 117px 190px;
+  margin: 132px 190px;
   position: absolute;
   top: 0;
   display: none;
