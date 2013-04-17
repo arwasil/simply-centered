@@ -25,6 +25,7 @@ header{
     position: absolute;
     top: 0;
     left: 118px;
+    z-index: 2;
 
     h1{ 
       padding-top: 24px;
@@ -36,33 +37,50 @@ header{
     }
 
     sub{
-      color: #ec8454;
+      color: #f3c12a;
+      text-transform: uppercase;
     }
   }
 
-  // Start move slogan into nav
-  #slogan h3{
-    text-align: center;
-    font-size: 14px;
-    font-weight: normal;
-    color: #f3c12a;
-    line-height: 20px;
-    margin: 24px 0;
+  // Move slogan into nav
+  #slogan{
+    z-index: 1;
+    h3{
+      text-align: center;
+      font-size: 14px;
+      font-weight: normal;
+      color: #f3c12a;
+      line-height: 20px;
+      margin: 24px 0;
+    }
   }
   // End move slogan into nav
 
   nav{
     position: absolute;
     top: 0;
-    right: 50px;
+    right: 0;
+    z-index: 2;
   }
 
-  li:hover{
-    background-color: transparent !important;
+  li{
+    border-left: 1px solid #cc5b27;
+    &:first-child{
+      border-color: #bb5223;
+    }
+    &:hover{
+      background-color: transparent !important;
+    }
+    a:first-child{
+      border-bottom: 1px solid #cc5b27;
+    }
+    &:last-child a{
+      padding-right: 50px;
+    }
   }
 
   #login{
-    margin: 5px 0;
+    padding-top: 4px;
   }
 
   .button{
@@ -82,6 +100,7 @@ header{
     height: 44px !important;
     line-height: 44px !important;
     font-size: 14px !important;
+    text-align: center;
   }
 
 }
@@ -111,7 +130,7 @@ footer{
   #copyright{
     height: 44px;
     line-height: 44px;
-    background-color: #202020;
+    background-color: #212121;
     background-image: inline-image('copyright-bg.png');
     font-size: 10px;
   }
