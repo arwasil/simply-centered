@@ -6587,54 +6587,49 @@ section {
 #mandala-sections div.align small {
   display: inline-block;
 }
-/* line 290, ../sass/index.scss */
+/* line 289, ../sass/index.scss */
 #mandala-sections div.align span {
   display: inline-block;
   margin-top: 4px;
 }
-/* line 295, ../sass/index.scss */
+/* line 294, ../sass/index.scss */
 #mandala-sections #section-knowledge {
   top: 27px;
   left: 27px;
 }
-/* line 298, ../sass/index.scss */
+/* line 297, ../sass/index.scss */
 #mandala-sections #section-knowledge div.background {
   background-color: #f3c12a;
 }
-/* line 302, ../sass/index.scss */
+/* line 301, ../sass/index.scss */
 #mandala-sections #section-energy {
   top: 27px;
   right: 27px;
 }
-/* line 305, ../sass/index.scss */
+/* line 304, ../sass/index.scss */
 #mandala-sections #section-energy div.background {
   background-color: #f2796b;
 }
-/* line 309, ../sass/index.scss */
+/* line 308, ../sass/index.scss */
 #mandala-sections #section-reflection {
   right: 27px;
   bottom: 27px;
 }
-/* line 312, ../sass/index.scss */
+/* line 311, ../sass/index.scss */
 #mandala-sections #section-reflection div.background {
   background-color: #69ae37;
 }
 /* line 315, ../sass/index.scss */
-#mandala-sections #section-reflection div.align {
-  font-size: 13px;
-  padding-top: 3px;
-}
-/* line 320, ../sass/index.scss */
 #mandala-sections #section-movement {
   bottom: 27px;
   left: 27px;
 }
-/* line 323, ../sass/index.scss */
+/* line 318, ../sass/index.scss */
 #mandala-sections #section-movement div.background {
   background-color: #3467c0;
 }
 
-/* line 329, ../sass/index.scss */
+/* line 324, ../sass/index.scss */
 h2 {
   margin-bottom: 45px !important;
   font-size: 24px;
@@ -6642,45 +6637,45 @@ h2 {
   text-align: center;
 }
 
-/* line 336, ../sass/index.scss */
+/* line 331, ../sass/index.scss */
 #register-call-to-action {
   display: block;
   margin-bottom: 45px;
 }
-/* line 340, ../sass/index.scss */
+/* line 335, ../sass/index.scss */
 #register-call-to-action span {
   display: inline-block;
   margin: 0 10px -2px 0;
 }
 
-/* line 346, ../sass/index.scss */
+/* line 341, ../sass/index.scss */
 #sub-nav {
   margin: -40px auto 50px;
   text-align: center;
 }
-/* line 351, ../sass/index.scss */
+/* line 346, ../sass/index.scss */
 #sub-nav span {
   display: none;
 }
-/* line 354, ../sass/index.scss */
+/* line 349, ../sass/index.scss */
 #sub-nav span.active {
   display: auto;
 }
-/* line 359, ../sass/index.scss */
+/* line 354, ../sass/index.scss */
 #sub-nav #nav-default {
   display: block;
 }
-/* line 361, ../sass/index.scss */
+/* line 356, ../sass/index.scss */
 #sub-nav #nav-default h3 {
   font-size: 20px !important;
 }
-/* line 366, ../sass/index.scss */
+/* line 361, ../sass/index.scss */
 #sub-nav a {
   display: inline-block;
   margin-right: 20px;
   font-size: 12px;
 }
-/* line 371, ../sass/index.scss */
+/* line 366, ../sass/index.scss */
 #sub-nav a:last-child {
   margin-right: 0;
 }
