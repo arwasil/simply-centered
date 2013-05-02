@@ -11,6 +11,26 @@ h2 {
 }
 
 /* line 11, ../sass/board.scss */
+.knowledge {
+  color: #f3c12a;
+}
+
+/* line 15, ../sass/board.scss */
+.energy {
+  color: #f2796b;
+}
+
+/* line 19, ../sass/board.scss */
+.transformation {
+  color: #69ae37;
+}
+
+/* line 23, ../sass/board.scss */
+.movement {
+  color: #3467c0;
+}
+
+/* line 27, ../sass/board.scss */
 #spling-widget {
   float: none;
   margin: auto;

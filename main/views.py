@@ -3,10 +3,15 @@ from django.shortcuts import render
 def index(request):
   return render(request, 'main/index.html')
 
-def board(request, slug):
+def board(request, *slugs):
+  
+  def name(slug):
+    # Turn a slug into a name
+    return " ".join([v.capitalize() for v in slug.split("-")])
+
   context = {
-    'name' : " ".join([v.capitalize() for v in slug.split("-")]),
-    'slug' : slug
+    'names' : map(name, slugs),
+    'slugs' : slugs
   }
 
   return render(request, 'main/board.html', context)
