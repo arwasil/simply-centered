@@ -1,6 +1,21 @@
 console.info('index.js loaded');
+
+var rotator = function(){
+  console.log('active');
+  var last = $('#planets a.active');
+  var active = last.next();
+  // perhaps nothing is active, or there is no next()
+  if (active.length === 0){
+    active = $('#planets a:first-child');
+  }
+  // last.removeClass('active');
+  active.addClass('active');
+  return true;
+};
+
 $(window).load(function () {
-  $('#mandala').on('transitionend webkitTransitionEnd oTransitionEnd otransitionend', function(e){
+  // do not also react to transitionEnd, this will trigger everything twice
+  $('#mandala').one('webkitTransitionEnd oTransitionEnd', function(e){
     $('#mandala-text').css('opacity', 1);
     $('#mandala-sections a').on('mouseenter', function(e){
       $("#sub-nav span").not('#nav-default').hide();
@@ -13,6 +28,7 @@ $(window).load(function () {
     $('.transition-hidden').fadeIn(400, function(){
       $('#planets').show();
     });
+    setInterval(rotator, 2000);
   });
   // Hide elements below the manadala until it's expanded for performance
   // debugger;

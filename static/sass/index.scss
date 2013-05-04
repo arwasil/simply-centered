@@ -23,8 +23,8 @@ section{
       }
 
       &:hover{
-        #planets a{
-          -webkit-animation-play-state: paused;
+        #planets a, #planets a span{
+          -webkit-animation-play-state: paused !important;
         }
       }
     }
@@ -129,42 +129,52 @@ section{
     display: none;
 
     a{
-      @include border-radius(20px);
       position: absolute;
-      display: block;
       -webkit-animation-play-state: running;
+      span{
+        position: absolute;
+        @include border-radius(20px);
+        border-style: solid;
+        border-width: 10px;
+      }
     }
+    a.active{
+      span{
+        -webkit-animation: pulse-planet 4s linear infinite;
+      }
+    }
+
     #planet-knowledge{
-      width: 20px;
-      height: 20px;
-      background-color: rgba(243,193,42,0.8);
       margin: 75px;
       @include transform-origin(338px, 338px);
       -webkit-animation: rotate-0deg 16s linear infinite;
+      span{
+        border-color: rgba(243,193,42,0.8);
+      }
     }
     #planet-energy{
-      width: 20px;
-      height: 20px;
-      background-color: rgba(242,121,107,0.8);
       margin: 112px;
       @include transform-origin(301px, 301px);
       -webkit-animation: rotate-100deg 22s linear infinite;
+      span{
+        border-color: rgba(242,121,107,0.8);
+      }
     }
     #planet-movement{
-      width: 20px;
-      height: 20px;
-      background-color: rgba(52,103,192,0.8);
       margin: 112px;
       @include transform-origin(301px, 301px);
       -webkit-animation: rotate-300deg 14s linear infinite;
+      span{
+        border-color: rgba(52,103,192,0.8);
+      }
     }
     #planet-reflection{
-      width: 20px;
-      height: 20px;
-      background-color: rgba(105,174,55,0.8);
       margin: 149px;
       @include transform-origin(264px, 264px);
       -webkit-animation: rotate-200deg 18s linear infinite;
+      span{
+        border-color: rgba(105,174,55,0.8);
+      }
     }
   }
 
