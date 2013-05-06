@@ -9,14 +9,23 @@
 
 {% block content %}
     <section>
-      <h2 id='breadcrumbs'>
-        {% for name in names %}
-          {% if not forloop.last %}
-            {{name}} > 
-          {% else %}
-            {{name}}
-          {% endif %}
-        {% endfor %}</h2>
+      <div class='row'>
+        <h3 id='section'>
+          <span class='{% if section == 0 %}active{% endif %}'>Facet</span>
+          <span class='{% if section == 1 %}active{% endif %}'>Pearl</span>
+          <span class='{% if section == 2 %}active{% endif %}'>Diamond</span>
+        </h3>
+      </div>
+      <div class='row'>
+        <h2 id='breadcrumbs'>
+          {% for name in names %}
+            {% if not forloop.last %}
+              {{name}} > 
+            {% else %}
+              {{name}}
+            {% endif %}
+          {% endfor %}</h2>
+      </div>
       <script type='text/javascript' id='spling-script'>
           window.SPLING_URL = 'http://spling.com/app/user/7GPortal/splingboards-widget/{{slugs|last}}';
       </script>

@@ -9,7 +9,13 @@ def board(request, *slugs):
     # Turn a slug into a name
     return " ".join([v.capitalize() for v in slug.split("-")])
 
+  # How many layers of nesting are there
+  max_depth = 2
+  # Zero index the section
+  section = max(min(len(slugs)-1, max_depth), 0)
+
   context = {
+    'section' : section,
     'names' : map(name, slugs),
     'slugs' : slugs
   }
