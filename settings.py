@@ -132,6 +132,8 @@ TEMPLATE_DIRS = (
 MEDIA_BUNDLES = (
     ('app.css',
      'stylesheets/app.css',),
+    ('spling.css',
+     'stylesheets/spling.css',),
     ('libraries.js',
      'javascripts/vendor/foundation/jquery.js',
      'javascripts/vendor/foundation/jquery.foundation.tooltips.js',

@@ -21,3 +21,11 @@ def board(request, *slugs):
   }
 
   return render(request, 'main/board.html', context)
+
+def spling(request):
+
+  context = {
+    'url' : request.GET.get('url')
+  }
+
+  return render(request, 'main/spling.html', context)

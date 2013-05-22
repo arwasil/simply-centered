@@ -1,0 +1,14 @@
+{% extends 'main/_base.html' %}
+
+{% load media %}
+
+{% block headExtra %}
+  {% include_media 'app.css' %}
+  {% include_media 'spling.css' %}
+{% endblock %}
+
+{% block content %}
+    <section>
+      <iframe id='spling' src='{{url}}'></iframe>
+    </section>
+{% endblock %}
