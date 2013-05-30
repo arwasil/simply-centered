@@ -6121,9 +6121,9 @@ header #slogan {
 /* line 48, ../sass/simply-centered.scss */
 header #slogan h3 {
   text-align: center;
-  font-size: 14px;
+  font-size: 24px;
   font-weight: normal;
-  color: #f3c12a;
+  color: white;
   line-height: 20px;
   margin: 24px 0;
 }
@@ -6416,7 +6416,6 @@ section {
 /* line 131, ../sass/index.scss */
 #orbitals #planets a {
   position: absolute;
-  -webkit-animation-play-state: running;
 }
 /* line 134, ../sass/index.scss */
 #orbitals #planets a span {
@@ -6428,12 +6427,13 @@ section {
   border-radius: 20px;
   border-style: solid;
   border-width: 10px;
+  border-color: rgba(52, 103, 192, 0.8);
 }
-/* line 142, ../sass/index.scss */
+/* line 143, ../sass/index.scss */
 #orbitals #planets a.active span {
   -webkit-animation: pulse-planet 4s linear infinite;
 }
-/* line 147, ../sass/index.scss */
+/* line 148, ../sass/index.scss */
 #orbitals #planets #planet-knowledge {
   margin: 75px;
   -webkit-transform-origin: 338px 338px;
@@ -6441,13 +6441,9 @@ section {
   -ms-transform-origin: 338px 338px;
   -o-transform-origin: 338px 338px;
   transform-origin: 338px 338px;
-  -webkit-animation: rotate-0deg 16s linear infinite;
+  -webkit-animation: rotate-0deg 21s linear infinite;
 }
-/* line 151, ../sass/index.scss */
-#orbitals #planets #planet-knowledge span {
-  border-color: rgba(243, 193, 42, 0.8);
-}
-/* line 155, ../sass/index.scss */
+/* line 153, ../sass/index.scss */
 #orbitals #planets #planet-energy {
   margin: 112px;
   -webkit-transform-origin: 301px 301px;
@@ -6455,13 +6451,9 @@ section {
   -ms-transform-origin: 301px 301px;
   -o-transform-origin: 301px 301px;
   transform-origin: 301px 301px;
-  -webkit-animation: rotate-100deg 22s linear infinite;
+  -webkit-animation: rotate-100deg 27s linear infinite;
 }
-/* line 159, ../sass/index.scss */
-#orbitals #planets #planet-energy span {
-  border-color: rgba(242, 121, 107, 0.8);
-}
-/* line 163, ../sass/index.scss */
+/* line 158, ../sass/index.scss */
 #orbitals #planets #planet-movement {
   margin: 112px;
   -webkit-transform-origin: 301px 301px;
@@ -6469,13 +6461,9 @@ section {
   -ms-transform-origin: 301px 301px;
   -o-transform-origin: 301px 301px;
   transform-origin: 301px 301px;
-  -webkit-animation: rotate-300deg 14s linear infinite;
+  -webkit-animation: rotate-300deg 19s linear infinite;
 }
-/* line 167, ../sass/index.scss */
-#orbitals #planets #planet-movement span {
-  border-color: rgba(52, 103, 192, 0.8);
-}
-/* line 171, ../sass/index.scss */
+/* line 163, ../sass/index.scss */
 #orbitals #planets #planet-reflection {
   margin: 149px;
   -webkit-transform-origin: 264px 264px;
@@ -6483,14 +6471,10 @@ section {
   -ms-transform-origin: 264px 264px;
   -o-transform-origin: 264px 264px;
   transform-origin: 264px 264px;
-  -webkit-animation: rotate-200deg 18s linear infinite;
-}
-/* line 175, ../sass/index.scss */
-#orbitals #planets #planet-reflection span {
-  border-color: rgba(105, 174, 55, 0.8);
+  -webkit-animation: rotate-200deg 23s linear infinite;
 }
 
-/* line 186, ../sass/index.scss */
+/* line 175, ../sass/index.scss */
 #mandala-center {
   width: 620px;
   height: 620px;
@@ -6499,7 +6483,7 @@ section {
   top: 0;
   pointer-events: none;
 }
-/* line 194, ../sass/index.scss */
+/* line 183, ../sass/index.scss */
 #mandala-center #mandala-box {
   pointer-events: all;
   width: 290px;
@@ -6516,13 +6500,13 @@ section {
   -moz-box-shadow: rgba(0, 0, 0, 0.59) 0px 1px 0px 5px inset;
   box-shadow: rgba(0, 0, 0, 0.59) 0px 1px 0px 5px inset;
 }
-/* line 205, ../sass/index.scss */
+/* line 194, ../sass/index.scss */
 #mandala-center #mandala-box:hover {
   -webkit-box-shadow: rgba(183, 133, 0, 0.77) 0px 0px 20px 10px inset;
   -moz-box-shadow: rgba(183, 133, 0, 0.77) 0px 0px 20px 10px inset;
   box-shadow: rgba(183, 133, 0, 0.77) 0px 0px 20px 10px inset;
 }
-/* line 209, ../sass/index.scss */
+/* line 198, ../sass/index.scss */
 #mandala-center #mandala-box img {
   opacity: 0.7;
   -webkit-border-radius: 290px;
@@ -6531,7 +6515,7 @@ section {
   -o-border-radius: 290px;
   border-radius: 290px;
 }
-/* line 215, ../sass/index.scss */
+/* line 204, ../sass/index.scss */
 #mandala-center #mandala-box span {
   display: table-cell;
   vertical-align: middle;
@@ -6550,7 +6534,7 @@ section {
   opacity: 0;
 }
 
-/* line 236, ../sass/index.scss */
+/* line 225, ../sass/index.scss */
 #mandala-sections {
   width: 620px;
   height: 620px;
@@ -6560,12 +6544,12 @@ section {
   display: none;
   pointer-events: none;
 }
-/* line 246, ../sass/index.scss */
+/* line 235, ../sass/index.scss */
 #mandala-sections a {
   width: inherit;
   height: inherit;
 }
-/* line 251, ../sass/index.scss */
+/* line 240, ../sass/index.scss */
 #mandala-sections > div {
   position: absolute;
   width: 162px;
@@ -6581,7 +6565,7 @@ section {
   -moz-box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 2px 1px inset, rgba(255, 255, 255, 0.2) 0px 1px 0px 0px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 2px 1px inset, rgba(255, 255, 255, 0.2) 0px 1px 0px 0px;
 }
-/* line 261, ../sass/index.scss */
+/* line 250, ../sass/index.scss */
 #mandala-sections > div div.background {
   width: 134px;
   height: 134px;
@@ -6596,11 +6580,11 @@ section {
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 5px 5px, rgba(255, 255, 255, 0.2) 0px 1px 0px 0px inset;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 5px 5px, rgba(255, 255, 255, 0.2) 0px 1px 0px 0px inset;
 }
-/* line 270, ../sass/index.scss */
+/* line 259, ../sass/index.scss */
 #mandala-sections > div div.background:hover {
   -webkit-animation: pulse 1s linear infinite;
 }
-/* line 280, ../sass/index.scss */
+/* line 269, ../sass/index.scss */
 #mandala-sections div.align {
   width: inherit;
   height: inherit;
@@ -6616,53 +6600,53 @@ section {
   pointer-events: none;
   padding-top: 20px;
 }
-/* line 295, ../sass/index.scss */
+/* line 284, ../sass/index.scss */
 #mandala-sections div.align small {
   display: inline-block;
 }
-/* line 299, ../sass/index.scss */
+/* line 288, ../sass/index.scss */
 #mandala-sections div.align span {
   display: inline-block;
   margin-top: 4px;
 }
-/* line 304, ../sass/index.scss */
+/* line 293, ../sass/index.scss */
 #mandala-sections #section-knowledge {
   top: 27px;
   left: 27px;
 }
-/* line 307, ../sass/index.scss */
+/* line 296, ../sass/index.scss */
 #mandala-sections #section-knowledge div.background {
   background-color: #f3c12a;
 }
-/* line 311, ../sass/index.scss */
+/* line 300, ../sass/index.scss */
 #mandala-sections #section-energy {
   top: 27px;
   right: 27px;
 }
-/* line 314, ../sass/index.scss */
+/* line 303, ../sass/index.scss */
 #mandala-sections #section-energy div.background {
   background-color: #f2796b;
 }
-/* line 318, ../sass/index.scss */
+/* line 307, ../sass/index.scss */
 #mandala-sections #section-reflection {
   right: 27px;
   bottom: 27px;
 }
-/* line 321, ../sass/index.scss */
+/* line 310, ../sass/index.scss */
 #mandala-sections #section-reflection div.background {
   background-color: #69ae37;
 }
-/* line 325, ../sass/index.scss */
+/* line 314, ../sass/index.scss */
 #mandala-sections #section-movement {
   bottom: 27px;
   left: 27px;
 }
-/* line 328, ../sass/index.scss */
+/* line 317, ../sass/index.scss */
 #mandala-sections #section-movement div.background {
   background-color: #3467c0;
 }
 
-/* line 334, ../sass/index.scss */
+/* line 323, ../sass/index.scss */
 h2 {
   margin-bottom: 45px !important;
   font-size: 24px;
@@ -6670,45 +6654,45 @@ h2 {
   text-align: center;
 }
 
-/* line 341, ../sass/index.scss */
+/* line 330, ../sass/index.scss */
 #register-call-to-action {
   display: block;
   margin-bottom: 45px;
 }
-/* line 345, ../sass/index.scss */
+/* line 334, ../sass/index.scss */
 #register-call-to-action span {
   display: inline-block;
   margin: 0 10px -2px 0;
 }
 
-/* line 351, ../sass/index.scss */
+/* line 340, ../sass/index.scss */
 #sub-nav {
   margin: -40px auto 50px;
   text-align: center;
 }
-/* line 356, ../sass/index.scss */
+/* line 345, ../sass/index.scss */
 #sub-nav span {
   display: none;
 }
-/* line 359, ../sass/index.scss */
+/* line 348, ../sass/index.scss */
 #sub-nav span.active {
   display: auto;
 }
-/* line 364, ../sass/index.scss */
+/* line 353, ../sass/index.scss */
 #sub-nav #nav-default {
   display: block;
 }
-/* line 366, ../sass/index.scss */
+/* line 355, ../sass/index.scss */
 #sub-nav #nav-default h3 {
   font-size: 20px !important;
 }
-/* line 371, ../sass/index.scss */
+/* line 360, ../sass/index.scss */
 #sub-nav a {
   display: inline-block;
   margin-right: 20px;
   font-size: 12px;
 }
-/* line 376, ../sass/index.scss */
+/* line 365, ../sass/index.scss */
 #sub-nav a:last-child {
   margin-right: 0;
 }

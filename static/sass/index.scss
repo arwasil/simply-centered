@@ -130,12 +130,13 @@ section{
 
     a{
       position: absolute;
-      -webkit-animation-play-state: running;
+      // -webkit-animation-play-state: paused;
       span{
         position: absolute;
         @include border-radius(20px);
         border-style: solid;
         border-width: 10px;
+        border-color: rgba(52,103,192,0.8);
       }
     }
     a.active{
@@ -147,34 +148,22 @@ section{
     #planet-knowledge{
       margin: 75px;
       @include transform-origin(338px, 338px);
-      -webkit-animation: rotate-0deg 16s linear infinite;
-      span{
-        border-color: rgba(243,193,42,0.8);
-      }
+      -webkit-animation: rotate-0deg 21s linear infinite;
     }
     #planet-energy{
       margin: 112px;
       @include transform-origin(301px, 301px);
-      -webkit-animation: rotate-100deg 22s linear infinite;
-      span{
-        border-color: rgba(242,121,107,0.8);
-      }
+      -webkit-animation: rotate-100deg 27s linear infinite;
     }
     #planet-movement{
       margin: 112px;
       @include transform-origin(301px, 301px);
-      -webkit-animation: rotate-300deg 14s linear infinite;
-      span{
-        border-color: rgba(52,103,192,0.8);
-      }
+      -webkit-animation: rotate-300deg 19s linear infinite;
     }
     #planet-reflection{
       margin: 149px;
       @include transform-origin(264px, 264px);
-      -webkit-animation: rotate-200deg 18s linear infinite;
-      span{
-        border-color: rgba(105,174,55,0.8);
-      }
+      -webkit-animation: rotate-200deg 23s linear infinite;
     }
   }
 
