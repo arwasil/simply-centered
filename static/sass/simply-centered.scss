@@ -93,6 +93,10 @@ header{
 
   li.blogs{
     clear: both;
+    // Hide dropdown arrow on blogs
+    a:after{
+      opacity: 0;
+    }
   }
 
   #login{
@@ -128,6 +132,12 @@ header{
         padding: 6px 50px 6px 15px !important;
         border: 0 !important;
         font-size: 13px !important;
+      }
+      &:hover{
+        background-color: #ec7139 !important;
+        a{
+          color: white !important;
+        }
       }
     }
   }
