@@ -1,9 +1,9 @@
 /*
 Syntax error: Undefined variable: "$footerBgColor".
-        on line 113 of /home/spling/sites/simply centered/static/sass/simply-centered.scss
+        on line 170 of /home/spling/sites/simply centered/static/sass/simply-centered.scss
 
 Backtrace:
-/home/spling/sites/simply centered/static/sass/simply-centered.scss:113
+/home/spling/sites/simply centered/static/sass/simply-centered.scss:170
 /var/lib/gems/1.8/gems/sass-3.2.3/lib/sass/../sass/script/variable.rb:49:in `_perform'
 /var/lib/gems/1.8/gems/sass-3.2.3/lib/sass/../sass/script/node.rb:40:in `perform'
 /var/lib/gems/1.8/gems/sass-3.2.3/lib/sass/../sass/tree/visitors/perform.rb:296:in `visit_prop'
@@ -79,4 +79,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$footerBgColor\".\A         on line 113 of /home/spling/sites/simply centered/static/sass/simply-centered.scss"; }
+  content: "Syntax error: Undefined variable: \"$footerBgColor\".\A         on line 170 of /home/spling/sites/simply centered/static/sass/simply-centered.scss"; }

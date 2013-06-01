@@ -137,6 +137,7 @@ MEDIA_BUNDLES = (
     ('libraries.js',
      'javascripts/vendor/foundation/jquery.js',
      'javascripts/vendor/foundation/jquery.foundation.tooltips.js',
+     'javascripts/vendor/foundation/jquery.foundation.topbar.js',
      'javascripts/vendor/foundation/modernizr.foundation.js',
      'javascripts/main/app.js',),
     ('index.js',

@@ -1,4 +1,4 @@
-  <header class="top-bar">
+<header class="top-bar">
   <a href='{% url index %}' id='logo'>
     <h1>Simply Centered</h1>
     <sub>Links for Living</sub>
@@ -10,21 +10,27 @@
   </div>
   <!-- Main site navigation -->
   <nav>
-    <ul>
+    <ul id='main-nav'>
       <li>
         <a href='collection.html'>
           Videos
         </a>
-        <a href='collection.html'>
-          Blogs
-        </a>
-      </li>
-      <li>
+      </li><li>
         <a id='login'>
           <!--<button>Login</button>
           <small>or</small>-->
           <button class='button'><i class='icons-fist'></i>Join</button>
         </a>
+      </li><li class='has-dropdown blogs'>
+        <a href='#'>Blogs</a>
+        <ul class="dropdown">
+          <li><a href="#">Sub Nav Item 1</a></li>
+          <li><a href="#">Sub Nav Item 2</a></li>
+          <li><a href="#">Sub Nav 3</a></li>
+          <li><a href="#">Sub Nav 4</a></li>
+          <li><a href="#">Sub Nav Item 5</a></li>
+        </ul>
+      </li><li>
         <a href='collection.html'>
           Login
         </a>
@@ -32,3 +38,9 @@
     </ul>
   </nav>
 </header>
+<ul id='social-colour'>
+  <li><a class='icons-search-colour'></a></li>
+  <li><a class='icons-facebook-colour'></a></li>
+  <li><a class='icons-twitter-colour'></a></li>
+  <li><a class='icons-email-colour'></a></li>
+</ul>
