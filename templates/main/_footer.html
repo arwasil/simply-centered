@@ -1,90 +1,89 @@
-<!-- The footer, stuck to the bottom of the page -->
-<footer id='footer'>
-  <section class='row' id='info'>
-    <div class='two columns'>
-      <h4>Simply Centered</h4>
-      <ul>
-        <li>
-          <a href='{% url index %}'>Home</a>
-        </li><li>
-          <a href='http://7gportal.com/blog/7gportal/knowledge/'>Knowledge</a>
-        </li><li>
-          <a href='{% url board 'movement' %}'>Movement</a>
-        </li><li>
-          <a href='{% url board 'transformation' %}'>Transformation</a>
-        </li><li>
-          <a href='{% url board 'energy' %}'>Energy</a>
-        </li>
-      </ul>
+{% load media %}
+<footer id="site-footer">
+  <section id="footer-links">
+    <div class="footer-wrapper">
+      <section class="links-group">
+        <h1 class="links-title">Simply Centered</h1>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="health.html">Health</a></li>
+          <li><a href="food.html">Food</a></li>
+          <li><a href="lifestyle.html">Lifestyle</a></li>
+          <li><a href="fitness.html">Fitness</a></li>
+        </ul>
+      </section>
+
+      <section class="links-group">
+        <h1 class="links-title">Trust Your Source</h1>
+        <ul>
+          <li><a href="#">Our Process</a></li>
+          <li><a href="#">Integrity Pledge</a></li>
+          <li><a href="shop.html">Market</a></li>
+        </ul>
+      </section>
+
+      <section class="links-group">
+        <h1 class="links-title">Connect</h1>
+        <ul>
+          <li><a href="mailto:info@simplycentered.com?subject=Greeting from New Costumer&body= Hallo Simply Centered, ">Email</a></li>
+        </ul>
+      </section>
+
+      <section class="links-group">
+        <h1 class="links-title">About Us</h1>
+        <ul>
+          <li><a href="#">Our Team</a></li>
+        </ul>
+      </section>
+
+      <section class="links-group">
+        <h1 class="links-title">Blog</h1>
+        <ul>
+          <li><a href="#">Elaine Gavalas</a></li>
+          <li><a href="#">Homesteader</a></li>
+          <li><a href="#">Off the Grid</a></li>
+          <li><a href="#">Cloister Code</a></li>
+          <li><a href="#">Simply Centered</a></li>
+        </ul>
+      </section>
+
+      <section class="links-group">
+        <h1 class="links-title">Market</h1>
+        <ul>
+          <li><a href="#">Art</a></li>
+          <li><a href="#">Books</a></li>
+          <li><a href="#">Fitness</a></li>
+          <li><a href="#">Food</a></li>
+          <li><a href="#">Gift Ideas</a></li>
+          <li><a href="#">Health</a></li>
+          <li><a href="#">Life Style</a></li>
+        </ul>
+      </section>
+
+      <section class="links-group">
+        <h1 class="links-title">Join</h1>
+        <ul>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Join Us</a></li>
+        </ul>
+      </section>
     </div>
-    <div class='two columns'>
-      <h4>Links for living</h4>
-      <ul>
-        <li>
-          <a href='#'>Home</a>
-        </li><li>
-          <a href='#'>Integrity pledge</a>
-        </li>
+  </section>
+  <section id="footer-info">
+    <div class="footer-wrapper">
+      <ul id="footer-menu">
+        <li>&copy; 2012 Simply Connected</li>
+        <li><a href="#">Site Map</a></li>
+        <li><a href="#">Privacy and Security</a></li>
+        <li><a href="#">Legal</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Site Map</a></li>
       </ul>
-    </div>
-    <div class='two columns'>
-      <h4>Connect</h4>
-      <ul>
-        <li>
-          <a href='#'>Email</a>
-        </li>
-      </ul>
-    </div>
-    <div class='two columns'>
-      <h4>About Us</h4>
-      <ul>
-        <li>
-          <a href='#'>Our Team</a>
-        </li>
-      </ul>
-    </div>
-    <div class='two columns'>
-      <h4>Blog</h4>
-      <ul>
-        <li>
-          <a href='#'>Elaine Gavalas</a>
-        </li><li>
-          <a href='#'>Homesteader</a>
-        </li><li>
-          <a href='#'>Off the Grid</a>
-        </li><li>
-          <a href='#'>Cloisters Code</a>
-        </li><li>
-          <a href='#'>Simply Centered</a>
-        </li>
-      </ul>
-    </div>
-    <div class='two columns'>
-      <h4>Join</h4>
-      <ul>
-        <li>
-          <a href='#'>Login</a>
-        </li><li>
-          <a href='#'>Signup</a>
-        </li>
+      <ul id="footer-social">
+        <li><a href="#" class="social-btn"><img src="{% media_url 'img/footer-twitter.png' %}"></a></li>
+        <li><a href="#" class="social-btn"><img src="{% media_url 'img/footer-facebook.png' %}"></a></li>
+        <li><a href="#" class="social-btn"><img src="{% media_url 'img/footer-pinterest.png' %}"></a></li>
       </ul>
     </div>
   </section>
-  <div id='copyright'>
-    <section class='row'>
-      <span class='1 column'>&copy; 2013 Simply Centered</span>
-      <ul class='10 columns'>
-
-      </ul>
-      <ul class='1 columns right' id='social'>
-        <li>
-          <a href='http://facebook.com' title='Simply Connecteds facebook page' class='icons-facebook'></a>
-        </li><li>
-          <a href='http://twitter.com' title='Simply Connecteds twitter' class='icons-twitter'></a>
-        </li><li>
-          <a href='http://pintrest.com' title='Simply Connecteds pintrest' class='icons-pintrest'></a>
-        </li>
-      </ul>
-    </section>
-  </div>
 </footer>

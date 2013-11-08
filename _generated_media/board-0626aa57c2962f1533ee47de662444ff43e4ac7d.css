@@ -1,0 +1,511 @@
+#board-container {
+	width: 960px;
+	margin: 30px auto;
+	margin-bottom: 100px;
+}
+
+#board-container .row {
+	display: block;
+	width: 100%;
+	margin: 0 0 12px 0;
+	padding: 0;
+}
+
+#board-container .row.content {
+	min-height: 300px;
+}
+
+/*************************************************************************************************\
+
+\*************************************************************************************************/
+
+#board-header {
+	position: relative;
+	text-align: center;
+	height: 42px;
+	margin: 0;
+	padding: 0;
+
+	border-radius: 3px;
+}
+
+#board-title {
+	font-family: "Futura", sans-serif;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: 300;
+	letter-spacing: .1em;	
+	line-height: 42px;
+	color: #fff;
+	display: inline;
+
+	text-shadow: 0px 0px 2px rgba(0, 0, 0, .3);
+}
+
+/*===============================================================================================*/
+
+#board-breadcumb {
+	position: absolute;
+	left: 17px;
+	font-family: 'Cabin', sans-serif;
+	font-size: 13px;
+
+	letter-spacing: .05em;
+	line-height: 42px;
+	display: inline;
+}
+
+#board-breadcumb a:after {
+	content: " >";
+}
+
+#board-breadcumb a:link, #board-breadcumb a:visited {
+	color: #fff;
+}
+
+#board-breadcumb a:hover, #board-breadcumb a:active {
+	color: #fff;
+}
+
+/*************************************************************************************************\
+
+\*************************************************************************************************/
+
+.board-items {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.board-item {
+	position: relative;
+	text-align: center;
+	display: block;
+	float: left;
+	height: 100%;
+	margin: 0 10px 0 0;
+	padding: 0;
+	background-color: #cecece;
+	overflow: hidden;
+
+	box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, .3);
+	border-radius: 2px;
+}
+
+.board-item:last-child {
+	margin: 0;
+}
+
+.board-items:last-child {
+	margin: 0;
+}
+
+.board-item.small {
+	width: 142px;
+}
+
+.board-item.large {
+	width: 284px;
+}
+
+/*===============================================================================================*/
+.board-item-link {
+	cursor: pointer;
+}
+
+.item-overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #ff0000;
+	opacity: 0.7;
+	z-index: 2;
+}
+
+.item-featured-link {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	z-index: 5;
+}
+
+.small .item-featured-link-icon {
+	display: block;
+	margin: 130px 51px 0 51px;
+}
+
+.large .item-featured-link-icon {
+	display: block;
+	margin: 130px 122px 0 122px;
+}
+
+.item-featured-link a {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.item-featured-link a:link, .item-featured-link a:visited {
+	color: #fff;
+}
+
+.item-featured-link a:hover, .item-featured-link a:active {
+	color: #fff;
+}
+
+/*===============================================================================================*/
+
+.item-img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+/*===============================================================================================*/
+
+.item-nav {
+	position: absolute;
+	bottom: 0;
+	text-align: left;
+	z-index: 2;
+}
+
+.item-nav-header {
+	font-family: 'Cabin', sans-serif;
+	font-size: 14px;
+	font-weight: 200;
+	letter-spacing: .05em;	
+	color: white;	
+	line-height: 32px;
+	margin: 0 0 0 0;
+	padding: 0 0 0 10px;
+	height: 32px;
+	/*background-color: #eebb22;*/
+	background-color:  rgba(238,187,34,.7);
+}
+
+/*===============================================================================================*/
+
+.item-nav-links {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	opacity: 0.9;
+}
+
+.item-nav-links li {
+	display: inline-block;
+	float: left;
+}
+
+.item-nav-links li a {
+	font-family: 'Cabin', sans-serif;
+	font-size: 14px;
+	font-weight: 900;
+	/*opacity: .8;*/
+
+	display: block;
+	line-height: 32px;
+	/*width: 107px;*/
+	height: 32px;
+
+	width: 94px;
+
+	/*padding-left: 3px;*/
+}
+
+.item-nav-links li:last-child a {
+	border-right: none;
+}
+
+.item-nav-links li a:link, .item-nav-links li a:visited {
+	color: rgba(0, 0, 0, 0.8);
+}
+
+.item-nav-links li a:hover, .item-nav-links li a:active {
+	color: #fff;
+}
+
+/*===============================================================================================*/
+
+.item-nav-link-articles {
+	/*background-image: url(http://localhost:80/simply/img/item-articles-hover-dedfdcbc628d00e2b2d78c4ff0afbcdd178e8c3a.png);*/
+	background-repeat: no-repeat;
+	/*background-position: 22px 8px;*/
+	/*text-indent: 18px;*/
+	
+	background-position: 15px 8px;
+	text-indent: 20px;
+}
+
+.item-nav-link-videos {
+	/*background-image: url(http://localhost:80/simply/img/item-movies-hover-381d4cc31b2e9c0b9e0892301057f116d9402caa.png);*/
+	background-repeat: no-repeat;
+	/*background-position: 22px 8px;*/
+	/*text-indent: 18px;*/
+
+	background-position: 15px 8px;
+	text-indent: 20px;
+}
+
+.item-nav-link-shop {
+	/*background-image: url(http://localhost:80/simply/img/item-shop-hover-4dbaf4bfc5ab7512f0e583155b6726e4e6a81918.png);*/
+	background-repeat: no-repeat;
+	/*background-position: 22px 8px;*/
+	/*text-indent: 18px;*/
+
+	background-position: 15px 8px;
+	text-indent: 20px;
+	
+}
+
+/* Health */
+
+.item-nav-link-articles.item-links-health {
+	background-image: url(http://localhost:80/simply/img/icon-articles-health-29ae852bef6794569c60ffb5e908f140ab1a0db9.png);
+}
+
+.item-nav-link-videos.item-links-health {
+	background-image: url(http://localhost:80/simply/img/icon-videos-health-7d55181100cdca389a3f5121800dd9d8d018a7f0.png);
+}
+
+.item-nav-link-shop.item-links-health {
+	background-image: url(http://localhost:80/simply/img/icon-shop-health-a2070313ae628049afce5ba75648f0bbd22dc6f2.png);
+}
+
+/* Food */
+
+.item-nav-link-articles.item-links-food {
+	background-image: url(http://localhost:80/simply/img/icon-articles-food-c1a08567f3d50e1cb3ac734a14a94f1c10debb81.png);
+}
+
+.item-nav-link-videos.item-links-food {
+	background-image: url(http://localhost:80/simply/img/icon-videos-food-0964f973ec83e50d48863cdb1822893a07462a1a.png);
+}
+
+.item-nav-link-shop.item-links-food {
+	background-image: url(http://localhost:80/simply/img/icon-shop-food-5884ea26131c8d84db58f5630dbbdb6440669dd3.png);
+}
+
+/* Lifestyle */
+
+.item-nav-link-articles.item-links-lifestyle {
+	background-image: url(http://localhost:80/simply/img/icon-articles-lifestyle-3461ec762755af3c1f4a27cf0aab5722bf070f28.png);
+}
+
+.item-nav-link-videos.item-links-lifestyle {
+	background-image: url(http://localhost:80/simply/img/icon-videos-lifestyle-001927e49c0e0b71394f066978184a5b2eef14be.png);
+}
+
+.item-nav-link-shop.item-links-lifestyle {
+	background-image: url(http://localhost:80/simply/img/icon-shop-lifestyle-3789ae7fd9d839f998e6892199072a8bf609da09.png);
+}
+
+/* Fitness */
+
+.item-nav-link-articles.item-links-fitness {
+	background-image: url(http://localhost:80/simply/img/icon-articles-fitness-cb25ba5e3bfd6eed975b65d71c34a3098e6e8d61.png);
+}
+
+.item-nav-link-videos.item-links-fitness {
+	background-image: url(http://localhost:80/simply/img/icon-videos-fitness-7f401c06b6e8b08b22a00b98f7f66e98a045533c.png);
+}
+
+.item-nav-link-shop.item-links-fitness {
+	background-image: url(http://localhost:80/simply/img/icon-shop-fitness-74fa393be82e2738537e84e66a6943333b5a55d5.png);
+}
+
+/* Hover */
+
+.item-nav-link-articles:hover, .item-nav-link-articles:active {
+	background-image: url(http://localhost:80/simply/img/item-articles-8701a0dd28ccbecd6351bdca50bc56fb9fee05ba.png);
+}
+
+.item-nav-link-videos:hover, .item-nav-link-videos:active {
+	background-image: url(http://localhost:80/simply/img/item-movies-604a97fc2c0a94a39c3b20a34aca3d772cbda510.png);
+}
+
+.item-nav-link-shop:hover, .item-nav-link-shop:active {
+	background-image: url(http://localhost:80/simply/img/item-shop-38c0ac90e153f29b06521dbcd138d54660428eef.png);
+}
+
+/*===============================================================================================*/
+
+/*************************************************************************************************\
+
+\*************************************************************************************************/
+
+.item-rate {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	background-color: rgba(0, 0, 0, 0.3);
+	border-radius: 3px;
+	z-index: 6;
+}
+
+.item-rate ul {
+	margin: 0;
+	padding: 4px 15px;
+	list-style: none;
+}
+
+.item-rate ul li {
+	display: inline-block;
+}
+
+.item-rate ul li a {
+	display: block;
+	width: 13px;
+	height: 13px;
+	margin: 0 1px;
+	background-image: url(http://localhost:80/simply/img/rate-ebce5daa5d5ddc2be32f9a8545da190fe5b49bae.png);
+}
+
+.item-rate li:hover a, .item-rate li a.active {
+	background-image: url(http://localhost:80/simply/img/rate-hover-ccfb8fa2a144ecfe49b326d56eefd42e6c25befb.png);
+}
+
+/*************************************************************************************************\
+
+\*************************************************************************************************/
+
+
+
+/*===============================================================================================*/
+
+
+/*************************************************************************************************\
+
+\*************************************************************************************************/
+
+.board-title-health {
+	background-color: #eebb22;
+}
+
+.item-header-health {
+	/*background-color: #eebb22;*/
+	border-bottom: 1px solid rgba(128,100,18,.30);
+
+	background-color: rgba(238,187,34,.7);
+}
+
+.item-links-health {
+	background-color: #eebb22;
+	border-right: 1px solid rgba(128,100,18,.30);
+}
+
+.item-overlay-health {
+	background-color: #eebb22;
+}
+
+/*===============================================================================================*/
+
+.board-title-food {
+	background-color: #ec8579;
+}
+
+.item-header-food {
+	/*background-color: #ec8579;*/
+	border-bottom: 1px solid rgba(174,91,82,.30);
+
+	background-color: rgba(236,133,121,.7);
+}
+
+.item-links-food {
+	background-color: #ec8579;
+	border-right: 1px solid rgba(174,91,82,.30);
+}
+
+.item-overlay-food {
+	background-color: #ec8579;
+}
+
+
+
+/*===============================================================================================*/
+
+.board-title-lifestyle {
+	background-color: #6cb636;
+}
+
+.item-header-lifestyle {
+	/*background-color: #6cb636;*/
+	border-bottom: 1px solid rgba(77,139,32,.30);
+
+	background-color: rgba(108,182,54,.7);
+}
+
+.item-links-lifestyle {
+	background-color: #6cb636;
+	border-right: 1px solid rgba(77,139,32,.30);
+}
+
+.item-overlay-lifestyle {
+	background-color: #6cb636;
+}
+
+/*===============================================================================================*/
+
+.board-title-fitness {
+	background-color: #6488c6;
+}
+
+.item-header-fitness {
+	/*background-color: #6488c6 ;*/
+	border-bottom: 1px solid rgba(63,95,151,.30);
+
+	background-color: rgba(100,136,198,.7); ;
+}
+
+.item-links-fitness {
+	background-color: #6488c6;
+	border-right: 1px solid rgba(63,95,151,.30);
+}
+
+.item-overlay-fitness {
+	background-color: #6488c6;
+}
+/*===============================================================================================*/
+
+
+.board-title-dummy1 {
+	background-color: black;
+}
+
+.board-title-dummy2 {
+	background-color: red;
+}
+
+.board-title-dummy2 {
+	background-color: yellow;
+}
+
+.board-title-dummy3 {
+	background-color: blue;
+}
+
+.board-title-dummy4 {
+	background-color: green;
+}
+
+.board-title-dummy5 {
+	background-color: deepskyblue;
+}
+
+.board-title-dummy6 {
+	background-color: lightgreen;
+}
+
+.board-title-dummy7 {
+	background-color: tomato;
+}
+
+.board-title-dummy8 {
+	background-color: grey;
+}

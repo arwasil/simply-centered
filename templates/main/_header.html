@@ -1,46 +1,142 @@
-<header class="top-bar">
-  <a href='{% url index %}' id='logo'>
-    <h1>Simply Centered</h1>
-    <sub>Links for Living</sub>
-  </a>
-  <div class='row'>
-    <div id='slogan' class='twelve columns'>
-      <h3>Trust Your Source.<br />Links for Living.</h3>
-    </div>
+{% load media %}
+<header id="site-header">
+  <div id="header-left">
+    <a href="{% url index %}"><img src="{% media_url 'img/logo.png' %}"></a>
   </div>
-  <!-- Main site navigation -->
-  <nav>
-    <ul id='main-nav'>
-      <li>
-        <a href='collection.html'>
-          Videos
-        </a>
-      </li><li>
-        <a id='login'>
-          <!--<button>Login</button>
-          <small>or</small>-->
-          <button class='button'><i class='icons-fist'></i>Join</button>
-        </a>
-      </li><li class='has-dropdown blogs'>
-        <a href='#'>Blogs</a>
-        <ul class="dropdown">
-          <li><a href="http://s165963.gridserver.com/blog/elaine/">Blog 1</a></li>
-          <li><a href="http://s165963.gridserver.com/blog/elaine/">Blog 2</a></li>
-          <li><a href="http://s165963.gridserver.com/blog/elaine/">Blog 3</a></li>
-          <li><a href="http://s165963.gridserver.com/blog/elaine/">Blog 4</a></li>
-          <li><a href="http://s165963.gridserver.com/blog/elaine/">Blog 5</a></li>
-        </ul>
-      </li><li>
-        <a href='collection.html'>
-          Login
-        </a>
-      </li>  
+  <div id="header-center">
+    <h1 id="site-title">
+      <a href="{% url index %}">Trust Your Source</a>
+    </h1>
+    <nav id="site-nav">
+      <ul>
+        <li>
+          <a href="{% url board 'health'%}">Health</a>
+          <div class="submenu">
+            <div class="submenu-triangle"></div>
+            <ul class="parent">
+              <li>
+                <a href="{% url board 'beauty'%}" id="parent-beauty" data-dropdown="#child-beauty">Beauty</a>
+                <div class="parent-triangle"></div>
+              </li>
+              <li>
+                <a href="{% url board 'natural-health'%}" id="parent-natural-health" data-dropdown="#child-natural-health">Natural Health</a>
+                <div class="parent-triangle"></div>
+              </li>
+            </ul>
+
+            <ul class="child" id="child-beauty" data-parent="#parent-beauty">
+              <li><a href="{% url board 'inner-beauty'%}">Inner Beauty</a></li>
+              <li><a href="{% url board 'outer-beauty'%}">Outer Beauty</a></li>
+              
+            </ul>
+
+            <ul class="child" id="child-natural-health" data-parent="#parent-natural-health">
+              <li><a href="{% url board 'wellness'%}">Wellness</a></li>
+              <li><a href="{% url board 'longevity'%}">Longevity</a></li>
+              
+            </ul>
+
+          </div>
+        </li>
+        <li>
+          <a href="{% url board 'food'%}">Food</a>
+          <div class="submenu">
+            <div class="submenu-triangle"></div>
+            <ul class="parent">
+              <li>
+                <a href="{% url board 'cooking'%}" id="parent-cooking" data-dropdown="#child-cooking">Cooking</a>
+                <div class="parent-triangle"></div>
+              </li>
+              <li>
+                <a href="{% url board 'healthy-diets'%}" id="parent-healthy-diets" data-dropdown="#child-healthy-diets">Healthy Diets</a>
+                <div class="parent-triangle"></div>
+              </li>
+            </ul>
+            <ul class="child" id="child-cooking" data-parent="#parent-cooking">
+              <li><a href="{% url board 'recipes'%}">Recipes</a></li>
+              <li><a href="{% url board 'natural-kitchen'%}">Natural Kitchen</a></li>
+            </ul>
+
+            <ul class="child" id="child-healthy-diets" data-parent="#parent-healthy-diets">
+              <li><a href="{% url board 'diets'%}">Diets</a></li>
+              <li><a href="{% url board 'superdoods'%}">Superdoods</a></li> 
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="{% url board 'lifestyle'%}">Lifestyle</a>
+          <div class="submenu">
+            <div class="submenu-triangle"></div>
+            <ul class="parent">
+              <li>
+                <a href="{% url board 'culture'%}" id="parent-culture" data-dropdown="#child-culture">Culture</a>
+                <div class="parent-triangle"></div>
+              </li>
+              <li>
+                <a href="{% url board 'green'%}" id="parent-green" data-dropdown="#child-green">Green</a>
+                <div class="parent-triangle"></div>
+              </li>
+            </ul>
+            <ul class="child" id="child-culture" data-parent="#parent-culture">
+              <li><a href="{% url board 'art'%}">Art</a></li>
+              <li><a href="{% url board 'fashion'%}">Fashion</a></li>
+            </ul>
+
+            <ul class="child" id="child-green" data-parent="#parent-green">
+              <li><a href="{% url board 'eco-living'%}">Eco Living</a></li>
+              <li><a href="{% url board 'eco-product'%}">Eco Product</a></li>  
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="{% url board 'fitness'%}">Fitness</a>
+          <div class="submenu">
+            <div class="submenu-triangle"></div>
+            <ul class="parent">
+              <li>
+                <a href="{% url board 'mindful-fitness'%}" id="parent-mindful-fitness" data-dropdown="#child-mindful-fitness">Mindful Fitness</a>
+                <div class="parent-triangle"></div>
+              </li>
+              <li>
+                <a href="{% url board 'optimum-body'%}" id="parent-optimum-body" data-dropdown="#child-optimum-body">Optimum Body</a>
+                <div class="parent-triangle"></div>
+              </li>
+            </ul>
+            <ul class="child" id="child-mindful-fitness" data-parent="#parent-mindful-fitness">
+              <li><a href="{% url board 'yoga'%}">Yoga</a></li>
+              <li><a href="{% url board 'alt-exercise'%}">Alt Exercise</a></li>
+            </ul>
+
+            <ul class="child" id="child-optimum-body" data-parent="#parent-optimum-body">
+              <li><a href="{% url board 'weightmgt'%}">Weightmgt</a></li>
+              <li><a href="{% url board 'bestbody'%}">Bestbody</a></li> 
+            </ul>
+          </div>
+        </li>
+        <li><a href="#">Videos</a></li>
+        <li><a href="#">SC Market</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div id="header-right">
+    <ul class="row">
+      <li><a href="#" class="col1">SC Market</a></li>
+      <li><a href="#" class="col2" id="menu-join">Join</a></li>
     </ul>
-  </nav>
+    <ul class="row">
+      <li id="menu-blogs-wrapper">
+        <a href="#" class="col1" id="menu-blogs">Blogs</a>
+        <div id="menu-blogs-submenu">
+          <div class="right-submenu-triangle"></div>
+          <ul class="right-submenu">
+            <li><a href="#">Blog1</a></li>
+            <li><a href="#">Blog2</a></li>
+            <li><a href="#">Blog3</a></li>
+            <li><a href="#">Blog4</a></li>
+          </ul>
+        </div>
+      </li>
+      <li><a href="#" class="col2" id="login-menu">Login</a></li>
+    </ul>
+  </div>
 </header>
-<ul id='social-colour'>
-  <li><a class='icons-search-colour'></a></li>
-  <li><a class='icons-facebook-colour'></a></li>
-  <li><a class='icons-twitter-colour'></a></li>
-  <li><a class='icons-email-colour'></a></li>
-</ul>

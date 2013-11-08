@@ -3,128 +3,74 @@
 {% load media %}
 
 {% block headExtra %}
-  {% include_media 'app.css' %}
+  {% include_media 'index.css' %}
   {% include_media 'index.js' %}
 {% endblock %}
 
 {% block content %}
-  <section>
-    <div id='mandala' class='row'>
-      <div id='orbitals' class='centered'>
-        <div id='orbit1' class='orbit'>
-          <div id='planets'>
-            <a href='http://shopsimplycentered.com'
-               id='planet-knowledge' 
-               class='has-tip'
-               title='Connect'><span></span></a>
-            <a href='http://shopsimplycentered.com'
-               id='planet-energy' 
-               class='has-tip'
-               title='Integrity pledge'><span></span></a>
-            <a href='http://shopsimplycentered.com'
-               id='planet-reflection' 
-               class='has-tip'
-               title='Join'><span></span></a>
-            <a href='http://shopsimplycentered.com'
-               id='planet-movement' 
-               class='has-tip'
-               title='About us'><span></span></a>
-          </div>
-          <div id='orbit2' class='orbit'>
-            <div id='orbit3' class='orbit'>
-              <div id='orbit4' class='orbit'>
-                  <div id='orbit5' class='orbit'></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id='mandala-center'>
-        <a href='http://shopsimplycentered.com' target='_blank'>
-          <div id='mandala-box'>
-            <img src='{% media_url 'images/spice-market.jpg' %}' alt=''/>
-            <span id='mandala-text'>Shop <br />Simply Centered</span>
-          </div>
-        </a>
-      </div>
-      <div id='mandala-sections'>
-        <div id='section-knowledge'>
-          <a href='{% url board 'health' %}' data-nav='nav-knowledge'>
-            <div class='background'></div>
-            <div class='align'>
-              Health<br />
-              <span class='icons-knowledge-large'></span>             
-            </div>
-          </a>
-        </div>
-        <div id='section-energy'>
-          <a href='{% url board 'food' %}' data-nav='nav-energy'>
-            <div class='background'></div>
-            <div class='align'>
-                Food<br />
-                <span class='icons-energy-large'></span>            
-            </div>
-          </a>
-        </div>
-        <div id='section-reflection'>
-          <a href='{% url board 'eco-living' %}' data-nav='nav-reflection'>
-            <div class='background'></div>
-            <div class='align'>
-                Eco Living<br />
-                <span class='icons-reflection-large'></span>               
-            </div>
-          </a>
-        </div>
-        <div id='section-movement'>
-          <a href='{% url board 'fitness' %}' data-nav='nav-movement'>
-            <div class='background'></div>
-            <div class='align'>
-                Fitness<br />
-                <span class='icons-movement-large'></span>            
-            </div>
-          </a>
-        </div>
-      </div>
+<section id="facet-container">
+  <div id="mandala">
+    <ul>
+      <li onclick="location.href='{% url board 'beauty'%}';" class="pie-health" data-facet="#facet-health"><a href="#">Beauty</a></li>
+      <li onclick="location.href='{% url board 'natural-health'%}';" class="pie-health" data-facet="#facet-health"><a href="#">Natural Health</a></li>
+      <li onclick="location.href='{% url board 'cooking'%}" class="pie-food" data-facet="#facet-food"><a href="#">Cooking</a></li>
+      <li onclick="location.href='{% url board 'healthy-diets'%}" class="pie-food" data-facet="#facet-food"><a href="#">Healthy Diets</a></li>
+      <li onclick="location.href='{% url board 'culture'%}" class="pie-lifestyle" data-facet="#facet-lifestyle"><a href="#">Culture</a></li>
+      <li onclick="location.href='{% url board 'lifestyle'%}" class="pie-lifestyle" data-facet="#facet-lifestyle"><a href="#">Green</a></li>
+      <li onclick="location.href='{% url board 'mindful-fitness'%}" class="pie-fitness" data-facet="#facet-fitness"><a href="#">Mindful Fitness</a></li>
+      <li onclick="location.href='{% url board 'optimum-body'%}" class="pie-fitness" data-facet="#facet-fitness"><a href="#">Optimum Body</a></li>
+    </ul>
+  </div>
+
+  <div id="mandala-border"></div>
+  <div id="mandala-bg"></div>
+
+  <div id="carousel-bg">
+    <h1 class="carousel-heading">Simply Centered</h1>
+    <div>
+      <div id="carousel-shadow"></div>
+      <img class="carousel-img" src="{% media_url 'img/carousel-4.jpg' %}">
+      <h2 class="carousel-subheading">"Healthy Living Fall"</h2>
     </div>
-    <div class='row' id='sub-nav'>
-      <!-- <a class='button large four columns centered' id='register-call-to-action' href='collection.html'><span class='icons-explore'></span></i>Explore</a> -->
-      <span id='nav-knowledge'>
-        <a href='sub-collection.html'>Learning Center</a>
-      </span>
-      <span id='nav-energy'>
-        <a href='sub-collection.html'>Learning Center</a>
-        <a href='sub-collection.html'>Natural Health</a>
-        <a href='sub-collection.html'>Healthy Aging</a>
-        <a href='{% url board 'healthy-diet' %}'>Healthy Diet</a>
-        <a href='sub-collection.html'>Recipes</a>
-        <a href='sub-collection.html'>Featured Book</a>
-        <a href='sub-collection.html'>Featured Article</a>
-        <a href='sub-collection.html'>Featured Product</a>
-      </span>
-      <span id='nav-reflection'>
-        <a href='sub-collection.html'>Learning Center</a>
-        <a href='sub-collection.html'>Green Living</a>
-        <a href='sub-collection.html'>Alternative Arts Depot</a>
-        <a href='sub-collection.html'>Stress Management</a>
-        <a href='sub-collection.html'>Spiritual Enlightenment</a>
-        <a href='sub-collection.html'>Featured Book</a>
-        <a href='sub-collection.html'>Featured Article</a>
-        <a href='sub-collection.html'>Featured Product</a>
-      </span>
-      <span id='nav-movement'>
-        <a href='sub-collection.html'>Learning Center</a>
-        <a href='sub-collection.html'>Weight Loss</a>
-        <a href='sub-collection.html'>Yoga</a>
-        <a href='sub-collection.html'>Wellness Workouts </a>
-        <a href='sub-collection.html'>Mind-Body Fitness</a>
-        <a href='sub-collection.html'>Featured Book</a>
-        <a href='sub-collection.html'>Featured Article</a>
-        <a href='sub-collection.html'>Featured Product</a>
-      </span>
-    </div>
-    <!-- <div class='row'>
-      <h2 class='six columns centered'>We provide a platform for users to discovery and consume content.<br />
-      Pictures, videos, songs, articles which related to healthy living and well being</h2>
-    </div> -->
-  </section>
+  </div>
+
+  <div id="facet-health" class="facet-btn" data-pie=".pie-health">
+    <a href="{% url board 'health'%}">Health</a>
+    <img class="icon-big" src="{% media_url 'img/facet-health-big-icon.png' %}">
+  </div>
+  <div id="facet-health-shadow" class="facet-shadow"></div>
+
+  <div id="facet-food" class="facet-btn" data-pie=".pie-food">
+    <a href="{% url board 'food'%}">Food</a>
+    <img class="icon-big" src="{% media_url 'img/facet-food-big-icon.png' %}">
+  </div>
+  <div id="facet-food-shadow" class="facet-shadow"></div>
+
+  <div id="facet-lifestyle" class="facet-btn" data-pie=".pie-lifestyle">
+    <a href="{% url board 'lifestyle'%}">Lifestyle</a>
+    <img class="icon-big" src="{% media_url 'img/facet-lifestyle-big-icon.png' %}">
+  </div>
+  <div id="facet-lifestyle-shadow" class="facet-shadow"></div>
+
+  <div id="facet-fitness" class="facet-btn" data-pie=".pie-fitness">
+    <a href="{% url board 'fitness'%}">Fitness</a>
+    <img class="icon-big" src="{% media_url 'img/facet-fitness-big-icon.png' %}">
+  </div>
+  <div id="facet-fitness-shadow" class="facet-shadow"></div>
+
+  <div id="twitter-stream">
+    <a href="#" id="follow-btn"></a>
+    <ul id="tweets">
+      <li>
+        We just write new article! Check this out <a href="#">http://sc.ly/HlSmR</a>
+      </li>
+      <li>
+        We’re featured on <a href="#">http://www.bbc.com</a>  website yesterday!
+      </li>
+      <li>
+        <a href="#">@Mark</a> yes you can visit our site and check the fitness category for more stuff!”
+      </li>
+    </ul>
+  </div>
+</section>
 {% endblock %}

@@ -1,4 +1,4 @@
-# Django settings for simply project.
+1# Django settings for simply project.
 
 from path import path
 import os
@@ -130,20 +130,23 @@ TEMPLATE_DIRS = (
 )
 
 MEDIA_BUNDLES = (
-    ('app.css',
-     'stylesheets/app.css',),
-    ('spling.css',
-     'stylesheets/spling.css',),
+    ('main.css',
+     'css/normalize.css',
+     'css/styles.css',),
+    ('index.css',
+      'css/animate.css',
+      'css/mandala.css',),
+    ('board.css',
+      'css/innerboard.css'),
+
     ('libraries.js',
-     'javascripts/vendor/foundation/jquery.js',
-     'javascripts/vendor/foundation/jquery.foundation.tooltips.js',
-     'javascripts/vendor/foundation/jquery.foundation.topbar.js',
-     'javascripts/vendor/foundation/modernizr.foundation.js',
-     'javascripts/main/app.js',),
+     'js/jquery-1.7.2.min.js',
+     'js/jquery-ui.min.js',
+     'js/scripts.js',),
     ('index.js',
-     'javascripts/main/index.js',),
+     'js/jquery.color.js',),
     ('board.js',
-     'javascripts/main/board.js',),
+     'js/innerboard.js',),
 )
 
 INSTALLED_APPS = (

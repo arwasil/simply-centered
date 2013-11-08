@@ -3,32 +3,23 @@
 {% load media %}
 
 {% block headExtra %}
-  {% include_media 'app.css' %}
+  {% include_media 'board.css' %}
   {% include_media 'board.js' %}
 {% endblock %}
 
 {% block content %}
-    <section>
-      <div class='row'>
-        <h3 id='section'>
-          <span class='{% if section == 0 %}active{% endif %}'>Facet</span>
-          <span class='{% if section == 1 %}active{% endif %}'>Pearl</span>
-          <span class='{% if section == 2 %}active{% endif %}'>Diamond</span>
-        </h3>
-      </div>
-      <div class='row'>
-        <h2 id='breadcrumbs'>
-          {% for name in names %}
-            {% if not forloop.last %}
-              {{name}} > 
-            {% else %}
-              {{name}}
-            {% endif %}
-          {% endfor %}</h2>
-      </div>
-      <script type='text/javascript' id='spling-script'>
-          window.SPLING_URL = 'http://spling.com/app/user/7GPortal/splingboards-widget/{{slugs|last}}';
-      </script>
-      <script type="text/javascript" src="http://spling.com/s/g/widget.js"></script>
-    </section>
+<section id="board-container">
+  <div class="row board-title-{{slugs|first}}" id="board-header">
+    <div id="board-breadcumb" class="breadcumb-{{slugs|first}}">
+      <a href="#">{{names|last}}</a>
+    </div>
+    <h1 id="board-title">{{names|last}}</h1>
+  </div>
+  <div class="row content">
+    <script type='text/javascript' id='spling-script'>
+      window.SPLING_URL = 'http://spling.com/widget/user/NewSimplyCentered/splingboards/{{slugs|last}}';
+    </script>
+    <script type="text/javascript" src="http://spling.com/s/g/widget.js"></script>
+  </div>
+</section>
 {% endblock %}
