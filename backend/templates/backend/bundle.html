@@ -32,7 +32,7 @@ Bundle
       <tbody>
         {% for item in list %}
         <tr>
-          <td>{{ item.doc.title }}</td>
+          <td><a href='{{ item.doc.link }}' target=blank>{{ item.doc.title }}</a></td>
           <td>{% if item.doc.original_image_url %}<a href='{{ item.doc.original_image_url }}' target=blank>Image</a>{% endif %}</td>
           <td>{{ item.doc.source.name }}</td>
           <td>{{ item.origin.name }}<td>

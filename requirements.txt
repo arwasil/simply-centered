@@ -4,3 +4,4 @@ path.py==2.2.2
 django-storages
 boto
 django-bootstrap3==1.1.0
+simplejson==3.3.1
