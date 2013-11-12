@@ -26,7 +26,7 @@ def list(request):
     response = urllib2.urlopen(req)
     data = simplejson.load(response)
 
-    return render(request, 'api/list.html', {"list": data})
+    return render(request, 'backend/list.html', {"list": data})
 
 def bundle(request, id):
     auth = authorization()
@@ -38,4 +38,4 @@ def bundle(request, id):
     response = urllib2.urlopen(req)
     data = simplejson.load(response)
 
-    return render(request, 'api/bundle.html', {"list": data['records']})
+    return render(request, 'backend/bundle.html', {"list": data['records']})
