@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+
+{% block title %}
+Bundles
+{% endblock%}
+
+{% block content %}
+<div class='row'>
+  <div class="col-md-6">
+    <h2>Bundles</h2>
+    <ul>
+      {% for item in list %}
+      <li>
+        <a href="{% url 'bundle' item.trap_id %}">{{ item.name }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endblock %}

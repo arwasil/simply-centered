@@ -163,7 +163,7 @@ INSTALLED_APPS = (
     # other vendor modules
     'mediagenerator',
     'storages',
-    'bootstrap3'
+    'bootstrap3',
     # simply modules
     'main',
     'backend',

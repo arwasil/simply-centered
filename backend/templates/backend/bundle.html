@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+
+{% block title %}
+Bundle
+{% endblock%}
+
+{% block content %}
+
+<div class='row'>
+  <div class="col-md-6">
+    <ol class="breadcrumb">
+      <li><a href="{% url 'list' %}">Home</a></li>
+      <li class="active">Bundle</li>
+    </ol>
+
+    <h2></h2>
+  </div>
+</div>
+
+<div class='row'>
+  <div class="col-md-10">
+    <table id='videos' class='table table-condensed table-striped'>
+      <thead>
+        <tr>
+          <th>Document Title</th>
+          <th>Image</th>
+          <th>Source</th>
+          <th>Origin<th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in list %}
+        <tr>
+          <td>{{ item.doc.title }}</td>
+          <td>{% if item.doc.original_image_url %}<a href='{{ item.doc.original_image_url }}' target=blank>Image</a>{% endif %}</td>
+          <td>{{ item.doc.source.name }}</td>
+          <td>{{ item.origin.name }}<td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
