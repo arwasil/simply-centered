@@ -3,3 +3,4 @@ django-mediagenerator==1.11
 path.py==2.2.2
 django-storages
 boto
+django-bootstrap3==1.1.0

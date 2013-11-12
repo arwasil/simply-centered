@@ -163,8 +163,10 @@ INSTALLED_APPS = (
     # other vendor modules
     'mediagenerator',
     'storages',
+    'bootstrap3'
     # simply modules
     'main',
+    'backend',
 )
 
 # we don't want django-mediagenerate to import apps images
