@@ -690,8 +690,8 @@ $(document).bind("spling:navigate", function(e, url){
   
   if (match && match[1])
     window.location += '/'+match[1];
-  else if(!url.match(patternBlog) && !url.match(patternAmazon))
-    // Remove widget from start of url
-    window.location = 'spling?url='+url.slice(7)
+  // else if(!url.match(patternBlog) && !url.match(patternAmazon))
+  //   // Remove widget from start of url
+  //   window.location = 'spling?url='+url.slice(7)
 
 });
