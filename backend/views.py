@@ -25,10 +25,12 @@ def list(request):
     base64string = base64.encodestring('%s:%s' % (auth['user_id'], auth['session'])).replace('\n', '')
     req.add_header("Authorization", "Basic %s" % base64string)
     
-    #req.data = {"query":"curated:true type:bundle ","order":"title","reverse":False,"language":"en","limit":50,"offset":0}
+    values = {"query":"curated:true type:bundle ","order":"title","reverse":False,"language":"en","limit":50,"offset":0}
+    data = urllib.urlencode(values)
     #req.get_method = lambda: "POST"
 
-    response = urllib2.urlopen(req)
+    response = urllib2.urlopen(req, data)
+    
     data = simplejson.load(response)
 
     return render(request, 'backend/list.html', {"list": data})
