@@ -7,6 +7,7 @@ from django.conf.urls import patterns, include, url
 urlpatterns = patterns('',
     url(r'^$', 'main.views.index', name='index'),
     url(r'spling/$', 'main.views.spling', name='spling'),
+    url(r'shop/$', 'main.views.shop', name='shop'),
 
     url(r'^backend/$', 'backend.views.list', name='list'),
     url(r'^backend/bundle/(?P<id>.+)/$', 'backend.views.bundle', name='bundle'),

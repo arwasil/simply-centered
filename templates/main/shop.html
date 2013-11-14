@@ -1,0 +1,185 @@
+{% extends 'main/_base.html' %}
+
+{% load media %}
+
+{% block headExtra %}
+  {% include_media 'board.css' %}
+  {% include_media 'board.js' %}
+{% endblock %}
+
+{% block aside %}
+<div id="aside">
+  <h4>SC Market</h4>
+  <ul>
+    <li><a href="#" alt="Featured">Featured</a></li>
+    <li><a href="#" alt="Featured">Art</a></li>
+    <li><a href="#" alt="Featured">Books</a></li>
+    <li><a href="#" alt="Featured">Fitness</a></li>
+    <li><a href="#" alt="Featured">Food</a></li>
+    <li><a href="#" alt="Featured">Gift Ideas</a></li>
+    <li><a href="#" alt="Featured">Health</a></li>
+    <li><a href="#" alt="Featured">Lifestyle</a></li>
+  </ul>
+</div>
+{% endblock %}
+
+{% block content %}
+<section id="board-container">
+
+
+  <!-- BOARD HEADER ============================================================-->
+  <div class="row board-shop" id="board-header">
+    <div id="board-breadcumb">
+      <a href="#">SC Market</a>
+    </div>
+    <div id="board-breadcumb2">
+      <a href="#">Featured</a>
+    </div>
+    <h1 id="board-title">Featured</h1>
+  </div>
+
+  <!-- BOARD CONTENT1 ==========================================================-->
+  <div class="row content">
+    <ul class="board-items">
+      <!-- 1st item -->
+      <li class="board-item small">
+        <div class="item-nav">
+          <h2 class="item-nav-header">Item Title</h2>
+          <ul class="item-nav-links">
+            <li>
+              <a href="#" class="item-nav-link-articles">Category</a>
+            </li>
+            <li>
+              <a href="#" class="item-nav-link-price">$100.00</a>
+            </li>
+          </ul>
+        </div>
+        <img class="item-img" src="{% media_url 'img/s1.jpg' %}">
+      </li>
+      <!-- 2nd item -->
+      <li class="board-item large">
+        <div class="item-rate"></div>
+        <div class="item-nav">
+          <h2 class="item-nav-header">Item Title</h2>
+          <ul class="item-nav-links">
+            <li>
+              <a href="#" class="item-nav-link-articles">Category</a>
+            </li>
+            
+            <li>
+              <a href="#" class="item-nav-link-price">$100.00</a>
+            </li>
+          </ul>
+        </div>
+        <img class="item-img" src="{% media_url 'img/s2.jpg' %}">
+      </li>
+      <!-- 3rd item -->
+      <li class="board-item large">
+        <div class="item-rate"></div>
+        <div class="item-nav">
+          <h2 class="item-nav-header">Item Title</h2>
+          <ul class="item-nav-links">
+            <li>
+              <a href="#" class="item-nav-link-articles">Category</a>
+            </li>
+            
+            <li>
+              <a href="#" class="item-nav-link-price">$12</a>
+            </li>
+          </ul>
+        </div>
+        <img class="item-img" src="{% media_url 'img/s3.jpg' %}">
+      </li>
+      <!-- 4th item -->
+      <li class="board-item small">
+        <div class="item-nav">
+          <h2 class="item-nav-header">Item Title</h2>
+          <ul class="item-nav-links">
+            <li>
+              <a href="#" class="item-nav-link-articles">Category</a>
+            </li>
+            
+            <li>
+              <a href="#" class="item-nav-link-price">$100.00</a>
+            </li>
+          </ul>
+        </div>
+        <img class="item-img" src="{% media_url 'img/s4.jpg' %}">
+      </li>
+    </ul>
+  </div>
+
+  <!-- BOARD CONTENT2 ===========================================================-->
+  <div class="row content">
+    <ul class="board-items">
+      <!-- 1st item -->
+      <li class="board-item small">
+        <div class="item-nav">
+          <h2 class="item-nav-header">Item Title</h2>
+          <ul class="item-nav-links">
+            <li>
+              <a href="#" class="item-nav-link-articles">Category</a>
+            </li>
+            
+            <li>
+              <a href="#" class="item-nav-link-price">$100.00</a>
+            </li>
+          </ul>
+        </div>
+        <img class="item-img" src="{% media_url 'img/s5.jpg' %}">
+      </li>
+      <!-- 2nd item -->
+      <li class="board-item large">
+        <div class="item-rate"></div>
+        <div class="item-nav">
+          <h2 class="item-nav-header">Item Title</h2>
+          <ul class="item-nav-links">
+            <li>
+              <a href="#" class="item-nav-link-articles">Category</a>
+            </li>
+            
+            <li>
+              <a href="#" class="item-nav-link-price">$100.00</a>
+            </li>
+          </ul>
+        </div>
+        <img class="item-img" src="{% media_url 'img/s6.jpg' %}">
+      </li>
+      <!-- 3rd item -->
+      <li class="board-item large">
+        <div class="item-rate"></div>
+        <div class="item-nav">
+          <h2 class="item-nav-header">Item Title</h2>
+          <ul class="item-nav-links">
+            <li>
+              <a href="#" class="item-nav-link-articles">Category</a>
+            </li>
+            
+            <li>
+              <a href="#" class="item-nav-link-price">$97</a>
+            </li>
+          </ul>
+        </div>
+        <img class="item-img" src="{% media_url 'img/s7.jpg' %}">
+      </li>
+      <!-- 4th item -->
+      <li class="board-item small">
+        <div class="item-nav">
+          <h2 class="item-nav-header">Item Title</h2>
+          <ul class="item-nav-links">
+            <li>
+              <a href="#" class="item-nav-link-articles">Category</a>
+            </li>
+            
+            <li>
+              <a href="#" class="item-nav-link-price">$100.00</a>
+            </li>
+          </ul>
+        </div>
+        <img class="item-img" src="{% media_url 'img/s8.jpg' %}">
+      </li>
+    </ul>
+  </div>
+
+</section>
+{% endblock %}
