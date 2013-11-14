@@ -139,7 +139,7 @@ MEDIA_BUNDLES = (
     ('board.css',
       'css/innerboard.css'),
     ('shop.css',
-      'css/shop.css',)
+      'css/shop.css',),
 
     ('libraries.js',
      'js/jquery-1.7.2.min.js',
