@@ -28,8 +28,6 @@ def list(request):
 
     return render(request, 'backend/list.html', {"list": data})
 
-    
-
 def bundle(request, id):
     auth = authorization()
 
