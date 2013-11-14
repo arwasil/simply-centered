@@ -132,7 +132,7 @@ TEMPLATE_DIRS = (
 MEDIA_BUNDLES = (
     ('main.css',
      'css/normalize.css',
-     'css/styles.css',),
+     'css/styles.less',),
     ('index.css',
       'css/animate.css',
       'css/mandala.css',),
