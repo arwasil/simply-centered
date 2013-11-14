@@ -29,3 +29,6 @@ def spling(request):
   }
 
   return render(request, 'main/spling.html', context)
+
+def shop(request):
+  return render(request, 'main/shop.html', {})
