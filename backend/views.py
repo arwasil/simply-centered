@@ -25,6 +25,8 @@ def list(request):
     base64string = base64.encodestring('%s:%s' % (auth['user_id'], auth['session'])).replace('\n', '')
     req.add_header("Authorization", "Basic %s" % base64string)
 
+    request.get_method = lambda: "POST"
+
     payload = {"query":"curated:true type:bundle ","order":"title","reverse":false,"language":"en","limit":50,"offset":0}
 
 
