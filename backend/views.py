@@ -24,13 +24,10 @@ def list(request):
     req = urllib2.Request(url)
     base64string = base64.encodestring('%s:%s' % (auth['user_id'], auth['session'])).replace('\n', '')
     req.add_header("Authorization", "Basic %s" % base64string)
+    req.data = {"query":"curated:true type:bundle ","order":"title","reverse":false,"language":"en","limit":50,"offset":0}
+    req.get_method = lambda: "POST"
 
-    request.get_method = lambda: "POST"
-
-    payload = {"query":"curated:true type:bundle ","order":"title","reverse":false,"language":"en","limit":50,"offset":0}
-
-
-    response = urllib2.urlopen(req, data=payload)
+    response = urllib2.urlopen(req)
     data = simplejson.load(response)
 
     return render(request, 'backend/list.html', {"list": data})
