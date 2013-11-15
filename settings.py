@@ -228,5 +228,5 @@ TRAP_IT_ACCESS_INFO = {
 SPLING_COM_ACCESS_INFO = {
     'url': 'http://7gportal.spling.com/api/2',
     'username': 'NewSimplyCentered',
-    'password': 'password',
+    'password': 'splingit!',
 }

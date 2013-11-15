@@ -39,7 +39,7 @@ Bundle
           <td>{{ item.doc.source.name }}</td>
           <td>{{ item.origin.name }}</td>
           <td>{{ item.doc.source.categories.0.name }}</td>
-          <td><button type='button' class='btn btn-default btn-sm add-to-spling' data-link="{{ item.doc.link }}" data-title="{{ item.doc.title }}" data-image="{{ item.doc.original_image_url }}" data-genre="{{ item.doc.source.categories.0.name }}">Add to Spling</button></td>
+          <td><button type='button' class='btn btn-default btn-sm add-to-spling' data-link="{{ item.doc.link }}" data-title="{{ item.doc.title }}" data-image="{{ item.doc.original_image_url|default:'' }}" data-genre="{{ item.doc.source.categories.0.name }}">Add to Spling</button></td>
         </tr>
         {% endfor %}
       </tbody>

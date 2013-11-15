@@ -42,7 +42,7 @@ def bundle(request, id):
 
 def add_to_spling(request):
     link = request.POST.get('link')
-    image = request.POST.get('image')
+    image = request.POST.get('image', '')
     title = request.POST.get('title')
     genre = request.POST.get('genre').lower()
     
@@ -50,7 +50,7 @@ def add_to_spling(request):
 
     data = {'Link': link,
             'Title': title, 
-            'ImageURL': image,
+            'ImageURL': image and image or '',
             'Genre': genre in SPLING_CATEGORIES and SPLING_CATEGORIES[genre] or ''}
 
     create_url = '%s/spling/' % access['url']
@@ -59,7 +59,10 @@ def add_to_spling(request):
     headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
     resp = requests.post(create_url, data=data, auth=auth, headers=headers)
 
-    if resp.status_code == 200:
-        return HttpResponse('success')
-    else:
+    if resp.status_code == 403:
         return HttpResponse(resp.json()['detail'])
+    elif resp.status_code == 400:
+        return HttpResponse(resp.text)
+    else:
+        return HttpResponse('success')
+
