@@ -26,7 +26,9 @@ Bundle
           <th>Document Title</th>
           <th>Image</th>
           <th>Source</th>
-          <th>Origin<th>
+          <th>Origin</th>
+          <th>Category</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
@@ -35,11 +37,37 @@ Bundle
           <td><a href='{{ item.doc.link }}' target=blank>{{ item.doc.title }}</a></td>
           <td>{% if item.doc.original_image_url %}<a href='{{ item.doc.original_image_url }}' target=blank>Image</a>{% endif %}</td>
           <td>{{ item.doc.source.name }}</td>
-          <td>{{ item.origin.name }}<td>
+          <td>{{ item.origin.name }}</td>
+          <td>{{ item.doc.source.categories.0.name }}</td>
+          <td><button type='button' class='btn btn-default btn-sm add-to-spling' data-link="{{ item.doc.link }}" data-title="{{ item.doc.title }}" data-image="{{ item.doc.original_image_url }}" data-genre="{{ item.doc.source.categories.0.name }}">Add to Spling</button></td>
         </tr>
         {% endfor %}
       </tbody>
     </table>
   </div>
 </div>
+{% endblock %}
+
+{% block additional_javascript %}
+<script>
+$(document).ready(function() {
+    // add to apling
+    $(".add-to-spling").click(function() {
+      var button = $(this);
+      button.addClass('disabled');
+      $.post("{% url add_to_spling %}", {'csrfmiddlewaretoken': '{{ csrf_token }}', 
+        'link': button.data('link'),
+        'title': button.data('title'),
+        'image': button.data('image'),
+        'genre': button.data('genre')
+      }, function(data) {
+        button.removeClass('disabled');
+        if (data == 'success')
+          alert("Added succesfully.");
+        else
+          alert(data);
+      });
+    });
+}); 
+</script>
 {% endblock %}
