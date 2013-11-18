@@ -37,7 +37,7 @@ def list(request):
 def bundle(request, id):
     auth = authorization()
 
-    url = 'https://simplycentered.trap.it/api/v3/sc/traps/%s/queue/?expand_doc_sources_and_origins=true&invisible_only=true&with_origin_owner=true&size=20&page=0&pretty=true' % id
+    url = 'https://simplycentered.trap.it/api/v3/sc/traps/%s/queue/?expand_doc_sources_and_origins=true&invisible_only=true&with_origin_owner=true&size=100&page=0&pretty=true' % id
     headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
 
     response = requests.get(url, auth=auth, headers=headers)
