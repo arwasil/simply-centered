@@ -12,7 +12,7 @@ Bundles
     <ul>
       {% for item in list %}
       <li>
-        <a href="{% url bundle item.trap_id %}">{{ item.name }}</a>
+        <a href="{% url bundle item.entity.id %}">{{ item.entity.name }}</a>
       </li>
       {% endfor %}
     </ul>
