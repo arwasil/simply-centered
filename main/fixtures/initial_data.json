@@ -1,0 +1,310 @@
+[
+    {
+        "pk": 1,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 272,
+            "image": "",
+            "name": "Health",
+            "parent": null,
+            "slug": "health"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 265,
+            "image": "",
+            "name": "Food",
+            "parent": null,
+            "slug": "food"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 0,
+            "image": "",
+            "name": "Lifestyle",
+            "parent": null,
+            "slug": "lifestyle"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 279,
+            "image": "",
+            "name": "Fitness",
+            "parent": null,
+            "slug": "fitness"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 273,
+            "image": "http://spling.com/s/m/cache/10/6e/106ebf3944777918f87d52769c82de13.jpg",
+            "name": "Beauty",
+            "parent": 1,
+            "slug": "beauty"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 274,
+            "image": "http://spling.com/s/m/cache/3a/a9/3aa993b19962155f8a0d693b138436ac.jpg",
+            "name": "Natural Health",
+            "parent": 1,
+            "slug": "natural-health"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 275,
+            "image": "http://spling.com/s/m/cache/ca/ba/caba5149a2f78e46c044084417991e8d.jpg",
+            "name": "Inner Beauty",
+            "parent": 5,
+            "slug": "inner-beauty"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 276,
+            "image": "http://spling.com/s/m/cache/ca/ba/caba5149a2f78e46c044084417991e8d.jpg",
+            "name": "Outer Beauty",
+            "parent": 5,
+            "slug": "outer-beauty"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 277,
+            "image": "http://spling.com/s/m/cache/ea/f5/eaf5e9fa49f2c0a2845d6a2cfb9542de.jpg",
+            "name": "Wellness",
+            "parent": 6,
+            "slug": "wellness"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 278,
+            "image": "http://spling.com/s/m/cache/7e/79/7e795278f1333ea94b52f833c523ea9f.jpg",
+            "name": "Longevity",
+            "parent": 6,
+            "slug": "longevity"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 266,
+            "image": "http://spling.com/s/m/cache/9c/19/9c19d4ccbc7eb06c23b03167a8295510.jpg",
+            "name": "Cooking",
+            "parent": 2,
+            "slug": "cooking"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 267,
+            "image": "http://spling.com/s/m/cache/6d/7d/6d7da83b63503f2c614b39e6c1f64ee2.jpg",
+            "name": "Healthy Diets",
+            "parent": 2,
+            "slug": "healthy-diets"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 268,
+            "image": "http://spling.com/s/m/cache/e9/9d/e99de4d620d2b7b7a16248e77473caf2.jpg",
+            "name": "Recipes",
+            "parent": 11,
+            "slug": "recipes"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 269,
+            "image": "http://spling.com/s/m/cache/24/a3/24a311f67f8fa56f97fda307fd4b5b72.jpg",
+            "name": "Natural Kitchen",
+            "parent": 11,
+            "slug": "natural-kitchen"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 270,
+            "image": "http://spling.com/s/m/cache/a3/02/a3020d3145adea10d569a9bdf03cfbc2.jpg",
+            "name": "Diets",
+            "parent": 12,
+            "slug": "diets"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 271,
+            "image": "http://spling.com/s/m/cache/60/d5/60d52a9b6b97282aea3f706cc754d490.jpg",
+            "name": "Superfoods",
+            "parent": 12,
+            "slug": "superfoods"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 0,
+            "image": "",
+            "name": "Culture",
+            "parent": 3,
+            "slug": "culture"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 0,
+            "image": "",
+            "name": "Green",
+            "parent": 3,
+            "slug": "green"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 0,
+            "image": "",
+            "name": "Art",
+            "parent": 17,
+            "slug": "art"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 0,
+            "image": "",
+            "name": "Fashion",
+            "parent": 17,
+            "slug": "fashion"
+        }
+    },
+    {
+        "pk": 21,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 0,
+            "image": "",
+            "name": "Eco Living",
+            "parent": 18,
+            "slug": "eco-living"
+        }
+    },
+    {
+        "pk": 22,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 0,
+            "image": "http://spling.com/s/m/cache/d3/b8/d3b836ffd941da2a1384346b3bd6b635.jpg",
+            "name": "Eco Products",
+            "parent": 18,
+            "slug": "eco-products"
+        }
+    },
+    {
+        "pk": 23,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 280,
+            "image": "http://spling.com/s/m/cache/7f/c5/7fc547d0fed9a9710dd848a3a26a357f.jpg",
+            "name": "Mindful Fitness",
+            "parent": 4,
+            "slug": "mindful-fitness"
+        }
+    },
+    {
+        "pk": 24,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 281,
+            "image": "http://spling.com/s/m/cache/03/ae/03ae9cc1c2e03c55aaa0f65f299ee8bc.jpg",
+            "name": "Optimum Body",
+            "parent": 4,
+            "slug": "optimum-body"
+        }
+    },
+    {
+        "pk": 25,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 282,
+            "image": "http://spling.com/s/m/cache/6c/a3/6ca3123b45737ebeb18ccdd429798ea4.jpg",
+            "name": "Yoga",
+            "parent": 23,
+            "slug": "yoga"
+        }
+    },
+    {
+        "pk": 26,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 283,
+            "image": "http://spling.com/s/m/cache/4d/4b/4d4b10fe9f031abb04aabef0eb50ceaf.jpg",
+            "name": "Alternative Exercise",
+            "parent": 23,
+            "slug": "alternative-exercise"
+        }
+    },
+    {
+        "pk": 27,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 0,
+            "image": "http://spling.com/s/m/cache/b8/b0/b8b099e875a2f1b70fae90fb548535b8.jpg",
+            "name": "Weight Management",
+            "parent": 24,
+            "slug": "weight-management"
+        }
+    },
+    {
+        "pk": 28,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 0,
+            "image": "http://spling.com/s/m/cache/0f/b5/0fb5ee0ce2826f6bdfb8ebebf39647cd.jpg",
+            "name": "Best Body",
+            "parent": 24,
+            "slug": "best-body"
+        }
+    }
+]
