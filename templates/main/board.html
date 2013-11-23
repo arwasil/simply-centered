@@ -21,6 +21,7 @@
   </div>
 
   <!-- BOARD CONTENT1 ==========================================================-->
+  {% if category.has_subcategories %}
   <div class="row content">
     <ul class="board-items">
       <!-- 1st item -->
@@ -41,7 +42,7 @@
         </div>
         <img class="item-img" src="{% media_url 'img/fo1.jpg' %}">
       </li>
-      <!-- 2nd item -->
+      <!-- subcategory 1 -->
       <li class="board-item large">
         <div class="item-rate">
           <ul>
@@ -53,7 +54,11 @@
           </ul>
         </div>
         <div class="item-nav">
-          <h2 class="item-nav-header item-header-food">Beauty</h2>
+          <h2 class="item-nav-header item-header-food">
+            <a href='{% url board category.subcategories.0.slug %}'>
+              {{ category.subcategories.0.name }}
+            </a>
+          </h2>
           <ul class="item-nav-links">
             <li>
               <a href="#" class="item-nav-link-articles item-links-food">Articles</a>
@@ -66,9 +71,11 @@
             </li>
           </ul>
         </div>
-        <img class="item-img" src="{% media_url 'img/fo2.jpg' %}">
+        <a href='{% url board category.subcategories.0.slug %}'>
+          <img class="item-img" src="{{ category.subcategories.0.image }}">
+        </a>
       </li>
-      <!-- 3rd item -->
+      <!-- subcategory 2 -->
       <li class="board-item large">
         <div class="item-rate">
           <ul>
@@ -80,7 +87,11 @@
           </ul>
         </div>
         <div class="item-nav">
-          <h2 class="item-nav-header item-header-food">Natural Health</h2>
+          <h2 class="item-nav-header item-header-food">
+            <a href='{% url board category.subcategories.1.slug %}'>
+              {{ category.subcategories.1.name }}
+            </a>
+          </h2>
           <ul class="item-nav-links">
             <li>
               <a href="#" class="item-nav-link-articles item-links-food">Articles</a>
@@ -93,7 +104,9 @@
             </li>
           </ul>
         </div>
-        <img class="item-img" src="{% media_url 'img/fo3.jpg' %}">
+        <a href='{% url board category.subcategories.1.slug %}'>
+          <img class="item-img" src="{{ category.subcategories.1.image }}">
+        </a>
       </li>
       <!-- 4th item -->
       <li class="board-item board-item-link small">
@@ -108,13 +121,14 @@
         </div>
         <div class="item-overlay item-overlay-food"></div>
         <div class="item-featured-link">
-          <img class="item-featured-link-icon" src="img/featured-link-icon.png">
+          <img class="item-featured-link-icon" src="{% media_url 'img/featured-link-icon.png' %}">
           <a href="#">Featured Link</a>
         </div>
         <img class="item-img" src="{% media_url 'img/fo4.jpg' %}">
       </li>
     </ul>
   </div>
+  {% endif %}
 
   <!-- BOARD CONTENT2 ===========================================================-->
   <div class="row content">
@@ -132,7 +146,7 @@
         </div>
         <div class="item-overlay item-overlay-food"></div>
         <div class="item-featured-link">
-          <img class="item-featured-link-icon" src="img/featured-link-icon.png">
+          <img class="item-featured-link-icon" src="{% media_url 'img/featured-link-icon.png' %}">
           <a href="#">Featured Link</a>
         </div>
         <img class="item-img" src="{% media_url 'img/fo5.jpg' %}">
@@ -150,7 +164,7 @@
         </div>
         <div class="item-overlay item-overlay-food"></div>
         <div class="item-featured-link">
-          <img class="item-featured-link-icon" src="img/featured-link-icon.png">
+          <img class="item-featured-link-icon" src="{% media_url 'img/featured-link-icon.png' %}">
           <a href="#">Featured Link</a>
         </div>
         <img class="item-img" src="{% media_url 'img/fo6.jpg' %}">
@@ -168,7 +182,7 @@
         </div>
         <div class="item-overlay item-overlay-food"></div>
         <div class="item-featured-link">
-          <img class="item-featured-link-icon" src="img/featured-link-icon.png">
+          <img class="item-featured-link-icon" src="{% media_url 'img/featured-link-icon.png' %}">
           <a href="#">Featured Link</a>
         </div>
         <img class="item-img" src="{% media_url 'img/fo7.jpg' %}">
@@ -186,7 +200,7 @@
         </div>
         <div class="item-overlay item-overlay-food"></div>
         <div class="item-featured-link">
-          <img class="item-featured-link-icon" src="img/featured-link-icon.png">
+          <img class="item-featured-link-icon" src="{% media_url 'img/featured-link-icon.png' %}">
           <a href="#">Featured Link</a>
         </div>
         <img class="item-img" src="{% media_url 'img/fo8.jpg' %}">

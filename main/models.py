@@ -46,5 +46,14 @@ class Category(models.Model):
     def root_category(self):
         return self.parent_categories[0]
 
+    @property
+    def subcategories(self):
+        return Category.objects.filter(parent=self)
+
+    @property
+    def has_subcategories(self):
+        return len(self.subcategories) >= 2
+
+
     class Meta:
         verbose_name_plural = "categories"
