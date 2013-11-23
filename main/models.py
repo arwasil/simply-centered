@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.urlresolvers import reverse
 
 SPLING_CATEGORIES = {
     "food": 265,
@@ -31,6 +32,19 @@ class Category(models.Model):
 
     def __unicode__(self):
         return self.name
+
+    @property
+    def parent_categories(self):
+        parents = [self]
+        for livel in (1, 2, 3):
+            if not parents[0].parent:
+                break
+            parents = [parents[0].parent] + parents
+        return parents
+
+    @property
+    def root_category(self):
+        return self.parent_categories[0]
 
     class Meta:
         verbose_name_plural = "categories"

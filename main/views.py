@@ -1,26 +1,14 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+
+from models import *
 
 def index(request):
   return render(request, 'main/index.html')
 
 def board(request, *slugs):
-  
-  def name(slug):
-    # Turn a slug into a name
-    return " ".join([v.capitalize() for v in slug.split("-")])
-
-  # How many layers of nesting are there
-  max_depth = 2
-  # Zero index the section
-  section = max(min(len(slugs)-1, max_depth), 0)
-
-  context = {
-    'section' : section,
-    'names' : map(name, slugs),
-    'slugs' : slugs
-  }
-
-  return render(request, 'main/board.html', context)
+  category = get_object_or_404(Category, slug=slugs[-1])
+  print category.parent_categories
+  return render(request, 'main/board.html', {'category': category})
 
 def spling(request):
 

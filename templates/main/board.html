@@ -9,17 +9,189 @@
 
 {% block content %}
 <section id="board-container">
-  <div class="row board-title-{{slugs|first}}" id="board-header">
-    <div id="board-breadcumb" class="breadcumb-{{slugs|first}}">
-      <a href="#">{{names|last}}</a>
+
+  <!-- BOARD HEADER ============================================================-->
+  <div class="row board-title-{{ category.root_category.slug }}" id="board-header">
+    <div id="board-breadcumb" class="breadcumb-{{ category.root_category.slug }}">
+      {% for parent in category.parent_categories %}
+      <a href="{% url board parent.slug %}">{{ parent.name }}</a>
+      {% endfor %}
     </div>
-    <h1 id="board-title">{{names|last}}</h1>
+    <h1 id="board-title">{{ category.name }}</h1>
   </div>
+
+  <!-- BOARD CONTENT1 ==========================================================-->
   <div class="row content">
-    <script type='text/javascript' id='spling-script'>
-      window.SPLING_URL = 'http://spling.com/widget/user/NewSimplyCentered/splingboards/{{slugs|last}}';
-    </script>
-    <script type="text/javascript" src="http://spling.com/s/g/widget.js"></script>
+    <ul class="board-items">
+      <!-- 1st item -->
+      <li class="board-item board-item-link small">
+        <div class="item-rate">
+          <ul>
+            <li><a href="#" class="rate rate1" data-rate="1">&nbsp;</a></li>
+            <li><a href="#" class="rate rate2" data-rate="2">&nbsp;</a></li>
+            <li><a href="#" class="rate rate3" data-rate="3">&nbsp;</a></li>
+            <li><a href="#" class="rate rate4" data-rate="4">&nbsp;</a></li>
+            <li><a href="#" class="rate rate5" data-rate="5">&nbsp;</a></li>
+          </ul>
+        </div>
+        <div class="item-overlay item-overlay-food"></div>
+        <div class="item-featured-link">
+          <img class="item-featured-link-icon" src="{% media_url 'img/featured-link-icon.png' %}">
+          <a href="#">Featured Link</a>
+        </div>
+        <img class="item-img" src="{% media_url 'img/fo1.jpg' %}">
+      </li>
+      <!-- 2nd item -->
+      <li class="board-item large">
+        <div class="item-rate">
+          <ul>
+            <li><a href="#" class="rate rate1" data-rate="1">&nbsp;</a></li>
+            <li><a href="#" class="rate rate2" data-rate="2">&nbsp;</a></li>
+            <li><a href="#" class="rate rate3" data-rate="3">&nbsp;</a></li>
+            <li><a href="#" class="rate rate4" data-rate="4">&nbsp;</a></li>
+            <li><a href="#" class="rate rate5" data-rate="5">&nbsp;</a></li>
+          </ul>
+        </div>
+        <div class="item-nav">
+          <h2 class="item-nav-header item-header-food">Beauty</h2>
+          <ul class="item-nav-links">
+            <li>
+              <a href="#" class="item-nav-link-articles item-links-food">Articles</a>
+            </li>
+            <li>
+              <a href="#" class="item-nav-link-videos item-links-food">Videos</a>
+            </li>
+            <li>
+              <a href="#" class="item-nav-link-shop item-links-food">Shop</a>
+            </li>
+          </ul>
+        </div>
+        <img class="item-img" src="{% media_url 'img/fo2.jpg' %}">
+      </li>
+      <!-- 3rd item -->
+      <li class="board-item large">
+        <div class="item-rate">
+          <ul>
+            <li><a href="#" class="rate rate1" data-rate="1">&nbsp;</a></li>
+            <li><a href="#" class="rate rate2" data-rate="2">&nbsp;</a></li>
+            <li><a href="#" class="rate rate3" data-rate="3">&nbsp;</a></li>
+            <li><a href="#" class="rate rate4" data-rate="4">&nbsp;</a></li>
+            <li><a href="#" class="rate rate5" data-rate="5">&nbsp;</a></li>
+          </ul>
+        </div>
+        <div class="item-nav">
+          <h2 class="item-nav-header item-header-food">Natural Health</h2>
+          <ul class="item-nav-links">
+            <li>
+              <a href="#" class="item-nav-link-articles item-links-food">Articles</a>
+            </li>
+            <li>
+              <a href="#" class="item-nav-link-videos item-links-food">Videos</a>
+            </li>
+            <li>
+              <a href="#" class="item-nav-link-shop item-links-food">Shop</a>
+            </li>
+          </ul>
+        </div>
+        <img class="item-img" src="{% media_url 'img/fo3.jpg' %}">
+      </li>
+      <!-- 4th item -->
+      <li class="board-item board-item-link small">
+        <div class="item-rate">
+          <ul>
+            <li><a href="#" class="rate rate1" data-rate="1">&nbsp;</a></li>
+            <li><a href="#" class="rate rate2" data-rate="2">&nbsp;</a></li>
+            <li><a href="#" class="rate rate3" data-rate="3">&nbsp;</a></li>
+            <li><a href="#" class="rate rate4" data-rate="4">&nbsp;</a></li>
+            <li><a href="#" class="rate rate5" data-rate="5">&nbsp;</a></li>
+          </ul>
+        </div>
+        <div class="item-overlay item-overlay-food"></div>
+        <div class="item-featured-link">
+          <img class="item-featured-link-icon" src="img/featured-link-icon.png">
+          <a href="#">Featured Link</a>
+        </div>
+        <img class="item-img" src="{% media_url 'img/fo4.jpg' %}">
+      </li>
+    </ul>
+  </div>
+
+  <!-- BOARD CONTENT2 ===========================================================-->
+  <div class="row content">
+    <ul class="board-items">
+      <!-- 1st item -->
+      <li class="board-item board-item-link small">
+        <div class="item-rate">
+          <ul>
+            <li><a href="#" class="rate rate1" data-rate="1">&nbsp;</a></li>
+            <li><a href="#" class="rate rate2" data-rate="2">&nbsp;</a></li>
+            <li><a href="#" class="rate rate3" data-rate="3">&nbsp;</a></li>
+            <li><a href="#" class="rate rate4" data-rate="4">&nbsp;</a></li>
+            <li><a href="#" class="rate rate5" data-rate="5">&nbsp;</a></li>
+          </ul>
+        </div>
+        <div class="item-overlay item-overlay-food"></div>
+        <div class="item-featured-link">
+          <img class="item-featured-link-icon" src="img/featured-link-icon.png">
+          <a href="#">Featured Link</a>
+        </div>
+        <img class="item-img" src="{% media_url 'img/fo5.jpg' %}">
+      </li>
+      <!-- 2nd item -->
+      <li class="board-item board-item-link large">
+        <div class="item-rate">
+          <ul>
+            <li><a href="#" class="rate rate1" data-rate="1">&nbsp;</a></li>
+            <li><a href="#" class="rate rate2" data-rate="2">&nbsp;</a></li>
+            <li><a href="#" class="rate rate3" data-rate="3">&nbsp;</a></li>
+            <li><a href="#" class="rate rate4" data-rate="4">&nbsp;</a></li>
+            <li><a href="#" class="rate rate5" data-rate="5">&nbsp;</a></li>
+          </ul>
+        </div>
+        <div class="item-overlay item-overlay-food"></div>
+        <div class="item-featured-link">
+          <img class="item-featured-link-icon" src="img/featured-link-icon.png">
+          <a href="#">Featured Link</a>
+        </div>
+        <img class="item-img" src="{% media_url 'img/fo6.jpg' %}">
+      </li>
+      <!-- 3rd item -->
+      <li class="board-item board-item-link large">
+        <div class="item-rate">
+          <ul>
+            <li><a href="#" class="rate rate1" data-rate="1">&nbsp;</a></li>
+            <li><a href="#" class="rate rate2" data-rate="2">&nbsp;</a></li>
+            <li><a href="#" class="rate rate3" data-rate="3">&nbsp;</a></li>
+            <li><a href="#" class="rate rate4" data-rate="4">&nbsp;</a></li>
+            <li><a href="#" class="rate rate5" data-rate="5">&nbsp;</a></li>
+          </ul>
+        </div>
+        <div class="item-overlay item-overlay-food"></div>
+        <div class="item-featured-link">
+          <img class="item-featured-link-icon" src="img/featured-link-icon.png">
+          <a href="#">Featured Link</a>
+        </div>
+        <img class="item-img" src="{% media_url 'img/fo7.jpg' %}">
+      </li>
+      <!-- 4th item -->
+      <li class="board-item board-item-link small">
+        <div class="item-rate">
+          <ul>
+            <li><a href="#" class="rate rate1" data-rate="1">&nbsp;</a></li>
+            <li><a href="#" class="rate rate2" data-rate="2">&nbsp;</a></li>
+            <li><a href="#" class="rate rate3" data-rate="3">&nbsp;</a></li>
+            <li><a href="#" class="rate rate4" data-rate="4">&nbsp;</a></li>
+            <li><a href="#" class="rate rate5" data-rate="5">&nbsp;</a></li>
+          </ul>
+        </div>
+        <div class="item-overlay item-overlay-food"></div>
+        <div class="item-featured-link">
+          <img class="item-featured-link-icon" src="img/featured-link-icon.png">
+          <a href="#">Featured Link</a>
+        </div>
+        <img class="item-img" src="{% media_url 'img/fo8.jpg' %}">
+      </li>
+    </ul>
   </div>
 </section>
 {% endblock %}
