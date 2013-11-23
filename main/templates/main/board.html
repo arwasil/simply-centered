@@ -24,7 +24,7 @@
   {% if category.has_subcategories %}
   <div class="row content">
     <ul class="board-items">
-      <!-- 1st item -->
+      <!-- item 1 -->
       <li class="board-item board-item-link small">
         <div class="item-rate">
           <ul>
@@ -35,12 +35,12 @@
             <li><a href="#" class="rate rate5" data-rate="5">&nbsp;</a></li>
           </ul>
         </div>
-        <div class="item-overlay item-overlay-food"></div>
+        <div class="item-overlay item-overlay-{{ category.root_category.slug }}"></div>
         <div class="item-featured-link">
           <img class="item-featured-link-icon" src="{% media_url 'img/featured-link-icon.png' %}">
-          <a href="#">Featured Link</a>
+          <a href="{{ data.0.Link }}">{{ data.0.Title }}</a>
         </div>
-        <img class="item-img" src="{% media_url 'img/fo1.jpg' %}">
+        <img class="item-img" src="{{ data.0.thumbnails.140x300 }}">
       </li>
       <!-- subcategory 1 -->
       <li class="board-item large">
@@ -54,20 +54,20 @@
           </ul>
         </div>
         <div class="item-nav">
-          <h2 class="item-nav-header item-header-food">
+          <h2 class="item-nav-header item-header-{{ category.root_category.slug }}">
             <a href='{% url board category.subcategories.0.slug %}'>
               {{ category.subcategories.0.name }}
             </a>
           </h2>
           <ul class="item-nav-links">
             <li>
-              <a href="#" class="item-nav-link-articles item-links-food">Articles</a>
+              <a href="#" class="item-nav-link-articles item-links-{{ category.root_category.slug }}">Articles</a>
             </li>
             <li>
-              <a href="#" class="item-nav-link-videos item-links-food">Videos</a>
+              <a href="#" class="item-nav-link-videos item-links-{{ category.root_category.slug }}">Videos</a>
             </li>
             <li>
-              <a href="#" class="item-nav-link-shop item-links-food">Shop</a>
+              <a href="#" class="item-nav-link-shop item-links-{{ category.root_category.slug }}">Shop</a>
             </li>
           </ul>
         </div>
@@ -87,20 +87,20 @@
           </ul>
         </div>
         <div class="item-nav">
-          <h2 class="item-nav-header item-header-food">
+          <h2 class="item-nav-header item-header-{{ category.root_category.slug }}">
             <a href='{% url board category.subcategories.1.slug %}'>
               {{ category.subcategories.1.name }}
             </a>
           </h2>
           <ul class="item-nav-links">
             <li>
-              <a href="#" class="item-nav-link-articles item-links-food">Articles</a>
+              <a href="#" class="item-nav-link-articles item-links-{{ category.root_category.slug }}">Articles</a>
             </li>
             <li>
-              <a href="#" class="item-nav-link-videos item-links-food">Videos</a>
+              <a href="#" class="item-nav-link-videos item-links-{{ category.root_category.slug }}">Videos</a>
             </li>
             <li>
-              <a href="#" class="item-nav-link-shop item-links-food">Shop</a>
+              <a href="#" class="item-nav-link-shop item-links-{{ category.root_category.slug }}">Shop</a>
             </li>
           </ul>
         </div>
@@ -108,7 +108,7 @@
           <img class="item-img" src="{{ category.subcategories.1.image }}">
         </a>
       </li>
-      <!-- 4th item -->
+      <!-- item 2 -->
       <li class="board-item board-item-link small">
         <div class="item-rate">
           <ul>
@@ -119,12 +119,12 @@
             <li><a href="#" class="rate rate5" data-rate="5">&nbsp;</a></li>
           </ul>
         </div>
-        <div class="item-overlay item-overlay-food"></div>
+        <div class="item-overlay item-overlay-{{ category.root_category.slug }}"></div>
         <div class="item-featured-link">
           <img class="item-featured-link-icon" src="{% media_url 'img/featured-link-icon.png' %}">
-          <a href="#">Featured Link</a>
+          <a href="{{ data.1.Link }}">{{ data.1.Title }}</a>
         </div>
-        <img class="item-img" src="{% media_url 'img/fo4.jpg' %}">
+        <img class="item-img" src="{{ data.1.thumbnails.140x300 }}">
       </li>
     </ul>
   </div>
@@ -133,7 +133,7 @@
   <!-- BOARD CONTENT2 ===========================================================-->
   <div class="row content">
     <ul class="board-items">
-      <!-- 1st item -->
+      <!-- 3 item -->
       <li class="board-item board-item-link small">
         <div class="item-rate">
           <ul>
@@ -144,14 +144,14 @@
             <li><a href="#" class="rate rate5" data-rate="5">&nbsp;</a></li>
           </ul>
         </div>
-        <div class="item-overlay item-overlay-food"></div>
+        <div class="item-overlay item-overlay-{{ category.root_category.slug }}"></div>
         <div class="item-featured-link">
           <img class="item-featured-link-icon" src="{% media_url 'img/featured-link-icon.png' %}">
-          <a href="#">Featured Link</a>
+          <a href="{{ data.2.Link }}">{{ data.2.Title }}</a>
         </div>
-        <img class="item-img" src="{% media_url 'img/fo5.jpg' %}">
+        <img class="item-img" src="{{ data.2.thumbnails.140x300 }}">
       </li>
-      <!-- 2nd item -->
+      <!-- 4 item -->
       <li class="board-item board-item-link large">
         <div class="item-rate">
           <ul>
@@ -162,14 +162,14 @@
             <li><a href="#" class="rate rate5" data-rate="5">&nbsp;</a></li>
           </ul>
         </div>
-        <div class="item-overlay item-overlay-food"></div>
+        <div class="item-overlay item-overlay-{{ category.root_category.slug }}"></div>
         <div class="item-featured-link">
           <img class="item-featured-link-icon" src="{% media_url 'img/featured-link-icon.png' %}">
-          <a href="#">Featured Link</a>
+          <a href="{{ data.3.Link }}">{{ data.3.Title }}</a>
         </div>
-        <img class="item-img" src="{% media_url 'img/fo6.jpg' %}">
+        <img class="item-img" src="{{ data.3.thumbnails.300x300 }}">
       </li>
-      <!-- 3rd item -->
+      <!-- 5 item -->
       <li class="board-item board-item-link large">
         <div class="item-rate">
           <ul>
@@ -180,14 +180,14 @@
             <li><a href="#" class="rate rate5" data-rate="5">&nbsp;</a></li>
           </ul>
         </div>
-        <div class="item-overlay item-overlay-food"></div>
+        <div class="item-overlay item-overlay-{{ category.root_category.slug }}"></div>
         <div class="item-featured-link">
           <img class="item-featured-link-icon" src="{% media_url 'img/featured-link-icon.png' %}">
-          <a href="#">Featured Link</a>
+          <a href="{{ data.4.Link }}">{{ data.4.Title }}</a>
         </div>
-        <img class="item-img" src="{% media_url 'img/fo7.jpg' %}">
+        <img class="item-img" src="{{ data.4.thumbnails.300x300 }}">
       </li>
-      <!-- 4th item -->
+      <!-- 6 item -->
       <li class="board-item board-item-link small">
         <div class="item-rate">
           <ul>
@@ -198,12 +198,12 @@
             <li><a href="#" class="rate rate5" data-rate="5">&nbsp;</a></li>
           </ul>
         </div>
-        <div class="item-overlay item-overlay-food"></div>
+        <div class="item-overlay item-overlay-{{ category.root_category.slug }}"></div>
         <div class="item-featured-link">
           <img class="item-featured-link-icon" src="{% media_url 'img/featured-link-icon.png' %}">
-          <a href="#">Featured Link</a>
+          <a href="{{ data.5.Link }}">{{ data.5.Title }}</a>
         </div>
-        <img class="item-img" src="{% media_url 'img/fo8.jpg' %}">
+        <img class="item-img" src="{{ data.5.thumbnails.140x300 }}">
       </li>
     </ul>
   </div>
