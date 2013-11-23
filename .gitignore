@@ -3,3 +3,5 @@ venc
 *.pyc
 settings_local.py
 hours
+_generated_media_names.py
+_generated_media/
