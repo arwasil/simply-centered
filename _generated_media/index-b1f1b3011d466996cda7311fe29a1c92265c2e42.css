@@ -3275,7 +3275,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 
 	border-radius: 100%;
 	/*background-color: #ccc;*/
-	background-image: url(/static/img/facet-border-63b88d58de2bde7349c952a2ab055e3cee59e72d.svg);
+	background-image: url(http://7gportal.s3.amazonaws.com/img/facet-border-63b88d58de2bde7349c952a2ab055e3cee59e72d.svg);
 	background-repeat: no-repeat;
 	z-index: -2;
 
@@ -3380,12 +3380,12 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	width: 10px;
 	height: 10px;
 	display: inline-block;
-	background-image: url(/static/img/carousel-nav-783646ee376cdaa6d24bcb41ebcb019eacb3edeb.png);
+	background-image: url(http://7gportal.s3.amazonaws.com/img/carousel-nav-783646ee376cdaa6d24bcb41ebcb019eacb3edeb.png);
 	margin: 37px 0 0 0px;
 }
 
 #mandala #carousel #carousel-nav a.active {
-	background-image: url(/static/img/carousel-nav-active-55573e6ca6b2fdfe76eaa777e5b2a1c05fa27e9a.png);
+	background-image: url(http://7gportal.s3.amazonaws.com/img/carousel-nav-active-55573e6ca6b2fdfe76eaa777e5b2a1c05fa27e9a.png);
 }
 
 #mandala ul {

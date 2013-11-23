@@ -399,7 +399,7 @@ table {
 
 @font-face {
 	font-family: 'Futura';
-	src: url(/static/font/FuturaStd-Bold-a67bc0cae442b805859cfc7414b972bbbadfd638.otf) format('opentype');
+	src: url(http://7gportal.s3.amazonaws.com/font/FuturaStd-Bold-a67bc0cae442b805859cfc7414b972bbbadfd638.otf) format('opentype');
 }
 
 body {
@@ -505,7 +505,7 @@ a {
 	letter-spacing: 0.1em;
 	padding: 5px 10px;
 
-	background-image: url(/static/img/menu-arrow-a977cfc737b7705f80de95cab0b7753c77cb7d5c.png);
+	background-image: url(http://7gportal.s3.amazonaws.com/img/menu-arrow-a977cfc737b7705f80de95cab0b7753c77cb7d5c.png);
 	background-repeat: no-repeat;
 	background-position: right;
 }
@@ -710,13 +710,13 @@ a {
 }
 
 #header-right #menu-blogs {
-	background-image: url(/static/img/menu-arrow-a977cfc737b7705f80de95cab0b7753c77cb7d5c.png);
+	background-image: url(http://7gportal.s3.amazonaws.com/img/menu-arrow-a977cfc737b7705f80de95cab0b7753c77cb7d5c.png);
 	background-repeat: no-repeat;
 	background-position: 80px;
 }
 
 #header-right #menu-join {
-	background-image: url(/static/img/join-hand-8f75316f0793bac2b1471ef3382d2d47f7314e6f.png);
+	background-image: url(http://7gportal.s3.amazonaws.com/img/join-hand-8f75316f0793bac2b1471ef3382d2d47f7314e6f.png);
 	background-repeat: no-repeat;
 	background-position: 20px;
 }
@@ -959,12 +959,12 @@ a {
 	width: 90px;
 	height: 24px;
 	margin: 20px auto;
-	background-image: url(/static/img/follow-btn-e4aba45e971bf046aab9e6b39f853c0f0d986d68.png);
+	background-image: url(http://7gportal.s3.amazonaws.com/img/follow-btn-e4aba45e971bf046aab9e6b39f853c0f0d986d68.png);
 	border-radius: 3px;
 }
 
 #twitter-stream #follow-btn:hover,#twitter-stream #follow-btn:active  {
-	background-image: url(/static/img/follow-btn-hover-ea2aaa658c4d7a0aec586554472f66883f3eaeff.png);
+	background-image: url(http://7gportal.s3.amazonaws.com/img/follow-btn-hover-ea2aaa658c4d7a0aec586554472f66883f3eaeff.png);
 	box-shadow: 0px 1px 5px -2px #444; /*Add Wasil*/
 }
 
@@ -1077,7 +1077,7 @@ a {
 	margin: 10px;
 	padding: 10px;
 	background-color: #eaeaea;
-	background-image: url(/static/img/btn-search-hover-ff2cc2dbccb4f11299aa88d7398d73b39eb93852.png);
+	background-image: url(http://7gportal.s3.amazonaws.com/img/btn-search-hover-ff2cc2dbccb4f11299aa88d7398d73b39eb93852.png);
 	background-repeat: no-repeat;
 	background-position: 150px;
 	border: 1px solid #c9c5c5;
@@ -1141,15 +1141,15 @@ a {
 }
 
 .popup-form-username {
-	background-image: url(/static/img/icon-username-afba62199d96fac58a917b4101bd106c1e2c5d05.png);
+	background-image: url(http://7gportal.s3.amazonaws.com/img/icon-username-afba62199d96fac58a917b4101bd106c1e2c5d05.png);
 }
 
 .popup-form-password {
-	background-image: url(/static/img/icon-password-9259415dcac09d6b7894b50f01d3644b89d3d169.png);
+	background-image: url(http://7gportal.s3.amazonaws.com/img/icon-password-9259415dcac09d6b7894b50f01d3644b89d3d169.png);
 }
 
 .popup-form-email {
-	background-image: url(/static/img/icon-email-cfb530d25002dfc19e52ed67ebfcef26a6b8b03c.png);
+	background-image: url(http://7gportal.s3.amazonaws.com/img/icon-email-cfb530d25002dfc19e52ed67ebfcef26a6b8b03c.png);
 }
 
 .main-popup-form input[type=submit] {
@@ -1230,7 +1230,7 @@ a {
     
 	margin-top: 0px;
     margin-right: 0px;
-	background-image: url(/static/img/close-btn-8ad0bdd106625c702aac6709c587ff4db9420fe6.png);
+	background-image: url(http://7gportal.s3.amazonaws.com/img/close-btn-8ad0bdd106625c702aac6709c587ff4db9420fe6.png);
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -1257,11 +1257,11 @@ a {
 	width: 13px;
 	height: 13px;
 	margin: 0 1px;
-	background-image: url(/static/img/rate-ebce5daa5d5ddc2be32f9a8545da190fe5b49bae.png);
+	background-image: url(http://7gportal.s3.amazonaws.com/img/rate-ebce5daa5d5ddc2be32f9a8545da190fe5b49bae.png);
 }
 
 .popup-item-rate li a:hover, .popup-item-rate li a.active {
-	background-image: url(/static/img/rate-hover-ccfb8fa2a144ecfe49b326d56eefd42e6c25befb.png);
+	background-image: url(http://7gportal.s3.amazonaws.com/img/rate-hover-ccfb8fa2a144ecfe49b326d56eefd42e6c25befb.png);
 }
 
 #rate-form {
