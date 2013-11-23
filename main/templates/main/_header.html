@@ -1,4 +1,7 @@
 {% load media %}
+{% load header %}
+{% get_root_categories %}
+
 <header id="site-header">
   <div id="header-left">
     <a href="{% url index %}"><img src="{% media_url 'img/logo.png' %}"></a>
@@ -9,110 +12,29 @@
     </h1>
     <nav id="site-nav">
       <ul>
+        {% for category in root_categories %}
         <li>
-          <a href="{% url board 'health'%}">Health</a>
+          <a href="{% url board category.slug %}">{{ category.name }}</a>
           <div class="submenu">
             <div class="submenu-triangle"></div>
             <ul class="parent">
+              {% for sub_category in category.subcategories %}
               <li>
-                <a href="{% url board 'beauty'%}" id="parent-beauty" data-dropdown="#child-beauty">Beauty</a>
+                <a href="{% url board sub_category.slug %}" id="parent-{{ sub_category.slug }}" data-dropdown="#child-{{ sub_category.slug }}">{{ sub_category.name }}</a>
                 <div class="parent-triangle"></div>
               </li>
-              <li>
-                <a href="{% url board 'natural-health'%}" id="parent-natural-health" data-dropdown="#child-natural-health">Natural Health</a>
-                <div class="parent-triangle"></div>
-              </li>
+              {% endfor %}
             </ul>
-
-            <ul class="child" id="child-beauty" data-parent="#parent-beauty">
-              <li><a href="{% url board 'inner-beauty'%}">Inner Beauty</a></li>
-              <li><a href="{% url board 'outer-beauty'%}">Outer Beauty</a></li>
-              
+            {% for sub_category in category.subcategories %}
+            <ul class="child" id="child-{{ sub_category.slug }}" data-parent="#parent-{{ sub_category.slug }}">
+              {% for sub_sub_category in sub_category.subcategories %}
+              <li><a href="{% url board sub_sub_category.slug %}">{{ sub_sub_category.name }}</a></li>
+              {% endfor %}
             </ul>
-
-            <ul class="child" id="child-natural-health" data-parent="#parent-natural-health">
-              <li><a href="{% url board 'wellness'%}">Wellness</a></li>
-              <li><a href="{% url board 'longevity'%}">Longevity</a></li>
-              
-            </ul>
-
+            {% endfor %}
           </div>
         </li>
-        <li>
-          <a href="{% url board 'food'%}">Food</a>
-          <div class="submenu">
-            <div class="submenu-triangle"></div>
-            <ul class="parent">
-              <li>
-                <a href="{% url board 'cooking'%}" id="parent-cooking" data-dropdown="#child-cooking">Cooking</a>
-                <div class="parent-triangle"></div>
-              </li>
-              <li>
-                <a href="{% url board 'healthy-diets'%}" id="parent-healthy-diets" data-dropdown="#child-healthy-diets">Healthy Diets</a>
-                <div class="parent-triangle"></div>
-              </li>
-            </ul>
-            <ul class="child" id="child-cooking" data-parent="#parent-cooking">
-              <li><a href="{% url board 'recipes'%}">Recipes</a></li>
-              <li><a href="{% url board 'natural-kitchen'%}">Natural Kitchen</a></li>
-            </ul>
-
-            <ul class="child" id="child-healthy-diets" data-parent="#parent-healthy-diets">
-              <li><a href="{% url board 'diets'%}">Diets</a></li>
-              <li><a href="{% url board 'superdoods'%}">Superdoods</a></li> 
-            </ul>
-          </div>
-        </li>
-        <li>
-          <a href="{% url board 'lifestyle'%}">Lifestyle</a>
-          <div class="submenu">
-            <div class="submenu-triangle"></div>
-            <ul class="parent">
-              <li>
-                <a href="{% url board 'culture'%}" id="parent-culture" data-dropdown="#child-culture">Culture</a>
-                <div class="parent-triangle"></div>
-              </li>
-              <li>
-                <a href="{% url board 'green'%}" id="parent-green" data-dropdown="#child-green">Green</a>
-                <div class="parent-triangle"></div>
-              </li>
-            </ul>
-            <ul class="child" id="child-culture" data-parent="#parent-culture">
-              <li><a href="{% url board 'art'%}">Art</a></li>
-              <li><a href="{% url board 'fashion'%}">Fashion</a></li>
-            </ul>
-
-            <ul class="child" id="child-green" data-parent="#parent-green">
-              <li><a href="{% url board 'eco-living'%}">Eco Living</a></li>
-              <li><a href="{% url board 'eco-product'%}">Eco Product</a></li>  
-            </ul>
-          </div>
-        </li>
-        <li>
-          <a href="{% url board 'fitness'%}">Fitness</a>
-          <div class="submenu">
-            <div class="submenu-triangle"></div>
-            <ul class="parent">
-              <li>
-                <a href="{% url board 'mindful-fitness'%}" id="parent-mindful-fitness" data-dropdown="#child-mindful-fitness">Mindful Fitness</a>
-                <div class="parent-triangle"></div>
-              </li>
-              <li>
-                <a href="{% url board 'optimum-body'%}" id="parent-optimum-body" data-dropdown="#child-optimum-body">Optimum Body</a>
-                <div class="parent-triangle"></div>
-              </li>
-            </ul>
-            <ul class="child" id="child-mindful-fitness" data-parent="#parent-mindful-fitness">
-              <li><a href="{% url board 'yoga'%}">Yoga</a></li>
-              <li><a href="{% url board 'alt-exercise'%}">Alt Exercise</a></li>
-            </ul>
-
-            <ul class="child" id="child-optimum-body" data-parent="#parent-optimum-body">
-              <li><a href="{% url board 'weightmgt'%}">Weightmgt</a></li>
-              <li><a href="{% url board 'bestbody'%}">Bestbody</a></li> 
-            </ul>
-          </div>
-        </li>
+        {% endfor %}
         <li><a href="http://vimeo.com/user18580146">Videos</a></li>
         <li><a href="{% url shop %}">SC Market</a></li>
       </ul>

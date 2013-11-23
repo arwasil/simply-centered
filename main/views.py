@@ -7,7 +7,6 @@ def index(request):
 
 def board(request, *slugs):
   category = get_object_or_404(Category, slug=slugs[-1])
-  print category.parent_categories
   return render(request, 'main/board.html', {'category': category})
 
 def spling(request):
