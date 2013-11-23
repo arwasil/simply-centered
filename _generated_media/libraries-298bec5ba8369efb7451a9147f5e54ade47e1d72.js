@@ -94,8 +94,20 @@ $(document).ready(function() {
 
 	///////////////////////////////////////////////////////////////////////////////////////////////
 
-	$("#facet-health,#facet-food,#facet-lifestyle,#facet-fitness").click(function() {
-		window.location = $(this).find('a').attr('href');
+	$("#facet-health").click(function() {
+		window.location = "health.html";
+	});
+
+	$("#facet-food").click(function() {
+		window.location = "food.html";
+	});
+
+	$("#facet-lifestyle").click(function() {
+		window.location = "lifestyle.html";
+	});
+
+	$("#facet-fitness").click(function() {
+		window.location = "fitness.html";
 	});
 
 	///////////////////////////////////////////////////////////////////////////////////////////////
@@ -679,19 +691,3 @@ function rightSubmenuLeave() {
 	var parent_menu = $(this).parent().children("a");
 	parent_menu.removeClass("active");
 }
-
-$(document).bind("spling:navigate", function(e, url){
-
-  pattern = /user\/NewSimplyCentered\/splingboards\/(.*)/;
-  match = url.match(pattern);
-
-  patternBlog = /7gportal.com/;
-  patternAmazon = /amazon.com/;
-  
-  if (match && match[1])
-    window.location += '/'+match[1];
-  // else if(!url.match(patternBlog) && !url.match(patternAmazon))
-  //   // Remove widget from start of url
-  //   window.location = 'spling?url='+url.slice(7)
-
-});
