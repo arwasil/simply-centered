@@ -61,7 +61,7 @@
           </h2>
           <ul class="item-nav-links">
             <li>
-              <a href="#" class="item-nav-link-articles item-links-{{ category.root_category.slug }}">Articles</a>
+              <a href="{{ category.subcategories.0.article }}" class="item-nav-link-articles item-links-{{ category.root_category.slug }}">Articles</a>
             </li>
             <li>
               <a href="#" class="item-nav-link-videos item-links-{{ category.root_category.slug }}">Videos</a>
@@ -94,7 +94,7 @@
           </h2>
           <ul class="item-nav-links">
             <li>
-              <a href="#" class="item-nav-link-articles item-links-{{ category.root_category.slug }}">Articles</a>
+              <a href="{{ category.subcategories.1.article }}" class="item-nav-link-articles item-links-{{ category.root_category.slug }}">Articles</a>
             </li>
             <li>
               <a href="#" class="item-nav-link-videos item-links-{{ category.root_category.slug }}">Videos</a>
