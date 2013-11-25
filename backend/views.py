@@ -41,24 +41,26 @@ def bundle(request, id):
     headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
 
     response = requests.get(url, auth=auth, headers=headers)
-
     return render(request, 'backend/bundle.html', {"list": response.json()['records']})
 
 def add_to_spling(request):
     link = request.POST.get('link')
     image = request.POST.get('image', '')
     title = request.POST.get('title')
-    genre = request.POST.get('genre').lower()
+    genre = request.POST.get('genre')
     
     access = settings.SPLING_COM_ACCESS_INFO
 
     create_url = '%s/spling/' % access['url']
     auth = HTTPBasicAuth(access['username'], access['password'])
     headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
+    category = Category.objects.filter(name=genre)
+    category = len(category) > 0 and category[0].spling_code or ''
+
     data = json.dumps({'Link': link,
             'Title': title, 
             'ImageURL': image and image or '',
-            'Genre': genre in SPLING_CATEGORIES and SPLING_CATEGORIES[genre] or ''})
+            'Genre': category})
 
     resp = requests.post(create_url, data=data, auth=auth, headers=headers)
 
