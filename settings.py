@@ -52,8 +52,8 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/var/www/example.com/media/"
-MEDIA_ROOT = ''
 
+MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://example.com/media/", "http://media.example.com/"
@@ -71,7 +71,7 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 STATIC_URL = '/static/'
 
 # django-mediagenerate needs dev/prod or throws null error
-MEDIA_URL = '/s/m/'
+MEDIA_URL = '/media/'
 
 DEV_MEDIA_URL = STATIC_URL
 
@@ -182,6 +182,8 @@ AWS_STORAGE_BUCKET_NAME = '7gportal'
 STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 S3_URL = 'http://%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
 DEV_MEDIA_URL = PRODUCTION_MEDIA_URL = STATIC_URL = S3_URL
+
+STATIC_URL = S3_URL + 'static/'
 
 try:
     from settings_local import *
