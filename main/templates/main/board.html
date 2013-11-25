@@ -72,7 +72,7 @@
           </ul>
         </div>
         <a href='{% url board category.subcategories.0.slug %}'>
-          <img class="item-img" src="{{ category.subcategories.0.image }}">
+          <img class="item-img" src="{% if category.subcategories.0.background %} {{ category.subcategories.0.background.url }}{% endif %}">
         </a>
       </li>
       <!-- subcategory 2 -->
@@ -105,7 +105,7 @@
           </ul>
         </div>
         <a href='{% url board category.subcategories.1.slug %}'>
-          <img class="item-img" src="{{ category.subcategories.1.image }}">
+          <img class="item-img" src="{% if category.subcategories.1.background %} {{ category.subcategories.1.background.url }}{% endif %}">
         </a>
       </li>
       <!-- item 2 -->

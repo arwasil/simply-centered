@@ -28,7 +28,7 @@ class Category(models.Model):
     slug = models.CharField(max_length=255)
     parent = models.ForeignKey('self', null=True, blank=True, default=None)
     spling_code = models.IntegerField(blank=True, default=0)
-    image = models.URLField(blank=True, default='')
+    background = models.ImageField(upload_to='categories', null=True, default=None)
 
     def __unicode__(self):
         return self.name
