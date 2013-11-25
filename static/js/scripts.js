@@ -76,24 +76,6 @@ $(document).ready(function() {
 
 	///////////////////////////////////////////////////////////////////////////////////////////////
 
-	$("#facet-health").click(function() {
-		window.location = "health.html";
-	});
-
-	$("#facet-food").click(function() {
-		window.location = "food.html";
-	});
-
-	$("#facet-lifestyle").click(function() {
-		window.location = "lifestyle.html";
-	});
-
-	$("#facet-fitness").click(function() {
-		window.location = "fitness.html";
-	});
-
-	///////////////////////////////////////////////////////////////////////////////////////////////
-
 	//$(".menu-blogs-wrapper").mouseenter(rightMenuHover).mouseleave(rightMenuLeave);
 	//UL_RIGHT_SUBMENU.mouseenter(rightSubmenuHover).mouseleave(rightSubmenuLeave);
 

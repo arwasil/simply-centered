@@ -11,14 +11,11 @@
 <section id="facet-container">
   <div id="mandala">
     <ul>
-      <li onclick="location.href='/health/beauty';" class="pie-health" data-facet="#facet-health"><a href="#">Beauty</a></li>
-      <li onclick="location.href='/health/natural-health';" class="pie-health" data-facet="#facet-health"><a href="#">Natural Health</a></li>
-      <li onclick="location.href='/food/cooking';" class="pie-food" data-facet="#facet-food"><a href="#">Cooking</a></li>
-      <li onclick="location.href='/food/healthy-diets';" class="pie-food" data-facet="#facet-food"><a href="#">Healthy Diets</a></li>
-      <li onclick="location.href='/lifestyle/arts';" class="pie-lifestyle" data-facet="#facet-lifestyle"><a href="#">Arts</a></li>
-      <li onclick="location.href='/lifestyle/eco-living';" class="pie-lifestyle" data-facet="#facet-lifestyle"><a href="#">Eco living</a></li>
-      <li onclick="location.href='/fitness/mindful-fitness';" class="pie-fitness" data-facet="#facet-fitness"><a href="#">Mindful Fitness</a></li>
-      <li onclick="location.href='/fitness/optimum-body';" class="pie-fitness" data-facet="#facet-fitness"><a href="#">Optimum Body</a></li>
+      {% for category in categories %}
+      {% for sub_category in category.subcategories %}
+      <li onclick="location.href='{% url board sub_category.slug %}';" class="pie-{{ category.slug }}" data-facet="#facet-{{ category.slug }}"><a href="{% url board sub_category.slug %}">{{ sub_category.name }}</a></li>
+      {% endfor %}
+      {% endfor %}
     </ul>
   </div>
 
@@ -34,29 +31,13 @@
     </div>
   </div>
 
-  <div id="facet-health" class="facet-btn" data-pie=".pie-health">
-    <a href="{% url board 'health'%}">Health</a>
-    <img class="icon-big" src="{% media_url 'img/facet-health-big-icon.png' %}">
+  {% for category in categories %}
+  <div id="facet-{{ category.slug }}" class="facet-btn" data-pie=".pie-{{ category.slug }}" onclick="location.href='{% url board category.slug %}';">
+    <a href="{% url board category.slug %}">{{ category.name }}</a>
+    <img class="icon-big" src="{% media_url category.facet_icon %}">
   </div>
-  <div id="facet-health-shadow" class="facet-shadow"></div>
-
-  <div id="facet-food" class="facet-btn" data-pie=".pie-food">
-    <a href="{% url board 'food'%}">Food</a>
-    <img class="icon-big" src="{% media_url 'img/facet-food-big-icon.png' %}">
-  </div>
-  <div id="facet-food-shadow" class="facet-shadow"></div>
-
-  <div id="facet-lifestyle" class="facet-btn" data-pie=".pie-lifestyle">
-    <a href="{% url board 'lifestyle'%}">Lifestyle</a>
-    <img class="icon-big" src="{% media_url 'img/facet-lifestyle-big-icon.png' %}">
-  </div>
-  <div id="facet-lifestyle-shadow" class="facet-shadow"></div>
-
-  <div id="facet-fitness" class="facet-btn" data-pie=".pie-fitness">
-    <a href="{% url board 'fitness'%}">Fitness</a>
-    <img class="icon-big" src="{% media_url 'img/facet-fitness-big-icon.png' %}">
-  </div>
-  <div id="facet-fitness-shadow" class="facet-shadow"></div>
+  <div id="facet-{{ category.slug }}-shadow" class="facet-shadow"></div>
+  {% endfor %}
 
   <div id="twitter-stream">
     <a href="https://twitter.com/simplycentered" id="follow-btn"></a>

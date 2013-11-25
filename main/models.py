@@ -34,5 +34,9 @@ class Category(models.Model):
         return len(self.subcategories) >= 2
 
 
+    def facet_icon(self):
+        return 'img/facet-' + self.slug + '-big-icon.png'
+
+
     class Meta:
         verbose_name_plural = "categories"
