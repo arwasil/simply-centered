@@ -1,12 +1,13 @@
 from django.db import models
 from django.core.urlresolvers import reverse
+from django.template.defaultfilters import slugify
 
 from PIL import Image
 
 
 class Category(models.Model):
     name = models.CharField(max_length=255)
-    slug = models.CharField(max_length=255)
+    slug = models.SlugField(max_length=255, unique=True)
     parent = models.ForeignKey('self', null=True, blank=True, default=None)
     spling_code = models.IntegerField(blank=True, default=0)
     background = models.ImageField(upload_to='categories', null=True, blank=True, default=None)
