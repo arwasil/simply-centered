@@ -12,13 +12,9 @@
   <h4>SC Market</h4>
   <ul>
     <li><a href="#" alt="Featured">Featured</a></li>
-    <li><a href="#" alt="Featured">Art</a></li>
-    <li><a href="#" alt="Featured">Books</a></li>
-    <li><a href="#" alt="Featured">Fitness</a></li>
-    <li><a href="#" alt="Featured">Food</a></li>
-    <li><a href="#" alt="Featured">Gift Ideas</a></li>
-    <li><a href="#" alt="Featured">Health</a></li>
-    <li><a href="#" alt="Featured">Lifestyle</a></li>
+    {% for category in categories %}
+    <li><a href="{% url board category.slug %}" alt="{{ category.name }}">{{ category.name }}</a></li>
+    {% endfor %}
   </ul>
 </div>
 {% endblock %}
@@ -39,12 +35,14 @@
   </div>
 
   <!-- BOARD CONTENT1 ==========================================================-->
+  {% for item in data %}
+  {% if forloop.counter0|divisibleby:'4'%}
   <div class="row content">
     <ul class="board-items">
-      <!-- 1st item -->
-      <li class="board-item small">
+  {% endif %}
+      <li class="board-item {% if forloop.counter0|divisibleby:'4' or forloop.counter|divisibleby:'4' %}small{% else %}large{% endif %}">
         <div class="item-nav">
-          <h2 class="item-nav-header">Item Title</h2>
+          <h2 class="item-nav-header">{{ item.Title }}</h2>
           <ul class="item-nav-links">
             <li>
               <a href="#" class="item-nav-link-articles">Category</a>
@@ -54,132 +52,16 @@
             </li>
           </ul>
         </div>
-        <img class="item-img" src="{% media_url 'img/s1.jpg' %}">
+        {% if forloop.counter0|divisibleby:'4' or forloop.counter|divisibleby:'4' %}
+        <img class="item-img" src="{{ item.thumbnails.140x300 }}">
+        {% else %}
+        <img class="item-img" src="{{ item.thumbnails.300x300 }}">
+        {% endif %}
       </li>
-      <!-- 2nd item -->
-      <li class="board-item large">
-        <div class="item-rate"></div>
-        <div class="item-nav">
-          <h2 class="item-nav-header">Item Title</h2>
-          <ul class="item-nav-links">
-            <li>
-              <a href="#" class="item-nav-link-articles">Category</a>
-            </li>
-            
-            <li>
-              <a href="#" class="item-nav-link-price">$100.00</a>
-            </li>
-          </ul>
-        </div>
-        <img class="item-img" src="{% media_url 'img/s2.jpg' %}">
-      </li>
-      <!-- 3rd item -->
-      <li class="board-item large">
-        <div class="item-rate"></div>
-        <div class="item-nav">
-          <h2 class="item-nav-header">Item Title</h2>
-          <ul class="item-nav-links">
-            <li>
-              <a href="#" class="item-nav-link-articles">Category</a>
-            </li>
-            
-            <li>
-              <a href="#" class="item-nav-link-price">$12</a>
-            </li>
-          </ul>
-        </div>
-        <img class="item-img" src="{% media_url 'img/s3.jpg' %}">
-      </li>
-      <!-- 4th item -->
-      <li class="board-item small">
-        <div class="item-nav">
-          <h2 class="item-nav-header">Item Title</h2>
-          <ul class="item-nav-links">
-            <li>
-              <a href="#" class="item-nav-link-articles">Category</a>
-            </li>
-            
-            <li>
-              <a href="#" class="item-nav-link-price">$100.00</a>
-            </li>
-          </ul>
-        </div>
-        <img class="item-img" src="{% media_url 'img/s4.jpg' %}">
-      </li>
+  {% if forloop.counter|divisibleby:'4' %}
     </ul>
   </div>
-
-  <!-- BOARD CONTENT2 ===========================================================-->
-  <div class="row content">
-    <ul class="board-items">
-      <!-- 1st item -->
-      <li class="board-item small">
-        <div class="item-nav">
-          <h2 class="item-nav-header">Item Title</h2>
-          <ul class="item-nav-links">
-            <li>
-              <a href="#" class="item-nav-link-articles">Category</a>
-            </li>
-            
-            <li>
-              <a href="#" class="item-nav-link-price">$100.00</a>
-            </li>
-          </ul>
-        </div>
-        <img class="item-img" src="{% media_url 'img/s5.jpg' %}">
-      </li>
-      <!-- 2nd item -->
-      <li class="board-item large">
-        <div class="item-rate"></div>
-        <div class="item-nav">
-          <h2 class="item-nav-header">Item Title</h2>
-          <ul class="item-nav-links">
-            <li>
-              <a href="#" class="item-nav-link-articles">Category</a>
-            </li>
-            
-            <li>
-              <a href="#" class="item-nav-link-price">$100.00</a>
-            </li>
-          </ul>
-        </div>
-        <img class="item-img" src="{% media_url 'img/s6.jpg' %}">
-      </li>
-      <!-- 3rd item -->
-      <li class="board-item large">
-        <div class="item-rate"></div>
-        <div class="item-nav">
-          <h2 class="item-nav-header">Item Title</h2>
-          <ul class="item-nav-links">
-            <li>
-              <a href="#" class="item-nav-link-articles">Category</a>
-            </li>
-            
-            <li>
-              <a href="#" class="item-nav-link-price">$97</a>
-            </li>
-          </ul>
-        </div>
-        <img class="item-img" src="{% media_url 'img/s7.jpg' %}">
-      </li>
-      <!-- 4th item -->
-      <li class="board-item small">
-        <div class="item-nav">
-          <h2 class="item-nav-header">Item Title</h2>
-          <ul class="item-nav-links">
-            <li>
-              <a href="#" class="item-nav-link-articles">Category</a>
-            </li>
-            
-            <li>
-              <a href="#" class="item-nav-link-price">$100.00</a>
-            </li>
-          </ul>
-        </div>
-        <img class="item-img" src="{% media_url 'img/s8.jpg' %}">
-      </li>
-    </ul>
-  </div>
-
+  {% endif %}
+  {% endfor %}
 </section>
 {% endblock %}

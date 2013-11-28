@@ -27,4 +27,10 @@ def spling(request):
   return render(request, 'main/spling.html', context)
 
 def shop(request):
-  return render(request, 'main/shop.html', {})
+  categories = Category.objects.filter(parent=None)
+
+  url = 'http://spling.com/api/2/recommendation/?limit=8&format=json'
+  response = requests.get(url)
+  spling_data = response.json()
+
+  return render(request, 'main/shop.html', {'categories': categories, 'data': spling_data['items']})
