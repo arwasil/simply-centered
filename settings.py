@@ -180,6 +180,8 @@ AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 AWS_STORAGE_BUCKET_NAME = '7gportal'
 STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+DEFAULT_FILE_STORAGE = 'main.api.s3.MediaS3BotoStorage' 
+STATICFILES_STORAGE = 'main.api.s3.StaticS3BotoStorage'
 S3_URL = 'http://%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
 DEV_MEDIA_URL = PRODUCTION_MEDIA_URL = STATIC_URL = S3_URL
 
