@@ -219,3 +219,14 @@ LOGGING = {
         },
     }
 }
+
+TRAP_IT_ACCESS_INFO = {
+    "auth_id": "bmcfarland@spling.com",
+    "auth_secret": "Discover",
+}
+
+SPLING_COM_ACCESS_INFO = {
+    'url': 'http://7gportal.spling.com/api/2',
+    'username': 'NewSimplyCentered',
+    'password': 'splingit!',
+}
