@@ -32,7 +32,7 @@ class Category(models.Model):
 
     @property
     def subcategories(self):
-        return Category.objects.filter(parent=self)
+        return Category.objects.filter(parent=self)[0:4]
 
     @property
     def has_subcategories(self):
