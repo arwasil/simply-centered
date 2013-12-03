@@ -13,6 +13,7 @@ class Category(models.Model):
     spling_code = models.IntegerField(blank=True, default=0)
     background = models.ImageField(upload_to='categories', null=True, blank=True, default=None)
     article = models.URLField(max_length=255, blank=True, default='')
+    position = models.SmallIntegerField(blank=True, default=0)
 
     def __unicode__(self):
         return self.name
@@ -75,3 +76,4 @@ class Category(models.Model):
     
     class Meta:
         verbose_name_plural = "categories"
+        ordering = ("position",)
