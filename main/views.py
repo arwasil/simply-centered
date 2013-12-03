@@ -12,8 +12,14 @@ def index(request):
 def board(request, *slugs):
   category = get_object_or_404(Category, slug=slugs[-1])
 
-  url = 'http://spling.com/api/2/recommendation/?limit=6&format=json'
-  response = requests.get(url)
+  params = {
+    'limit': 6,
+    'format': 'json',
+    'tags': [category.name]
+  }
+
+  url = 'http://7gportal.spling.com/api/2/recommendation/'
+  response = requests.get(url, params=params)
   spling_data = response.json()
 
   return render(request, 'main/board.html', {'category': category, 'data': spling_data['items']})
