@@ -35,6 +35,10 @@ class Category(models.Model):
         return Category.objects.filter(parent=self)[0:4]
 
     @property
+    def two_subcategories(self):
+        return Category.objects.filter(parent=self)[0:2]
+
+    @property
     def has_subcategories(self):
         return len(self.subcategories) >= 2
 

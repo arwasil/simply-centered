@@ -12,7 +12,7 @@
   <div id="mandala">
     <ul>
       {% for category in categories %}
-      {% for sub_category in category.subcategories %}
+      {% for sub_category in category.two_subcategories %}
       <li onclick="location.href='{% url board sub_category.slug %}';" class="pie-{{ category.slug }}" data-facet="#facet-{{ category.slug }}"><a href="{% url board sub_category.slug %}">{{ sub_category.name }}</a></li>
       {% endfor %}
       {% endfor %}

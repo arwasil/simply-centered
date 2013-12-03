@@ -6,7 +6,7 @@ from models import *
 
 
 def index(request):
-  categories = Category.objects.filter(parent=None)
+  categories = Category.objects.filter(parent=None)[0:4]
   return render(request, 'main/index.html', {'categories': categories})
 
 def board(request, *slugs):
