@@ -22,7 +22,7 @@ $(document).ready(function() {
 
 	$(".item-rate ul li").mouseenter(itemRateHover).mouseleave(itemRateLeave);
 
-	$(".item-rate ul li").click(itemRateClick);
+	// $(".item-rate ul li").click(itemRateClick);
 
 	$("#rate-form-submit").click(function(event) { reviewSubmit(event) });
 
