@@ -21,48 +21,56 @@
   </div>
 
   <!-- BOARD CONTENT1 ==========================================================-->
-  {% if category.has_sub_menu %}
   <div class="row content">
     <ul class="board-items">
       <!-- item 1 -->
       {% include 'main/partial/_board_small_item.html' with item=data.0 %}
 
+      {% if category.sub_menu.count > 2 %}
       <!-- subcategory 1 -->
       {% include 'main/partial/_board_category_item.html' with item=category.sub_menu.0 %}
+      {% else %}
+      <!-- 2 item -->
+      {% include 'main/partial/_board_large_item.html' with item=data.1 %}
+      {% endif %}
 
+      {% if category.sub_menu.count > 2 %}
       <!-- subcategory 2 -->
       {% include 'main/partial/_board_category_item.html' with item=category.sub_menu.1 %}
+      {% else %}
+      <!-- 3 item -->
+      {% include 'main/partial/_board_large_item.html' with item=data.2 %}
+      {% endif %}
 
-      <!-- item 2 -->
-      {% include 'main/partial/_board_small_item.html' with item=data.1 %}
+      <!-- item 4 -->
+      {% include 'main/partial/_board_small_item.html' with item=data.3 %}
     </ul>
   </div>
-  {% endif %}
-
+  
   <!-- BOARD CONTENT2 ===========================================================-->
   <div class="row content">
     <ul class="board-items">
-      <!-- 3 item -->
-      {% include 'main/partial/_board_small_item.html' with item=data.2 %}
+      <!-- 5 item -->
+      {% include 'main/partial/_board_small_item.html' with item=data.4 %}
       
       {% if category.sub_menu.count > 2 %}
       <!-- subcategory 3 -->
       {% include 'main/partial/_board_category_item.html' with item=category.sub_menu.2 %}
       {% else %}
-      <!-- 4 item -->
-      {% include 'main/partial/_board_large_item.html' with item=data.3 %}
+      <!-- 6 item -->
+      {% include 'main/partial/_board_large_item.html' with item=data.5 %}
       {% endif %}
 
       {% if category.sub_menu.count > 3 %}
       <!-- subcategory 4 -->
       {% include 'main/partial/_board_category_item.html' with item=category.sub_menu.3 %}
       {% else %}
-      <!-- 5 item -->
-      {% include 'main/partial/_board_large_item.html' with item=data.4 %}
+      <!-- 7 item -->
+      {% include 'main/partial/_board_large_item.html' with item=data.6 %}
       {% endif %}
 
-      <!-- 6 item -->
-      {% include 'main/partial/_board_small_item.html' with item=data.5 %}
+      <!-- 8 item -->
+      {% include 'main/partial/_board_small_item.html' with item=data.7 %}
     </ul>
   </div>
 </section>

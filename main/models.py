@@ -31,9 +31,6 @@ class Category(models.Model):
     def sub_menu_4(self):
         return self.sub_menu()[0:4]
 
-    def has_sub_menu(self):
-        return len(self.sub_menu()) >= 2
-
     def facet_icon(self):
         return 'img/facet-' + self.slug + '-big-icon.png'
 

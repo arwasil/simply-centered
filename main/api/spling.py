@@ -2,7 +2,7 @@ import requests, simplejson as json
 
 def recommendations(category):
     params = {
-        'limit': 6,
+        'limit': 8,
         'format': 'json',
         'tags': [category]
     }
