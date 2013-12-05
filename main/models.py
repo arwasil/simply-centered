@@ -15,36 +15,40 @@ class Category(models.Model):
     article = models.URLField(max_length=255, blank=True, default='')
     position = models.SmallIntegerField(blank=True, default=0)
 
+    show_in_menu = models.BooleanField(blank=True, default=True)
+    show_in_video = models.BooleanField(blank=True, default=False)
+    show_in_shop = models.BooleanField(blank=True, default=False)
+
     def __unicode__(self):
         return self.name
+
+    def sub_menu(self):
+        return Category.objects.filter(show_in_menu=True, parent=self)
+
+    def sub_menu_2(self):
+        return self.sub_menu()[0:2]
+
+    def sub_menu_4(self):
+        return self.sub_menu()[0:4]
+
+    def has_sub_menu(self):
+        return len(self.sub_menu()) >= 2
+
+    def facet_icon(self):
+        return 'img/facet-' + self.slug + '-big-icon.png'
 
     @property
     def parent_categories(self):
         parents = [self]
-        for livel in (1, 2, 3):
+        for level in (1, 2, 3):
             if not parents[0].parent:
                 break
             parents = [parents[0].parent] + parents
         return parents
 
     @property
-    def root_category(self):
+    def root(self):
         return self.parent_categories[0]
-
-    @property
-    def subcategories(self):
-        return Category.objects.filter(parent=self)[0:4]
-
-    @property
-    def two_subcategories(self):
-        return Category.objects.filter(parent=self)[0:2]
-
-    @property
-    def has_subcategories(self):
-        return len(self.subcategories) >= 2
-
-    def facet_icon(self):
-        return 'img/facet-' + self.slug + '-big-icon.png'
 
     def save(self, background_size=(284, 300)):
         super(Category, self).save()

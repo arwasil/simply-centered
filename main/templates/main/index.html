@@ -11,8 +11,8 @@
 <section id="facet-container">
   <div id="mandala">
     <ul>
-      {% for category in categories %}
-      {% for sub_category in category.two_subcategories %}
+      {% for category in menu %}
+      {% for sub_category in category.sub_menu_2 %}
       <li onclick="location.href='{% url board sub_category.slug %}';" class="pie-{{ category.slug }}" data-facet="#facet-{{ category.slug }}"><a href="{% url board sub_category.slug %}">{{ sub_category.name }}</a></li>
       {% endfor %}
       {% endfor %}
@@ -31,7 +31,7 @@
     </div>
   </div>
 
-  {% for category in categories %}
+  {% for category in menu %}
   <div id="facet-{{ category.slug }}" class="facet-btn" data-pie=".pie-{{ category.slug }}" onclick="location.href='{% url board category.slug %}';">
     <a href="{% url board category.slug %}">{{ category.name }}</a>
     <img class="icon-big" src="{% media_url category.facet_icon %}">

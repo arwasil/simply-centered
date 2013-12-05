@@ -6,8 +6,8 @@ from models import *
 
 
 def index(request):
-  categories = Category.objects.filter(parent=None)[0:4]
-  return render(request, 'main/index.html', {'categories': categories})
+  menu = Category.objects.filter(parent=None, show_in_menu=True)[0:4]
+  return render(request, 'main/index.html', {'menu': menu})
 
 def board(request, *slugs):
   category = get_object_or_404(Category, slug=slugs[-1])
@@ -27,7 +27,7 @@ def spling(request):
   return render(request, 'main/spling.html', context)
 
 def shop(request):
-  categories = Category.objects.filter(parent=None)
+  categories = Category.shop_categories.filter(parent=None)
 
   url = 'http://spling.com/api/2/recommendation/?limit=8&format=json'
   response = requests.get(url)

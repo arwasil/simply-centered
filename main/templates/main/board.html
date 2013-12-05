@@ -11,8 +11,8 @@
 <section id="board-container">
 
   <!-- BOARD HEADER ============================================================-->
-  <div class="row board-title-{{ category.root_category.slug }}" id="board-header">
-    <div id="board-breadcumb" class="breadcumb-{{ category.root_category.slug }}">
+  <div class="row board-title-{{ category.root.slug }}" id="board-header">
+    <div id="board-breadcumb" class="breadcumb-{{ category.root.slug }}">
       {% for parent in category.parent_categories %}
       <a href="{% url board parent.slug %}">{{ parent.name }}</a>
       {% endfor %}
@@ -21,32 +21,32 @@
   </div>
 
   <!-- BOARD CONTENT1 ==========================================================-->
-  {% if category.has_subcategories %}
+  {% if category.has_sub_menu %}
   <div class="row content">
     <ul class="board-items">
-      {% if  category.subcategories.count > 2 %}
+      {% if  category.sub_menu.count > 2 %}
       <!-- subcategory 3 -->
       <li class="board-item board-item-link small">
         <div class="item-nav">
-          <h2 class="item-nav-header item-header-{{ category.root_category.slug }}">
-            <a href='{% url board category.subcategories.2.slug %}'>
-              {{ category.subcategories.2.name }}
+          <h2 class="item-nav-header item-header-{{ category.root.slug }}">
+            <a href='{% url board category.sub_menu.2.slug %}'>
+              {{ category.sub_menu.2.name }}
             </a>
           </h2>
           <ul class="item-nav-links">
             <li>
-              <a href="{{ category.subcategories.2.article }}" class="item-nav-link-articles item-links-{{ category.root_category.slug }}">Articles</a>
+              <a href="{{ category.sub_menu.2.article }}" class="item-nav-link-articles item-links-{{ category.root.slug }}">Articles</a>
             </li>
             <li>
-              <a href="#" class="item-nav-link-videos item-links-{{ category.root_category.slug }}">Videos</a>
+              <a href="#" class="item-nav-link-videos item-links-{{ category.root.slug }}">Videos</a>
             </li>
             <li>
-              <a href="#" class="item-nav-link-shop item-links-{{ category.root_category.slug }}">Shop</a>
+              <a href="#" class="item-nav-link-shop item-links-{{ category.root.slug }}">Shop</a>
             </li>
           </ul>
         </div>
-        <a href='{% url board category.subcategories.2.slug %}'>
-          <img class="item-img" src="{% if category.subcategories.2.background %} {{ category.subcategories.2.background.url }}{% endif %}">
+        <a href='{% url board category.sub_menu.2.slug %}'>
+          <img class="item-img" src="{% if category.sub_menu.2.background %} {{ category.sub_menu.2.background.url }}{% endif %}">
         </a>
       </li>
       {% else %}
@@ -61,7 +61,7 @@
             <li><a href="#" class="rate rate5" data-rate="5">&nbsp;</a></li>
           </ul>
         </div>
-        <div class="item-overlay item-overlay-{{ category.root_category.slug }}"></div>
+        <div class="item-overlay item-overlay-{{ category.root.slug }}"></div>
         <div class="item-featured-link">
           <img class="item-featured-link-icon" src="{% media_url 'img/featured-link-icon.png' %}">
           <a href="{{ data.0.Link }}">{{ data.0.Title }}</a>
@@ -72,74 +72,74 @@
       <!-- subcategory 1 -->
       <li class="board-item large">
         <div class="item-nav">
-          <h2 class="item-nav-header item-header-{{ category.root_category.slug }}">
-            <a href='{% url board category.subcategories.0.slug %}'>
-              {{ category.subcategories.0.name }}
+          <h2 class="item-nav-header item-header-{{ category.root.slug }}">
+            <a href='{% url board category.sub_menu.0.slug %}'>
+              {{ category.sub_menu.0.name }}
             </a>
           </h2>
           <ul class="item-nav-links">
             <li>
-              <a href="{{ category.subcategories.0.article }}" class="item-nav-link-articles item-links-{{ category.root_category.slug }}">Articles</a>
+              <a href="{{ category.sub_menu.0.article }}" class="item-nav-link-articles item-links-{{ category.root.slug }}">Articles</a>
             </li>
             <li>
-              <a href="#" class="item-nav-link-videos item-links-{{ category.root_category.slug }}">Videos</a>
+              <a href="#" class="item-nav-link-videos item-links-{{ category.root.slug }}">Videos</a>
             </li>
             <li>
-              <a href="#" class="item-nav-link-shop item-links-{{ category.root_category.slug }}">Shop</a>
+              <a href="#" class="item-nav-link-shop item-links-{{ category.root.slug }}">Shop</a>
             </li>
           </ul>
         </div>
-        <a href='{% url board category.subcategories.0.slug %}'>
-          <img class="item-img" src="{% if category.subcategories.0.background %} {{ category.subcategories.0.background.url }}{% endif %}">
+        <a href='{% url board category.sub_menu.0.slug %}'>
+          <img class="item-img" src="{% if category.sub_menu.0.background %} {{ category.sub_menu.0.background.url }}{% endif %}">
         </a>
       </li>
       <!-- subcategory 2 -->
       <li class="board-item large">
         <div class="item-nav">
-          <h2 class="item-nav-header item-header-{{ category.root_category.slug }}">
-            <a href='{% url board category.subcategories.1.slug %}'>
-              {{ category.subcategories.1.name }}
+          <h2 class="item-nav-header item-header-{{ category.root.slug }}">
+            <a href='{% url board category.sub_menu.1.slug %}'>
+              {{ category.sub_menu.1.name }}
             </a>
           </h2>
           <ul class="item-nav-links">
             <li>
-              <a href="{{ category.subcategories.1.article }}" class="item-nav-link-articles item-links-{{ category.root_category.slug }}">Articles</a>
+              <a href="{{ category.sub_menu.1.article }}" class="item-nav-link-articles item-links-{{ category.root.slug }}">Articles</a>
             </li>
             <li>
-              <a href="#" class="item-nav-link-videos item-links-{{ category.root_category.slug }}">Videos</a>
+              <a href="#" class="item-nav-link-videos item-links-{{ category.root.slug }}">Videos</a>
             </li>
             <li>
-              <a href="#" class="item-nav-link-shop item-links-{{ category.root_category.slug }}">Shop</a>
+              <a href="#" class="item-nav-link-shop item-links-{{ category.root.slug }}">Shop</a>
             </li>
           </ul>
         </div>
-        <a href='{% url board category.subcategories.1.slug %}'>
-          <img class="item-img" src="{% if category.subcategories.1.background %} {{ category.subcategories.1.background.url }}{% endif %}">
+        <a href='{% url board category.sub_menu.1.slug %}'>
+          <img class="item-img" src="{% if category.sub_menu.1.background %} {{ category.sub_menu.1.background.url }}{% endif %}">
         </a>
       </li>
-      {% if  category.subcategories.count > 3 %}
+      {% if  category.sub_menu.count > 3 %}
       <!-- subcategory 4 -->
       <li class="board-item board-item-link small">
         <div class="item-nav">
-          <h2 class="item-nav-header item-header-{{ category.root_category.slug }}">
-            <a href='{% url board category.subcategories.3.slug %}'>
-              {{ category.subcategories.3.name }}
+          <h2 class="item-nav-header item-header-{{ category.root.slug }}">
+            <a href='{% url board category.sub_menu.3.slug %}'>
+              {{ category.sub_menu.3.name }}
             </a>
           </h2>
           <ul class="item-nav-links">
             <li>
-              <a href="{{ category.subcategories.3.article }}" class="item-nav-link-articles item-links-{{ category.root_category.slug }}">Articles</a>
+              <a href="{{ category.sub_menu.3.article }}" class="item-nav-link-articles item-links-{{ category.root.slug }}">Articles</a>
             </li>
             <li>
-              <a href="#" class="item-nav-link-videos item-links-{{ category.root_category.slug }}">Videos</a>
+              <a href="#" class="item-nav-link-videos item-links-{{ category.root.slug }}">Videos</a>
             </li>
             <li>
-              <a href="#" class="item-nav-link-shop item-links-{{ category.root_category.slug }}">Shop</a>
+              <a href="#" class="item-nav-link-shop item-links-{{ category.root.slug }}">Shop</a>
             </li>
           </ul>
         </div>
-        <a href='{% url board category.subcategories.3.slug %}'>
-          <img class="item-img" src="{% if category.subcategories.3.background %} {{ category.subcategories.3.background.url }}{% endif %}">
+        <a href='{% url board category.sub_menu.3.slug %}'>
+          <img class="item-img" src="{% if category.sub_menu.3.background %} {{ category.sub_menu.3.background.url }}{% endif %}">
         </a>
       </li>
       {% else %}
@@ -154,7 +154,7 @@
             <li><a href="#" class="rate rate5" data-rate="5">&nbsp;</a></li>
           </ul>
         </div>
-        <div class="item-overlay item-overlay-{{ category.root_category.slug }}"></div>
+        <div class="item-overlay item-overlay-{{ category.root.slug }}"></div>
         <div class="item-featured-link">
           <img class="item-featured-link-icon" src="{% media_url 'img/featured-link-icon.png' %}">
           <a href="{{ data.1.Link }}">{{ data.1.Title }}</a>
@@ -180,7 +180,7 @@
             <li><a href="#" class="rate rate5" data-rate="5">&nbsp;</a></li>
           </ul>
         </div>
-        <div class="item-overlay item-overlay-{{ category.root_category.slug }}"></div>
+        <div class="item-overlay item-overlay-{{ category.root.slug }}"></div>
         <div class="item-featured-link">
           <img class="item-featured-link-icon" src="{% media_url 'img/featured-link-icon.png' %}">
           <a href="{{ data.2.Link }}">{{ data.2.Title }}</a>
@@ -198,7 +198,7 @@
             <li><a href="#" class="rate rate5" data-rate="5">&nbsp;</a></li>
           </ul>
         </div>
-        <div class="item-overlay item-overlay-{{ category.root_category.slug }}"></div>
+        <div class="item-overlay item-overlay-{{ category.root.slug }}"></div>
         <div class="item-featured-link">
           <img class="item-featured-link-icon" src="{% media_url 'img/featured-link-icon.png' %}">
           <a href="{{ data.3.Link }}">{{ data.3.Title }}</a>
@@ -216,7 +216,7 @@
             <li><a href="#" class="rate rate5" data-rate="5">&nbsp;</a></li>
           </ul>
         </div>
-        <div class="item-overlay item-overlay-{{ category.root_category.slug }}"></div>
+        <div class="item-overlay item-overlay-{{ category.root.slug }}"></div>
         <div class="item-featured-link">
           <img class="item-featured-link-icon" src="{% media_url 'img/featured-link-icon.png' %}">
           <a href="{{ data.4.Link }}">{{ data.4.Title }}</a>
@@ -234,7 +234,7 @@
             <li><a href="#" class="rate rate5" data-rate="5">&nbsp;</a></li>
           </ul>
         </div>
-        <div class="item-overlay item-overlay-{{ category.root_category.slug }}"></div>
+        <div class="item-overlay item-overlay-{{ category.root.slug }}"></div>
         <div class="item-featured-link">
           <img class="item-featured-link-icon" src="{% media_url 'img/featured-link-icon.png' %}">
           <a href="{{ data.5.Link }}">{{ data.5.Title }}</a>

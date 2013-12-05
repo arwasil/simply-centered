@@ -5,7 +5,7 @@ register = template.Library()
 
 class RootCategoriesNode(template.Node):
     def render(self, context):
-        context['root_categories'] = Category.objects.filter(parent=None)
+        context['root_menu'] = Category.objects.filter(show_in_menu=True, parent=None)
         return ''
 
 @register.tag
