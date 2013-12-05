@@ -14,7 +14,7 @@
   <div class="row board-title-{{ category.root.slug }}" id="board-header">
     <div id="board-breadcumb" class="breadcumb-{{ category.root.slug }}">
       {% for parent in category.parent_categories %}
-      <a href="{% url board parent.slug %}">{{ parent.name }}</a>
+      <a href="{{ parent.full_url }}">{{ parent.name }}</a>
       {% endfor %}
     </div>
     <h1 id="board-title">{{ category.name }}</h1>
@@ -26,7 +26,7 @@
       <!-- item 1 -->
       {% include 'main/partial/_board_small_item.html' with item=data.0 %}
 
-      {% if category.sub_menu.count > 2 %}
+      {% if category.sub_menu.count >= 1 %}
       <!-- subcategory 1 -->
       {% include 'main/partial/_board_category_item.html' with item=category.sub_menu.0 %}
       {% else %}
@@ -34,7 +34,7 @@
       {% include 'main/partial/_board_large_item.html' with item=data.1 %}
       {% endif %}
 
-      {% if category.sub_menu.count > 2 %}
+      {% if category.sub_menu.count >= 2 %}
       <!-- subcategory 2 -->
       {% include 'main/partial/_board_category_item.html' with item=category.sub_menu.1 %}
       {% else %}
@@ -53,7 +53,7 @@
       <!-- 5 item -->
       {% include 'main/partial/_board_small_item.html' with item=data.4 %}
       
-      {% if category.sub_menu.count > 2 %}
+      {% if category.sub_menu.count >= 3 %}
       <!-- subcategory 3 -->
       {% include 'main/partial/_board_category_item.html' with item=category.sub_menu.2 %}
       {% else %}
@@ -61,7 +61,7 @@
       {% include 'main/partial/_board_large_item.html' with item=data.5 %}
       {% endif %}
 
-      {% if category.sub_menu.count > 3 %}
+      {% if category.sub_menu.count >= 4 %}
       <!-- subcategory 4 -->
       {% include 'main/partial/_board_category_item.html' with item=category.sub_menu.3 %}
       {% else %}

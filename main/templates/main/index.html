@@ -13,7 +13,7 @@
     <ul>
       {% for category in menu %}
       {% for sub_category in category.sub_menu_2 %}
-      <li onclick="location.href='{% url board sub_category.slug %}';" class="pie-{{ category.slug }}" data-facet="#facet-{{ category.slug }}"><a href="{% url board sub_category.slug %}">{{ sub_category.name }}</a></li>
+      <li onclick="location.href='{{ category.full_url }}';" class="pie-{{ category.slug }}" data-facet="#facet-{{ category.slug }}"><a href="{{ sub_category.full_url }}">{{ sub_category.name }}</a></li>
       {% endfor %}
       {% endfor %}
     </ul>
@@ -32,8 +32,8 @@
   </div>
 
   {% for category in menu %}
-  <div id="facet-{{ category.slug }}" class="facet-btn" data-pie=".pie-{{ category.slug }}" onclick="location.href='{% url board category.slug %}';">
-    <a href="{% url board category.slug %}">{{ category.name }}</a>
+  <div id="facet-{{ category.slug }}" class="facet-btn" data-pie=".pie-{{ category.slug }}" onclick="location.href='{{ category.full_url }}';">
+    <a href="{{ category.full_url }}">{{ category.name }}</a>
     <img class="icon-big" src="{% media_url category.facet_icon %}">
   </div>
   <div id="facet-{{ category.slug }}-shadow" class="facet-shadow"></div>

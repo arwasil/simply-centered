@@ -14,6 +14,7 @@ class Category(models.Model):
     background = models.ImageField(upload_to='categories', null=True, blank=True, default=None)
     article = models.URLField(max_length=255, blank=True, default='')
     position = models.SmallIntegerField(blank=True, default=0)
+    full_url = models.CharField(max_length=255, editable=False, blank=True, default='')
 
     show_in_menu = models.BooleanField(blank=True, default=True)
     show_in_video = models.BooleanField(blank=True, default=False)
@@ -48,6 +49,8 @@ class Category(models.Model):
         return self.parent_categories[0]
 
     def save(self, background_size=(284, 300)):
+        self.full_url = '/' + '/'.join([parent.slug for parent in self.parent_categories]) + '/'
+
         super(Category, self).save()
 
         if self.background:
