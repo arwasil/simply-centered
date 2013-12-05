@@ -1,0 +1,19 @@
+{% load media %}
+
+<li class="board-item board-item-link small">
+  <div class="item-rate">
+    <ul>
+      <li><a href="#" class="rate rate1" data-rate="1">&nbsp;</a></li>
+      <li><a href="#" class="rate rate2" data-rate="2">&nbsp;</a></li>
+      <li><a href="#" class="rate rate3" data-rate="3">&nbsp;</a></li>
+      <li><a href="#" class="rate rate4" data-rate="4">&nbsp;</a></li>
+      <li><a href="#" class="rate rate5" data-rate="5">&nbsp;</a></li>
+    </ul>
+  </div>
+  <div class="item-overlay item-overlay-{{ category.root.slug }}"></div>
+  <div class="item-featured-link">
+    <img class="item-featured-link-icon" src="{% media_url 'img/featured-link-icon.png' %}">
+    <a href="{{ item.url }}">{{ item.name }}</a>
+  </div>
+  <img class="item-img" src="{% if item.background %}{{ item.background.url }}{% endif %}">
+</li>

@@ -85,3 +85,13 @@ class Category(models.Model):
     class Meta:
         verbose_name_plural = "categories"
         ordering = ("position",)
+
+
+class Promotion(models.Model):
+    category = models.ForeignKey(Category)
+    name = models.CharField(max_length=255)
+    url = models.URLField(max_length=255, blank=True, default='')
+    background = models.ImageField(upload_to='promotions', null=True, blank=True, default=None)
+
+    def __unicode__(self):
+        return "%s - %s" % (self.category, self.name)
