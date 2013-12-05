@@ -13,7 +13,7 @@
   <ul>
     <li><a href="#" alt="Featured">Featured</a></li>
     {% for category in categories %}
-    <li><a href="{% url board category.slug %}" alt="{{ category.name }}">{{ category.name }}</a></li>
+    <li><a href="{% url shop_category category.slug %}" alt="{{ category.name }}">{{ category.name }}</a></li>
     {% endfor %}
   </ul>
 </div>
@@ -26,12 +26,12 @@
   <!-- BOARD HEADER ============================================================-->
   <div class="row board-shop" id="board-header">
     <div id="board-breadcumb">
-      <a href="#">SC Market</a>
+      <a href="{% url shop %}">SC Market</a>
+      {% for parent in category.parent_categories %}
+      <a href="{% url shop_category parent.slug %}">{{ parent.name }}</a>
+      {% endfor %}    
     </div>
-    <div id="board-breadcumb2">
-      <a href="#">Featured</a>
-    </div>
-    <h1 id="board-title">Featured</h1>
+    <h1 id="board-title">{% if category %}{{ category }}{% else %}SC Market{% endif %}</h1>
   </div>
 
   <!-- BOARD CONTENT1 ==========================================================-->
