@@ -20,9 +20,12 @@ def board(request, *slugs):
 
   url = 'http://7gportal.spling.com/api/2/recommendation/'
   response = requests.get(url, params=params)
-  spling_data = response.json()
+  try:
+    spling_data = response.json()['items']
+  except:
+    spling_data = []
 
-  return render(request, 'main/board.html', {'category': category, 'data': spling_data['items']})
+  return render(request, 'main/board.html', {'category': category, 'data': spling_data})
 
 def spling(request):
 
