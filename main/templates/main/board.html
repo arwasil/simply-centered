@@ -28,7 +28,7 @@
         {% include 'main/partial/_board_promotion_item.html' with item=category.promotion_set.all.0 %}
       {% else %}
         <!-- item 1 -->
-        {% include 'main/partial/_board_small_item.html' with item=data.0 %}
+        {% include 'main/partial/_board_small_item.html' with item=data.next %}
       {% endif %}
 
       {% if category.sub_menu.count >= 1 %}
@@ -36,7 +36,7 @@
         {% include 'main/partial/_board_category_item.html' with item=category.sub_menu.0 %}
       {% else %}
         <!-- 2 item -->
-        {% include 'main/partial/_board_large_item.html' with item=data.1 %}
+        {% include 'main/partial/_board_large_item.html' with item=data.next %}
       {% endif %}
 
       {% if category.sub_menu.count >= 2 %}
@@ -44,7 +44,7 @@
         {% include 'main/partial/_board_category_item.html' with item=category.sub_menu.1 %}
       {% else %}
         <!-- 3 item -->
-        {% include 'main/partial/_board_large_item.html' with item=data.2 %}
+        {% include 'main/partial/_board_large_item.html' with item=data.next %}
       {% endif %}
 
       {% if category.promotion_set.count >= 2 %}
@@ -52,7 +52,7 @@
         {% include 'main/partial/_board_promotion_item.html' with item=category.promotion_set.all.1 %}
       {% else %}
         <!-- item 4 -->
-        {% include 'main/partial/_board_small_item.html' with item=data.3 %}
+        {% include 'main/partial/_board_small_item.html' with item=data.next %}
       {% endif %}
     </ul>
   </div>
@@ -65,7 +65,7 @@
         {% include 'main/partial/_board_promotion_item.html' with item=category.promotion_set.all.2 %}
       {% else %}
         <!-- 5 item -->
-        {% include 'main/partial/_board_small_item.html' with item=data.4 %}
+        {% include 'main/partial/_board_small_item.html' with item=data.next %}
       {% endif %}
       
       {% if category.sub_menu.count >= 3 %}
@@ -73,7 +73,7 @@
         {% include 'main/partial/_board_category_item.html' with item=category.sub_menu.2 %}
       {% else %}
         <!-- 6 item -->
-        {% include 'main/partial/_board_large_item.html' with item=data.5 %}
+        {% include 'main/partial/_board_large_item.html' with item=data.next %}
       {% endif %}
 
       {% if category.sub_menu.count >= 4 %}
@@ -81,7 +81,7 @@
         {% include 'main/partial/_board_category_item.html' with item=category.sub_menu.3 %}
       {% else %}
         <!-- 7 item -->
-        {% include 'main/partial/_board_large_item.html' with item=data.6 %}
+        {% include 'main/partial/_board_large_item.html' with item=data.next %}
       {% endif %}
 
       {% if category.promotion_set.count >= 4 %}
@@ -89,7 +89,7 @@
         {% include 'main/partial/_board_promotion_item.html' with item=category.promotion_set.all.3 %}
       {% else %}
         <!-- 8 item -->
-        {% include 'main/partial/_board_small_item.html' with item=data.7 %}
+        {% include 'main/partial/_board_small_item.html' with item=data.next %}
       {% endif %}
     </ul>
   </div>
