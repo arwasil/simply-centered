@@ -20,6 +20,7 @@ urlpatterns = patterns('',
     url(r'^backend/bundle/(?P<id>.+)/$', 'backend.views.bundle', name='bundle'),
     url(r'^backend/add_to_spling/$', 'backend.views.add_to_spling', name='add_to_spling'),
 
+    url(r'^([\w-]+)/([\w-]+)/([\w-]+)/([\w-]+)/$', 'main.views.board'),
     url(r'^([\w-]+)/([\w-]+)/([\w-]+)/$', 'main.views.board'),
     url(r'^([\w-]+)/([\w-]+)/$', 'main.views.board'),
     url(r'^([\w-]+)/$', 'main.views.board', name='board'),
