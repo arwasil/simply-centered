@@ -1,10 +1,8 @@
 from django.db import models
 from django.core.urlresolvers import reverse
 from django.template.defaultfilters import slugify
-from django.core.files.storage import default_storage as storage
 
-from PIL import Image
-
+from utils import image
 
 class Category(models.Model):
     name = models.CharField(max_length=255)
@@ -48,39 +46,13 @@ class Category(models.Model):
     def root(self):
         return self.parent_categories[0]
 
-    def save(self, background_size=(284, 300)):
+    def save(self):
         self.full_url = '/' + '/'.join([parent.slug for parent in self.parent_categories]) + '/'
 
         super(Category, self).save()
 
         if self.background:
-            # prepare thumbnail for uploaded background image
-            try:
-                image = Image.open(self.background)
-            except:
-                image = None
-        
-            if image:
-                src_width, src_height = image.size
-                src_ratio = float(src_width) / float(src_height)
-                dst_width, dst_height = background_size
-                dst_ratio = float(dst_width) / float(dst_height)
-                
-                if dst_ratio < src_ratio:
-                    crop_height = src_height
-                    crop_width = crop_height * dst_ratio
-                    x_offset = int(float(src_width - crop_width) / 2)
-                    y_offset = 0
-                else:
-                    crop_width = src_width
-                    crop_height = crop_width / dst_ratio
-                    x_offset = 0
-                    y_offset = int(float(src_height - crop_height) / 3)
-                image = image.crop((x_offset, y_offset, x_offset+int(crop_width), y_offset+int(crop_height)))
-                image = image.resize(background_size, Image.ANTIALIAS)
-                fh = storage.open(self.background.name, "w")
-                image.save(fh)
-                fh.close()
+            image.resize_image(self.background, (284, 300))
     
     class Meta:
         verbose_name_plural = "categories"
@@ -95,3 +67,9 @@ class Promotion(models.Model):
 
     def __unicode__(self):
         return "%s - %s" % (self.category, self.name)
+
+    def save(self):
+        super(Promotion, self).save()
+
+        if self.background:
+            image.resize_image(self.background, (142, 300))
