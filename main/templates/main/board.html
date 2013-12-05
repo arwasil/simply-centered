@@ -1,4 +1,4 @@
-{% extends 'main/_base.html' %}
+{% extends 'main/base.html' %}
 
 {% load media %}
 
@@ -24,144 +24,17 @@
   {% if category.has_sub_menu %}
   <div class="row content">
     <ul class="board-items">
-      {% if  category.sub_menu.count > 2 %}
-      <!-- subcategory 3 -->
-      <li class="board-item board-item-link small">
-        <div class="item-nav">
-          <h2 class="item-nav-header item-header-{{ category.root.slug }}">
-            <a href='{% url board category.sub_menu.2.slug %}'>
-              {{ category.sub_menu.2.name }}
-            </a>
-          </h2>
-          <ul class="item-nav-links">
-            <li>
-              <a href="{{ category.sub_menu.2.article }}" class="item-nav-link-articles item-links-{{ category.root.slug }}">Articles</a>
-            </li>
-            <li>
-              <a href="#" class="item-nav-link-videos item-links-{{ category.root.slug }}">Videos</a>
-            </li>
-            <li>
-              <a href="#" class="item-nav-link-shop item-links-{{ category.root.slug }}">Shop</a>
-            </li>
-          </ul>
-        </div>
-        <a href='{% url board category.sub_menu.2.slug %}'>
-          <img class="item-img" src="{% if category.sub_menu.2.background %} {{ category.sub_menu.2.background.url }}{% endif %}">
-        </a>
-      </li>
-      {% else %}
       <!-- item 1 -->
-      <li class="board-item board-item-link small">
-        <div class="item-rate">
-          <ul>
-            <li><a href="#" class="rate rate1" data-rate="1">&nbsp;</a></li>
-            <li><a href="#" class="rate rate2" data-rate="2">&nbsp;</a></li>
-            <li><a href="#" class="rate rate3" data-rate="3">&nbsp;</a></li>
-            <li><a href="#" class="rate rate4" data-rate="4">&nbsp;</a></li>
-            <li><a href="#" class="rate rate5" data-rate="5">&nbsp;</a></li>
-          </ul>
-        </div>
-        <div class="item-overlay item-overlay-{{ category.root.slug }}"></div>
-        <div class="item-featured-link">
-          <img class="item-featured-link-icon" src="{% media_url 'img/featured-link-icon.png' %}">
-          <a href="{{ data.0.Link }}">{{ data.0.Title }}</a>
-        </div>
-        <img class="item-img" src="{{ data.0.thumbnails.140x300 }}">
-      </li>
-      {% endif %}
+      {% include 'main/partial/_board_small_item.html' with item=data.0 %}
+
       <!-- subcategory 1 -->
-      <li class="board-item large">
-        <div class="item-nav">
-          <h2 class="item-nav-header item-header-{{ category.root.slug }}">
-            <a href='{% url board category.sub_menu.0.slug %}'>
-              {{ category.sub_menu.0.name }}
-            </a>
-          </h2>
-          <ul class="item-nav-links">
-            <li>
-              <a href="{{ category.sub_menu.0.article }}" class="item-nav-link-articles item-links-{{ category.root.slug }}">Articles</a>
-            </li>
-            <li>
-              <a href="#" class="item-nav-link-videos item-links-{{ category.root.slug }}">Videos</a>
-            </li>
-            <li>
-              <a href="#" class="item-nav-link-shop item-links-{{ category.root.slug }}">Shop</a>
-            </li>
-          </ul>
-        </div>
-        <a href='{% url board category.sub_menu.0.slug %}'>
-          <img class="item-img" src="{% if category.sub_menu.0.background %} {{ category.sub_menu.0.background.url }}{% endif %}">
-        </a>
-      </li>
+      {% include 'main/partial/_board_category_item.html' with item=category.sub_menu.0 %}
+
       <!-- subcategory 2 -->
-      <li class="board-item large">
-        <div class="item-nav">
-          <h2 class="item-nav-header item-header-{{ category.root.slug }}">
-            <a href='{% url board category.sub_menu.1.slug %}'>
-              {{ category.sub_menu.1.name }}
-            </a>
-          </h2>
-          <ul class="item-nav-links">
-            <li>
-              <a href="{{ category.sub_menu.1.article }}" class="item-nav-link-articles item-links-{{ category.root.slug }}">Articles</a>
-            </li>
-            <li>
-              <a href="#" class="item-nav-link-videos item-links-{{ category.root.slug }}">Videos</a>
-            </li>
-            <li>
-              <a href="#" class="item-nav-link-shop item-links-{{ category.root.slug }}">Shop</a>
-            </li>
-          </ul>
-        </div>
-        <a href='{% url board category.sub_menu.1.slug %}'>
-          <img class="item-img" src="{% if category.sub_menu.1.background %} {{ category.sub_menu.1.background.url }}{% endif %}">
-        </a>
-      </li>
-      {% if  category.sub_menu.count > 3 %}
-      <!-- subcategory 4 -->
-      <li class="board-item board-item-link small">
-        <div class="item-nav">
-          <h2 class="item-nav-header item-header-{{ category.root.slug }}">
-            <a href='{% url board category.sub_menu.3.slug %}'>
-              {{ category.sub_menu.3.name }}
-            </a>
-          </h2>
-          <ul class="item-nav-links">
-            <li>
-              <a href="{{ category.sub_menu.3.article }}" class="item-nav-link-articles item-links-{{ category.root.slug }}">Articles</a>
-            </li>
-            <li>
-              <a href="#" class="item-nav-link-videos item-links-{{ category.root.slug }}">Videos</a>
-            </li>
-            <li>
-              <a href="#" class="item-nav-link-shop item-links-{{ category.root.slug }}">Shop</a>
-            </li>
-          </ul>
-        </div>
-        <a href='{% url board category.sub_menu.3.slug %}'>
-          <img class="item-img" src="{% if category.sub_menu.3.background %} {{ category.sub_menu.3.background.url }}{% endif %}">
-        </a>
-      </li>
-      {% else %}
+      {% include 'main/partial/_board_category_item.html' with item=category.sub_menu.1 %}
+
       <!-- item 2 -->
-      <li class="board-item board-item-link small">
-        <div class="item-rate">
-          <ul>
-            <li><a href="#" class="rate rate1" data-rate="1">&nbsp;</a></li>
-            <li><a href="#" class="rate rate2" data-rate="2">&nbsp;</a></li>
-            <li><a href="#" class="rate rate3" data-rate="3">&nbsp;</a></li>
-            <li><a href="#" class="rate rate4" data-rate="4">&nbsp;</a></li>
-            <li><a href="#" class="rate rate5" data-rate="5">&nbsp;</a></li>
-          </ul>
-        </div>
-        <div class="item-overlay item-overlay-{{ category.root.slug }}"></div>
-        <div class="item-featured-link">
-          <img class="item-featured-link-icon" src="{% media_url 'img/featured-link-icon.png' %}">
-          <a href="{{ data.1.Link }}">{{ data.1.Title }}</a>
-        </div>
-        <img class="item-img" src="{{ data.1.thumbnails.140x300 }}">
-      </li>
-      {% endif %}
+      {% include 'main/partial/_board_small_item.html' with item=data.1 %}
     </ul>
   </div>
   {% endif %}
@@ -170,77 +43,26 @@
   <div class="row content">
     <ul class="board-items">
       <!-- 3 item -->
-      <li class="board-item board-item-link small">
-        <div class="item-rate">
-          <ul>
-            <li><a href="#" class="rate rate1" data-rate="1">&nbsp;</a></li>
-            <li><a href="#" class="rate rate2" data-rate="2">&nbsp;</a></li>
-            <li><a href="#" class="rate rate3" data-rate="3">&nbsp;</a></li>
-            <li><a href="#" class="rate rate4" data-rate="4">&nbsp;</a></li>
-            <li><a href="#" class="rate rate5" data-rate="5">&nbsp;</a></li>
-          </ul>
-        </div>
-        <div class="item-overlay item-overlay-{{ category.root.slug }}"></div>
-        <div class="item-featured-link">
-          <img class="item-featured-link-icon" src="{% media_url 'img/featured-link-icon.png' %}">
-          <a href="{{ data.2.Link }}">{{ data.2.Title }}</a>
-        </div>
-        <img class="item-img" src="{{ data.2.thumbnails.140x300 }}">
-      </li>
+      {% include 'main/partial/_board_small_item.html' with item=data.2 %}
+      
+      {% if category.sub_menu.count > 2 %}
+      <!-- subcategory 3 -->
+      {% include 'main/partial/_board_category_item.html' with item=category.sub_menu.2 %}
+      {% else %}
       <!-- 4 item -->
-      <li class="board-item board-item-link large">
-        <div class="item-rate">
-          <ul>
-            <li><a href="#" class="rate rate1" data-rate="1">&nbsp;</a></li>
-            <li><a href="#" class="rate rate2" data-rate="2">&nbsp;</a></li>
-            <li><a href="#" class="rate rate3" data-rate="3">&nbsp;</a></li>
-            <li><a href="#" class="rate rate4" data-rate="4">&nbsp;</a></li>
-            <li><a href="#" class="rate rate5" data-rate="5">&nbsp;</a></li>
-          </ul>
-        </div>
-        <div class="item-overlay item-overlay-{{ category.root.slug }}"></div>
-        <div class="item-featured-link">
-          <img class="item-featured-link-icon" src="{% media_url 'img/featured-link-icon.png' %}">
-          <a href="{{ data.3.Link }}">{{ data.3.Title }}</a>
-        </div>
-        <img class="item-img" src="{{ data.3.thumbnails.300x300 }}">
-      </li>
+      {% include 'main/partial/_board_large_item.html' with item=data.3 %}
+      {% endif %}
+
+      {% if category.sub_menu.count > 3 %}
+      <!-- subcategory 4 -->
+      {% include 'main/partial/_board_category_item.html' with item=category.sub_menu.3 %}
+      {% else %}
       <!-- 5 item -->
-      <li class="board-item board-item-link large">
-        <div class="item-rate">
-          <ul>
-            <li><a href="#" class="rate rate1" data-rate="1">&nbsp;</a></li>
-            <li><a href="#" class="rate rate2" data-rate="2">&nbsp;</a></li>
-            <li><a href="#" class="rate rate3" data-rate="3">&nbsp;</a></li>
-            <li><a href="#" class="rate rate4" data-rate="4">&nbsp;</a></li>
-            <li><a href="#" class="rate rate5" data-rate="5">&nbsp;</a></li>
-          </ul>
-        </div>
-        <div class="item-overlay item-overlay-{{ category.root.slug }}"></div>
-        <div class="item-featured-link">
-          <img class="item-featured-link-icon" src="{% media_url 'img/featured-link-icon.png' %}">
-          <a href="{{ data.4.Link }}">{{ data.4.Title }}</a>
-        </div>
-        <img class="item-img" src="{{ data.4.thumbnails.300x300 }}">
-      </li>
+      {% include 'main/partial/_board_large_item.html' with item=data.4 %}
+      {% endif %}
+
       <!-- 6 item -->
-      <li class="board-item board-item-link small">
-        <div class="item-rate">
-          <ul>
-            <li><a href="#" class="rate rate1" data-rate="1">&nbsp;</a></li>
-            <li><a href="#" class="rate rate2" data-rate="2">&nbsp;</a></li>
-            <li><a href="#" class="rate rate3" data-rate="3">&nbsp;</a></li>
-            <li><a href="#" class="rate rate4" data-rate="4">&nbsp;</a></li>
-            <li><a href="#" class="rate rate5" data-rate="5">&nbsp;</a></li>
-          </ul>
-        </div>
-        <div class="item-overlay item-overlay-{{ category.root.slug }}"></div>
-        <div class="item-featured-link">
-          <img class="item-featured-link-icon" src="{% media_url 'img/featured-link-icon.png' %}">
-          <a href="{{ data.5.Link }}">{{ data.5.Title }}</a>
-        </div>
-        <img class="item-img" src="{{ data.5.thumbnails.140x300 }}">
-      </li>
+      {% include 'main/partial/_board_small_item.html' with item=data.5 %}
     </ul>
   </div>
 </section>

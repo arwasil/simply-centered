@@ -13,6 +13,8 @@ urlpatterns = patterns('',
     url(r'^spling/$', 'main.views.spling', name='spling'),
     url(r'^shop/$', 'main.views.shop', name='shop'),
     url(r'^shop/([\w-]+)/$', 'main.views.shop', name='shop_category'),
+    url(r'^video/$', 'main.views.video', name='video'),
+    url(r'^video/([\w-]+)/$', 'main.views.video', name='video_category'),
 
     url(r'^backend/$', 'backend.views.list', name='list'),
     url(r'^backend/bundle/(?P<id>.+)/$', 'backend.views.bundle', name='bundle'),
@@ -21,5 +23,4 @@ urlpatterns = patterns('',
     url(r'^([\w-]+)/([\w-]+)/([\w-]+)/$', 'main.views.board'),
     url(r'^([\w-]+)/([\w-]+)/$', 'main.views.board'),
     url(r'^([\w-]+)/$', 'main.views.board', name='board'),
-
-) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+)

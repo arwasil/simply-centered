@@ -16,12 +16,12 @@
 <body>
   <!-- The main page content, wrapped to support stick footers -->
   <div id="site-container">
-    {% include 'main/_header.html' %}
+    {% include 'main/partial/_header.html' %}
     {% block aside %}{% endblock %}
     {% block content %}{% endblock %}
-    {% include 'main/_footer.html' %}
-    {% include 'main/_social.html' %}
-    {% include 'main/_popups.html' %}
+    {% include 'main/partial/_footer.html' %}
+    {% include 'main/partial/_social.html' %}
+    {% include 'main/partial/_popups.html' %}
   </div>
 </body>
 </html>

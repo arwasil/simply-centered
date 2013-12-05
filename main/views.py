@@ -24,8 +24,18 @@ def spling(request):
 def shop(request, category=None):
     if category:
         category = get_object_or_404(Category, slug=category, show_in_shop=True)
+    print category
 
     sub_cats = Category.objects.filter(parent=category, show_in_shop=True)
+    data = recommendations(category)
+
+    return render(request, 'main/shop.html', {'category': category, 'categories': sub_cats, 'data': data})
+
+def video(request, category=None):
+    if category:
+        category = get_object_or_404(Category, slug=category, show_in_video=True)
+
+    sub_cats = Category.objects.filter(parent=category, show_in_video=True)
     data = recommendations(category)
 
     return render(request, 'main/shop.html', {'category': category, 'categories': sub_cats, 'data': data})
