@@ -1,3 +1,5 @@
+from itertools import chain, repeat
+
 from django.shortcuts import render, get_object_or_404
 
 from models import *
@@ -10,7 +12,7 @@ def index(request):
 
 def board(request, *slugs):
     category = get_object_or_404(Category, slug=slugs[-1])
-    data = iter(recommendations(category.name))
+    data =  chain(recommendations(category.name), repeat(None))
     
     return render(request, 'main/board.html', {'category': category, 'data': data})
 
@@ -27,7 +29,7 @@ def shop(request, category=None):
     print category
 
     sub_cats = Category.objects.filter(parent=category, show_in_shop=True)
-    data = item(recommendations(category))
+    data = chain(recommendations(category.name), repeat(None))
 
     return render(request, 'main/shop.html', {'category': category, 'categories': sub_cats, 'data': data})
 
@@ -36,6 +38,6 @@ def video(request, category=None):
         category = get_object_or_404(Category, slug=category, show_in_video=True)
 
     sub_cats = Category.objects.filter(parent=category, show_in_video=True)
-    data = iter(recommendations(category))
+    data = chain(recommendations(category.name), repeat(None))
 
     return render(request, 'main/shop.html', {'category': category, 'categories': sub_cats, 'data': data})
