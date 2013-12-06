@@ -30,4 +30,4 @@ def market(request, category='market'):
     data = chain(recommendations(category, 'market'), repeat(None))
 
     context = {'category': category, 'categories': sub_cats, 'data': data}
-    return render(request, 'main/shop.html', context)
+    return render(request, 'main/board.html', context)
