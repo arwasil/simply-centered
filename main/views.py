@@ -26,7 +26,7 @@ def spling(request):
 def market(request, category='market'):
     category = get_object_or_404(Category, slug=category, show_in_shop=True)
 
-    sub_cats = Category.objects.filter(parent=category, show_in_shop=True)
+    sub_cats = Category.objects.filter(show_in_shop=True).exclude(slug='market')
     data = recommendations(category, 'market')[:8]
 
     context = {'category': category, 'categories': sub_cats, 'data': data}

@@ -25,12 +25,14 @@
 
   <!-- BOARD HEADER ============================================================-->
   <div class="row board-shop" id="board-header">
+    {% comment %}
     <div id="board-breadcumb">
       <a href="{% url shop %}">SC Market</a>
       {% for parent in category.parent_categories %}
       <a href="{% url shop_category parent.slug %}">{{ parent.name }}</a>
       {% endfor %}    
     </div>
+    {% encomment %}
     <h1 id="board-title">{% if category %}{{ category }}{% else %}SC Market{% endif %}</h1>
   </div>
 
