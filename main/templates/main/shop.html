@@ -13,7 +13,7 @@
   <ul>
     <li><a href="{% url shop %}" alt="Featured">Featured</a></li>
     {% for category in categories %}
-    <li><a href="{% url shop_category category.slug %}" alt="{{ category.name }}">{{ category.name | slice:"8:" }}</a></li>
+    <li><a href="{% url shop_category category.slug %}" alt="{{ category.name }}">{{ category.name|slice:"8:" }}</a></li>
     {% endfor %}
   </ul>
 </div>
