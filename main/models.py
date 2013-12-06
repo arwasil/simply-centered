@@ -46,6 +46,18 @@ class Category(models.Model):
     def root(self):
         return self.parent_categories[0]
 
+    def sub_categories(self, area=None):
+        list = Category.objects.filter(parent=self)
+
+        if area == 'menu': 
+            list = list.filter(show_in_menu=True)
+        elif area == 'shop': 
+            list = list.filter(show_in_shop=True)
+        elif area == 'video': 
+            list = list.filter(show_in_video=True)
+
+        return list
+
     def save(self):
         self.full_url = '/' + '/'.join([parent.slug for parent in self.parent_categories]) + '/'
 

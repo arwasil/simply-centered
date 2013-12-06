@@ -12,7 +12,7 @@ def index(request):
 
 def board(request, *slugs):
     category = get_object_or_404(Category, slug=slugs[-1])
-    data =  chain(recommendations(category.name), repeat(None))
+    data =  chain(recommendations(category, 'menu'), repeat(None))
     
     return render(request, 'main/board.html', {'category': category, 'data': data})
 
@@ -26,18 +26,8 @@ def spling(request):
 def shop(request, category=None):
     if category:
         category = get_object_or_404(Category, slug=category, show_in_shop=True)
-    print category
 
     sub_cats = Category.objects.filter(parent=category, show_in_shop=True)
-    data = chain(recommendations(category.name), repeat(None))
-
-    return render(request, 'main/shop.html', {'category': category, 'categories': sub_cats, 'data': data})
-
-def video(request, category=None):
-    if category:
-        category = get_object_or_404(Category, slug=category, show_in_video=True)
-
-    sub_cats = Category.objects.filter(parent=category, show_in_video=True)
-    data = chain(recommendations(category.name), repeat(None))
+    data = chain(recommendations(category, 'shop'), repeat(None))
 
     return render(request, 'main/shop.html', {'category': category, 'categories': sub_cats, 'data': data})
