@@ -1,9 +1,12 @@
 import requests, simplejson as json
 
-def recommendations(category, area):
+def recommendations(category, area, spec_limit=None):
     limit = 8
     limit = limit - min(category.sub_categories(area).count(), 4)
     limit = limit - min(category.promotion_set.count(), 4)
+
+    if spec_limit:
+        limit = spec_limit
 
     spling_data = []
 
