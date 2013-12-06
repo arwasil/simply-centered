@@ -27,7 +27,7 @@ def market(request, category='market'):
     category = get_object_or_404(Category, slug=category, show_in_shop=True)
 
     sub_cats = Category.objects.filter(parent=category, show_in_shop=True)
-    data = chain(recommendations(category, 'market'), repeat(None))
+    data = chain(recommendations(category, 'market'), repeat(None))[:8]
 
     context = {'category': category, 'categories': sub_cats, 'data': data}
-    return render(request, 'main/board.html', context)
+    return render(request, 'main/shop.html', context)
