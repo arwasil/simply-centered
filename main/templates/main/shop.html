@@ -47,9 +47,7 @@
           <h2 class="item-nav-header">{{ item.Title }}</h2>
           <ul class="item-nav-links">
             <li>
-              {% comment %}
-              <a href="{{ item.Link }}" title='{{ item.Title }}' target='_blank' class="item-nav-link-articles">Category</a>
-              {% endcomment %}
+              <a href="{{ item.Link }}" title='{{ item.Title }}' target='_blank' class="item-nav-link-articles">{% comment %}Category{% endcomment %}</a>
             </li>
             <li>
               <a href="{{ item.Link }}" title='{{ item.Title }}' target='_blank' class="item-nav-link-price">{{item.ExtraText}}</a>
