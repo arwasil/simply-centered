@@ -33,7 +33,11 @@
       {% endfor %}    
     </div>
     {% endcomment %}
-    <h1 id="board-title">{% if category %}{{ category.name|slice:"7:" }}{% else %}SC Market{% endif %}</h1>
+    <h1 id="board-title">
+      {% if category %}
+        {% if category.name is 'Market' %}Market{% else %}{{ category.name|slice:"7:" }}{% endif %}
+      {% else %}SC Market{% endif %}
+    </h1>
   </div>
 
   <!-- BOARD CONTENT1 ==========================================================-->
