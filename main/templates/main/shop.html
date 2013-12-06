@@ -13,7 +13,7 @@
   <ul>
     <li><a href="{% url shop %}" alt="Featured">Featured</a></li>
     {% for category in categories %}
-    <li><a href="{% url shop_category category.slug %}" alt="{{ category.name }}">{{ category.name }}</a></li>
+    <li><a href="{% url shop_category category.slug %}" alt="{{ category.name }}">{{ category.name | slice:"8:" }}</a></li>
     {% endfor %}
   </ul>
 </div>
@@ -47,7 +47,7 @@
           <h2 class="item-nav-header">{{ item.Title }}</h2>
           <ul class="item-nav-links">
             <li>
-              <a href="{{ item.Link }}" title='{{ item.Title }}' target='_blank' class="item-nav-link-articles">{% comment %}Category{% endcomment %}</a>
+              <a href="{{ item.Link }}" title='{{ item.Title }}' target='_blank' class="item-nav-link-articles">{{category}}</a>
             </li>
             <li>
               <a href="{{ item.Link }}" title='{{ item.Title }}' target='_blank' class="item-nav-link-price">{{item.ExtraText}}</a>
