@@ -47,18 +47,22 @@
           <h2 class="item-nav-header">{{ item.Title }}</h2>
           <ul class="item-nav-links">
             <li>
-              <a href="#" class="item-nav-link-articles">Category</a>
+              {% comment %}
+              <a href="{{ item.Link }}" title='{{ item.Title }}' target='_blank' class="item-nav-link-articles">Category</a>
+              {% endcomment %}
             </li>
             <li>
-              <a href="#" class="item-nav-link-price">$100.00</a>
+              <a href="{{ item.Link }}" title='{{ item.Title }}' target='_blank' class="item-nav-link-price">{{item.ExtraText}}</a>
             </li>
           </ul>
         </div>
-        {% if forloop.counter0|divisibleby:'4' or forloop.counter|divisibleby:'4' %}
-        <img class="item-img" src="{{ item.thumbnails.140x300 }}">
-        {% else %}
-        <img class="item-img" src="{{ item.thumbnails.300x300 }}">
-        {% endif %}
+        <a href="{{ item.Link }}" title='{{ item.Title }}' target='_blank'>
+          {% if forloop.counter0|divisibleby:'4' or forloop.counter|divisibleby:'4' %}
+          <img class="item-img" src="{{ item.thumbnails.140x300 }}">
+          {% else %}
+          <img class="item-img" src="{{ item.thumbnails.300x300 }}">
+          {% endif %}
+        </a>
       </li>
   {% if forloop.counter|divisibleby:'4' %}
     </ul>
