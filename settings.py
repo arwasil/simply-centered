@@ -186,6 +186,8 @@ S3_URL = 'http://%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
 DEV_MEDIA_URL = PRODUCTION_MEDIA_URL = STATIC_URL = S3_URL
 
 STATIC_URL = S3_URL + 'static/'
+PRODUCTION_MEDIA_URL = STATIC_URL
+
 
 try:
     from settings_local import *
