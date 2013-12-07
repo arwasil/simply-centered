@@ -11,12 +11,12 @@ urlpatterns = patterns('',
 
     url(r'^$', 'main.views.index', name='index'),
     url(r'^spling/$', 'main.views.spling', name='spling'),
-    url(r'^shop/$', 'main.views.shop', name='shop'),
-    url(r'^shop/([\w-]+)/$', 'main.views.shop', name='shop_category'),
+    url(r'^market/$', 'main.views.market', name='shop'),
+    url(r'^market/([\w-]+)/$', 'main.views.market', name='shop_category'),
     
     # video pages - temporary link to shop
-    url(r'^video/$', 'main.views.shop', name='video'),
-    url(r'^video/([\w-]+)/$', 'main.views.shop', name='video_category'),
+    url(r'^video/$', 'main.views.market', name='video'),
+    url(r'^video/([\w-]+)/$', 'main.views.market', name='video_category'),
 
     url(r'^backend/$', 'backend.views.list', name='list'),
     url(r'^backend/bundle/(?P<id>.+)/$', 'backend.views.bundle', name='bundle'),

@@ -23,11 +23,11 @@ def spling(request):
 
     return render(request, 'main/spling.html', context)
 
-def shop(request, category=None):
-    if category:
-        category = get_object_or_404(Category, slug=category, show_in_shop=True)
+def market(request, category='market'):
+    category = get_object_or_404(Category, slug=category, show_in_shop=True)
 
-    sub_cats = Category.objects.filter(parent=category, show_in_shop=True)
-    data = chain(recommendations(category, 'shop'), repeat(None))
+    sub_cats = Category.objects.filter(show_in_shop=True).exclude(slug='market')
+    data = recommendations(category, 'market', 8)[:8]
 
-    return render(request, 'main/shop.html', {'category': category, 'categories': sub_cats, 'data': data})
+    context = {'category': category, 'categories': sub_cats, 'data': data}
+    return render(request, 'main/shop.html', context)
