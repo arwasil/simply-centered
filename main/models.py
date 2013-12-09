@@ -62,6 +62,10 @@ class Category(models.Model):
     def shop_slug(self):
         return 'market-%s' % self.slug
 
+    @property
+    def video_slug(self):
+        return 'video-%s' % self.slug
+
     def save(self):
         self.full_url = '/' + '/'.join([parent.slug for parent in self.parent_categories]) + '/'
 
