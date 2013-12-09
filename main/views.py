@@ -27,7 +27,7 @@ def market(request, category='market'):
     try:
         category = Category.objects.get(slug=category, show_in_shop=True)
     except Category.DoesNotExist:
-        return redirect('market')
+        return redirect('shop')
 
     sub_cats = Category.objects.filter(show_in_shop=True).exclude(slug='market')
     data = recommendations(category, 'market', 8)[:8]
