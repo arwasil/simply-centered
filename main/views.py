@@ -1,6 +1,6 @@
 from itertools import chain, repeat
 
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 
 from models import *
 from api.spling import recommendations
@@ -24,7 +24,10 @@ def spling(request):
     return render(request, 'main/spling.html', context)
 
 def market(request, category='market'):
-    category = get_object_or_404(Category, slug=category, show_in_shop=True)
+    try:
+        category = Category.objects.get(slug=category, show_in_shop=True)
+    except Category.DoesNotExist:
+        return redirect('market')
 
     sub_cats = Category.objects.filter(show_in_shop=True).exclude(slug='market')
     data = recommendations(category, 'market', 8)[:8]
