@@ -3,8 +3,10 @@ import requests, simplejson as json
 def recommendations(category, area, spec_limit=None):
     limit = 8
     limit = limit - min(category.sub_categories(area).count(), 4)
-    limit = limit - min(category.promotion_set.count(), 4)
-
+    if category.skyscraper_mode:
+        limit = limit - 2 - min(category.promotion_set.count(), 2)
+    else:
+        limit = limit - min(category.promotion_set.count(), 4)
     if spec_limit:
         limit = spec_limit
 

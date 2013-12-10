@@ -15,6 +15,38 @@
 	height: 300px;
 }
 
+#board-container .skyscraper-row.content {
+	height: 612px;
+}
+
+#board-container .side-column {
+	display: block;
+	float: left;
+	width: 142px;
+	margin: 0 10px 0 0;
+	padding: 0;
+}
+
+#board-container .side-column.last {
+	margin: 0;
+}
+
+#board-container .side-column.last:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+
+#board-container .center-column {
+	display: block;
+	float: left;
+	width: 578px;
+	margin: 0 10px 0 0;
+	padding: 0;
+}
+
+
 /*************************************************************************************************\
 
 \*************************************************************************************************/

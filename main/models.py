@@ -14,6 +14,8 @@ class Category(models.Model):
     position = models.SmallIntegerField(blank=True, default=0)
     full_url = models.CharField(max_length=255, editable=False, blank=True, default='')
 
+    skyscraper_mode = models.BooleanField(blank=True, default=False)
+
     show_in_menu = models.BooleanField(blank=True, default=True)
     show_in_video = models.BooleanField(blank=True, default=False)
     show_in_shop = models.BooleanField(blank=True, default=False)
@@ -92,4 +94,7 @@ class Promotion(models.Model):
         super(Promotion, self).save()
 
         if self.background:
-            image.resize_image(self.background, (142, 300))
+            size = (142, 300)
+            if self.category.skyscraper_mode:
+                size = (142, 612)
+            image.resize_image(self.background, size)
