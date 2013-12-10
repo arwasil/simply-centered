@@ -23,12 +23,15 @@
 	display: block;
 	float: left;
 	width: 142px;
-	margin: 0 10px 0 0;
 	padding: 0;
 }
 
+#board-container .side-column.first {
+	margin-right: 10px;
+}
+
 #board-container .side-column.last {
-	margin: 0;
+	margin-left: 10px;
 }
 
 #board-container .side-column.last:after {
