@@ -178,7 +178,7 @@ $(document).ready(function() {
 	$("#carousel-2").fadeOut(0);
 	$("#carousel-3").fadeOut(0);
 	$("#carousel-4").fadeOut(0);
-	//carousel();
+	carousel();
 
 	$(".facet-btn").mouseenter(function() {
 		var pie_class = $(this).attr("data-pie");
