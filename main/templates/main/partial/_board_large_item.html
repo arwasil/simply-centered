@@ -1,7 +1,7 @@
 {% load media %}
 
 {% if item %}
-  <li class="board-item board-item-link large">
+  <li class="board-item board-item-link large {% if 'Trusted Source' in item.name %}featured{% endif %}">
     <div class="item-rate">
       <ul>
         <li><a href="#" class="rate rate1" data-rate="1">&nbsp;</a></li>
