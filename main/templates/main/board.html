@@ -42,7 +42,7 @@
     <div class="row content">
       <ul class="board-items">
 
-        {% if not category.skyscrape_mode %}
+        {% if not category.skyscraper_mode %}
           {% if category.promotion_set.count >= 1 %}
             <!-- promotion 1 -->
             {% include 'main/partial/_board_promotion_item.html' with item=category.promotion_set.all.0 %}
@@ -68,7 +68,7 @@
           {% include 'main/partial/_board_large_item.html' with item=data.next %}
         {% endif %}
 
-        {% if not category.skyscrape_mode %}
+        {% if not category.skyscraper_mode %}
           {% if category.promotion_set.count >= 2 %}
             {% include 'main/partial/_board_promotion_item.html' with item=category.promotion_set.all.1 %}
           {% else %}
@@ -81,7 +81,7 @@
     <div class="row content">
       <ul class="board-items">
 
-        {% if not category.skyscrape_mode %}
+        {% if not category.skyscraper_mode %}
           {% if category.promotion_set.count >= 2 %}
             <!-- promotion 1 -->
             {% include 'main/partial/_board_promotion_item.html' with item=category.promotion_set.all.1 %}
@@ -107,7 +107,7 @@
           {% include 'main/partial/_board_large_item.html' with item=data.next %}
         {% endif %}
 
-        {% if not category.skyscrape_mode %}
+        {% if not category.skyscraper_mode %}
           {% if category.promotion_set.count >= 4 %}
             {% include 'main/partial/_board_promotion_item.html' with item=category.promotion_set.all.3 %}
           {% else %}
