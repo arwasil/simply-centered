@@ -14,13 +14,16 @@
       <ul>
         {% for category in root_menu %}
         <li>
-          <a href="{{ category.full_url }}">{{ category.name }}</a>
+          <a href="{{ category.full_url }}"
+             class="{{ category.name|lower }}_b">{{ category.name }}</a>
           <div class="submenu">
             <div class="submenu-triangle"></div>
             <ul class="parent">
               {% for sub_category in category.sub_menu %}
               <li>
-                <a href="{{ sub_category.full_url }}" id="parent-{{ sub_category.slug }}" data-dropdown="#child-{{ sub_category.slug }}">{{ sub_category.name }}</a>
+                <a href="{{ sub_category.full_url }}" 
+                   id="parent-{{ sub_category.slug }}" 
+                   data-dropdown="#child-{{ sub_category.slug }}">{{ sub_category.name }}</a>
                 <div class="parent-triangle"></div>
               </li>
               {% endfor %}
