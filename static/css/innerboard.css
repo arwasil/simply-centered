@@ -513,3 +513,7 @@ a.main{
 .board-title-dummy8 {
 	background-color: grey;
 }
+
+.featured{
+  box-shadow: 0 0 8px 4px rgba(98, 165, 190, 1);
+}
