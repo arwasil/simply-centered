@@ -29,9 +29,13 @@
               {% endfor %}
             </ul>
             {% for sub_category in category.sub_menu %}
-            <ul class="child" id="child-{{ sub_category.slug }}" data-parent="#parent-{{ sub_category.slug }}">
+            <ul class="child " 
+                id="child-{{ sub_category.slug }}" 
+                data-parent="#parent-{{ sub_category.slug }}">
               {% for sub_sub_category in sub_category.sub_menu %}
-              <li><a href="{{ sub_sub_category.full_url }}">{{ sub_sub_category.name }}</a></li>
+              <li>
+                <a href="{{ sub_sub_category.full_url }}">{{ sub_sub_category.name }}</a>
+              </li>
               {% endfor %}
             </ul>
             {% endfor %}
