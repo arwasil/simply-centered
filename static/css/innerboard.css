@@ -41,7 +41,7 @@
 #board-container .center-column {
 	display: block;
 	float: left;
-	width: 578px;
+	/*width: 578px;*/
 	margin: 0 10px 0 0;
 	padding: 0;
 }
