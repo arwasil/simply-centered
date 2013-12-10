@@ -7,7 +7,7 @@ from api.spling import recommendations
 
 
 def index(request):
-    menu = Category.objects.filter(parent=None, show_in_menu=True)[0:4]
+    menu = Category.objects.filter(parent=None, show_in_menu=True).order_by('pk')[0:4]
     return render(request, 'main/index.html', {'menu': menu})
 
 def board(request, *slugs):
