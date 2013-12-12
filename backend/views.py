@@ -22,41 +22,46 @@ def authorization():
 def list(request):
     auth = authorization()
 
-    url = 'https://simplycentered.trap.it/api/v3/sc/trapdumps/bundles/'
+    url = 'https://simplycentered.trap.it/api/v3/sc/search/?pretty=true'
     headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
-
-    response = requests.get(url, auth=auth, headers=headers)
+    data = json.dumps({'query': 'curated:true type:bundle',
+            'order': 'title',
+            'reverse': False,
+            'language': 'en',
+            'limit': 50,
+            'offset': 0})
+    
+    response = requests.post(url, auth=auth, data=data, headers=headers)
     return render(request, 'backend/list.html', {"list": response.json()})
 
 def bundle(request, id):
     auth = authorization()
 
-    url = 'https://simplycentered.trap.it/api/v3/sc/traps/%s/queue/?expand_doc_sources_and_origins=true&invisible_only=true&with_origin_owner=true&size=20&page=0&pretty=true' % id
+    url = 'https://simplycentered.trap.it/api/v3/sc/traps/%s/queue/?expand_doc_sources_and_origins=true&invisible_only=true&with_origin_owner=true&size=100&page=0&pretty=true' % id
     headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
 
     response = requests.get(url, auth=auth, headers=headers)
-    data = response.json()
-    #print json.dumps(data['records'][0], indent=4*' ')
-
-    return render(request, 'backend/bundle.html', {"list": data['records']})
+    return render(request, 'backend/bundle.html', {"list": response.json()['records']})
 
 def add_to_spling(request):
     link = request.POST.get('link')
     image = request.POST.get('image', '')
     title = request.POST.get('title')
-    genre = request.POST.get('genre').lower()
+    genre = request.POST.get('genre')
     
     access = settings.SPLING_COM_ACCESS_INFO
 
-    data = {'Link': link,
-            'Title': title, 
-            'ImageURL': image and image or '',
-            'Genre': genre in SPLING_CATEGORIES and SPLING_CATEGORIES[genre] or ''}
-
     create_url = '%s/spling/' % access['url']
-    data = json.dumps(data)
     auth = HTTPBasicAuth(access['username'], access['password'])
     headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
+    category = Category.objects.filter(name=genre)
+    category = len(category) > 0 and category[0].spling_code or ''
+
+    data = json.dumps({'Link': link,
+            'Title': title, 
+            'ImageURL': image and image or '',
+            'Genre': category})
+
     resp = requests.post(create_url, data=data, auth=auth, headers=headers)
 
     if resp.status_code == 403:

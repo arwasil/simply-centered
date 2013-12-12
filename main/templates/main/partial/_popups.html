@@ -1,3 +1,5 @@
+{% load media %}
+
 <div id="popup-bg-overlay"></div>
 
 <div id="popup-login" class="main-popup">
@@ -8,7 +10,7 @@
     <input type="submit" class="btn-login" value="Log In">
   </form>
   <p class="form-info">
-    Not a member yet? <a href="#" id="link-register">Register now <img src="img/mini-arrow.png"></a>
+    Not a member yet? <a href="#" id="link-register">Register now <img src="{% media_url 'img/mini-arrow.png' %}"></a>
   </p>
 </div>
 
@@ -21,6 +23,6 @@
     <input type="submit" class="btn-register" value="Register">
   </form>
   <p class="form-info">
-    Already a member? <a href="#" id="link-login">Login now <img src="img/mini-arrow.png"></a>
+    Already a member? <a href="#" id="link-login">Login now <img src="{% media_url 'img/mini-arrow.png' %}"></a>
   </p>
 </div>

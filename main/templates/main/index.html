@@ -1,0 +1,86 @@
+{% extends 'main/base.html' %}
+
+{% load media %}
+
+{% block headExtra %}
+  {% include_media 'index.css' %}
+  {% include_media 'index.js' %}
+{% endblock %}
+
+{% block content %}
+<section id="facet-container">
+  <div id="mandala">
+    <ul>
+      {% for category in menu %}
+      {% for sub_category in category.sub_menu_2 %}
+      <li onclick="location.href='{{ category.full_url }}';" class="pie-{{ category.slug }}" data-facet="#facet-{{ category.slug }}"><a href="{{ sub_category.full_url }}">{{ sub_category.name }}</a></li>
+      {% endfor %}
+      {% endfor %}
+    </ul>
+    <div id="carousel" class="carousel-bg">
+      <h1 class="carousel-heading">Simply Centered</h1>
+      <div id="carousel-1">
+        <div id="carousel-shadow"></div>
+        <img class="carousel-img" src="{% media_url 'img/carousel-1.jpg' %}">
+        <h2 class="carousel-subheading">"Healthy Living Fall!"</h2>
+      </div>
+      <div id="carousel-2">
+        <div id="carousel-shadow"></div>
+        <img class="carousel-img" src="{% media_url 'img/carousel-2.jpg' %}">
+        <h2 class="carousel-subheading">"Healthy Living Fall!"</h2>
+      </div>
+      <div id="carousel-3">
+        <div id="carousel-shadow"></div>
+        <img class="carousel-img" src="{% media_url 'img/carousel-3.jpg' %}">
+        <h2 class="carousel-subheading">"Healthy Living Fall!"</h2>
+      </div>
+      <div id="carousel-4">
+        <div id="carousel-shadow"></div>
+        <img class="carousel-img" src="{% media_url 'img/carousel-4.jpg' %}">
+        <h2 class="carousel-subheading">"Healthy Living Fall!"</h2>
+      </div>
+      <div id="carousel-nav">
+        <a href="#" id="carousel-nav-1" data-carousel="1"></a>
+        <a href="#" id="carousel-nav-2" data-carousel="2"></a>
+        <a href="#" id="carousel-nav-3" data-carousel="3"></a>
+        <a href="#" id="carousel-nav-4" data-carousel="4"></a>
+      </div>
+    </div>
+  </div>
+
+  <div id="mandala-border"></div>
+  <div id="mandala-bg"></div>
+
+  <div id="carousel-bg">
+    <h1 class="carousel-heading">Simply Centered</h1>
+    <div>
+      <div id="carousel-shadow"></div>
+      <img class="carousel-img" src="{% media_url 'img/carousel-4.jpg' %}">
+      <h2 class="carousel-subheading">"Healthy Living Fall"</h2>
+    </div>
+  </div>
+
+  {% for category in menu %}
+  <div id="facet-{{ category.slug }}" class="facet-btn" data-pie=".pie-{{ category.slug }}" onclick="location.href='{{ category.full_url }}';">
+    <a href="{{ category.full_url }}">{{ category.name }}</a>
+    <img class="icon-big" src="{% media_url category.facet_icon %}">
+  </div>
+  <div id="facet-{{ category.slug }}-shadow" class="facet-shadow"></div>
+  {% endfor %}
+
+  <div id="twitter-stream">
+    <a href="https://twitter.com/simplycentered" id="follow-btn"></a>
+    <ul id="tweets">
+      <li>
+        We just write new article! Check this out <a href="#">http://sc.ly/HlSmR</a>
+      </li>
+      <li>
+        We’re featured on <a href="#">http://www.bbc.com</a>  website yesterday!
+      </li>
+      <li>
+        <a href="#">@Mark</a> yes you can visit our site and check the fitness category for more stuff!”
+      </li>
+    </ul>
+  </div>
+</section>
+{% endblock %}

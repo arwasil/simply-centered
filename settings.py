@@ -16,21 +16,16 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '',                      # Or path to database file if using sqlite3.
-        # The following settings are not used with sqlite3:
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
-        'PORT': '',                      # Set to empty string for default.
-    }
-}
+import dj_database_url
+DATABASES = {}
+DATABASES['default'] =  dj_database_url.config()
+
+# Honor the 'X-Forwarded-Proto' header for request.is_secure()
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -57,8 +52,8 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/var/www/example.com/media/"
-MEDIA_ROOT = ''
 
+MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://example.com/media/", "http://media.example.com/"
@@ -73,10 +68,10 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
-STATIC_URL = 'http://localhost:80/simply/'
+STATIC_URL = '/static/'
 
 # django-mediagenerate needs dev/prod or throws null error
-MEDIA_URL = '/s/m/'
+MEDIA_URL = '/media/'
 
 DEV_MEDIA_URL = STATIC_URL
 
@@ -108,6 +103,7 @@ TEMPLATE_LOADERS = (
 )
 
 MIDDLEWARE_CLASSES = (
+    'mediagenerator.middleware.MediaMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -126,7 +122,6 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    os.path.join(PROJECT_ROOT, 'templates'),
 )
 
 MEDIA_BUNDLES = (
@@ -137,7 +132,8 @@ MEDIA_BUNDLES = (
       'css/animate.css',
       'css/mandala.css',),
     ('board.css',
-      'css/innerboard.css'),
+      'css/innerboard.css',
+      'css/colorbox.css',),
     ('shop.css',
       'css/shop.css',),
 
@@ -148,7 +144,8 @@ MEDIA_BUNDLES = (
     ('index.js',
      'js/jquery.color.js',),
     ('board.js',
-     'js/innerboard.js',),
+     'js/innerboard.js',
+     'js/jquery.colorbox-min.js',),
 )
 
 INSTALLED_APPS = (
@@ -158,14 +155,15 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
-    # Uncomment the next line to enable admin documentation:
-    # 'django.contrib.admindocs',
+    'django.contrib.admin',
+    'django.contrib.admindocs',
+    
     # other vendor modules
     'mediagenerator',
     'storages',
     'bootstrap3',
+    'south',
+    
     # simply modules
     'main',
     'backend',
@@ -177,19 +175,26 @@ IGNORE_APP_MEDIA_DIRS = INSTALLED_APPS
 # where is the static coming from
 # AWS_STORAGE_BUCKET_NAME = os.environ['AWS_STORAGE_BUCKET_NAME']
 
+DEBUG = TEMPLATE_DEBUG = os.environ.get('DEBUG_MODE', False)
+MEDIA_DEV_MODE = False
+
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = '7gportal'
+STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+DEFAULT_FILE_STORAGE = 'main.api.s3.MediaS3BotoStorage' 
+STATICFILES_STORAGE = 'main.api.s3.StaticS3BotoStorage'
+S3_URL = 'http://%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
+DEV_MEDIA_URL = PRODUCTION_MEDIA_URL = STATIC_URL = S3_URL
+
+STATIC_URL = S3_URL + 'static/'
+PRODUCTION_MEDIA_URL = STATIC_URL
+
 try:
     from settings_local import *
 except ImportError:
-    logging.warn("no settings_local found, using defaults")
-    DEBUG = MEDIA_DEV_MODE = TEMPLATE_DEBUG = False
+    pass
 
-if not DEBUG:
-    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
-    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
-    AWS_STORAGE_BUCKET_NAME = '7gportal'
-    STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-    S3_URL = 'http://%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
-    DEV_MEDIA_URL = PRODUCTION_MEDIA_URL = STATIC_URL = S3_URL
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to

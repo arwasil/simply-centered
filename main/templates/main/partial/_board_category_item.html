@@ -1,0 +1,23 @@
+<li class="board-item large {% if 'Trusted Source' in item.name %}featured{% endif %}">
+  <div class="item-nav">
+    <h2 class="item-nav-header item-header-{{ category.root.slug }}">
+      <a href='{{ item.full_url }}'>
+        {{ item.name }}
+      </a>
+    </h2>
+    <ul class="item-nav-links">
+      <li>
+        <a href="{{ item.article }}" class="item-nav-link-articles item-links-{{ category.root.slug }}">Articles</a>
+      </li>
+      <li>
+        <a href="{% url board item.video_slug %}" class="item-nav-link-videos item-links-{{ category.root.slug }}">Videos</a>
+      </li>
+      <li>
+        <a href="{% url shop_category item.shop_slug %}" class="item-nav-link-shop item-links-{{ category.root.slug }}">Shop</a>
+      </li>
+    </ul>
+  </div>
+  <a href='{{ item.full_url }}'>
+    <img class="item-img" src="{% if item.background %}{{ item.background.url }}{% endif %}">
+  </a>
+</li>

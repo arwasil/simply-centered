@@ -1,0 +1,310 @@
+[
+    {
+        "pk": 1,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 272,
+            "background": "",
+            "name": "Health",
+            "parent": null,
+            "slug": "health"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 265,
+            "background": "",
+            "name": "Food",
+            "parent": null,
+            "slug": "food"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 0,
+            "background": "",
+            "name": "Lifestyle",
+            "parent": null,
+            "slug": "lifestyle"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 279,
+            "background": "",
+            "name": "Fitness",
+            "parent": null,
+            "slug": "fitness"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 273,
+            "background": "",
+            "name": "Beauty",
+            "parent": 1,
+            "slug": "beauty"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 274,
+            "background": "",
+            "name": "Natural Health",
+            "parent": 1,
+            "slug": "natural-health"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 275,
+            "background": "",
+            "name": "Inner Beauty",
+            "parent": 5,
+            "slug": "inner-beauty"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 276,
+            "background": "",
+            "name": "Outer Beauty",
+            "parent": 5,
+            "slug": "outer-beauty"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 277,
+            "background": "",
+            "name": "Wellness",
+            "parent": 6,
+            "slug": "wellness"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 278,
+            "background": "",
+            "name": "Longevity",
+            "parent": 6,
+            "slug": "longevity"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 266,
+            "background": "",
+            "name": "Cooking",
+            "parent": 2,
+            "slug": "cooking"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 267,
+            "background": "",
+            "name": "Healthy Diets",
+            "parent": 2,
+            "slug": "healthy-diets"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 268,
+            "background": "",
+            "name": "Recipes",
+            "parent": 11,
+            "slug": "recipes"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 269,
+            "background": "",
+            "name": "Natural Kitchen",
+            "parent": 11,
+            "slug": "natural-kitchen"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 270,
+            "background": "",
+            "name": "Diets",
+            "parent": 12,
+            "slug": "diets"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 271,
+            "background": "",
+            "name": "Superfoods",
+            "parent": 12,
+            "slug": "superfoods"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 0,
+            "background": "",
+            "name": "Culture",
+            "parent": 3,
+            "slug": "culture"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 0,
+            "background": "",
+            "name": "Green",
+            "parent": 3,
+            "slug": "green"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 0,
+            "background": "",
+            "name": "Art",
+            "parent": 17,
+            "slug": "art"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 0,
+            "background": "",
+            "name": "Fashion",
+            "parent": 17,
+            "slug": "fashion"
+        }
+    },
+    {
+        "pk": 21,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 0,
+            "background": "",
+            "name": "Eco Living",
+            "parent": 18,
+            "slug": "eco-living"
+        }
+    },
+    {
+        "pk": 22,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 0,
+            "background": "",
+            "name": "Eco Products",
+            "parent": 18,
+            "slug": "eco-products"
+        }
+    },
+    {
+        "pk": 23,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 280,
+            "background": "",
+            "name": "Mindful Fitness",
+            "parent": 4,
+            "slug": "mindful-fitness"
+        }
+    },
+    {
+        "pk": 24,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 281,
+            "background": "",
+            "name": "Optimum Body",
+            "parent": 4,
+            "slug": "optimum-body"
+        }
+    },
+    {
+        "pk": 25,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 282,
+            "background": "",
+            "name": "Yoga",
+            "parent": 23,
+            "slug": "yoga"
+        }
+    },
+    {
+        "pk": 26,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 283,
+            "background": "",
+            "name": "Alternative Exercise",
+            "parent": 23,
+            "slug": "alternative-exercise"
+        }
+    },
+    {
+        "pk": 27,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 0,
+            "background": "",
+            "name": "Weight Management",
+            "parent": 24,
+            "slug": "weight-management"
+        }
+    },
+    {
+        "pk": 28,
+        "model": "main.category",
+        "fields": {
+            "spling_code": 0,
+            "background": "",
+            "name": "Best Body",
+            "parent": 24,
+            "slug": "best-body"
+        }
+    }
+]

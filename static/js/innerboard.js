@@ -22,13 +22,18 @@ $(document).ready(function() {
 
 	$(".item-rate ul li").mouseenter(itemRateHover).mouseleave(itemRateLeave);
 
-	$(".item-rate ul li").click(itemRateClick);
+	// $(".item-rate ul li").click(itemRateClick);
 
 	$("#rate-form-submit").click(function(event) { reviewSubmit(event) });
 
 	$(".popup-item-rate ul li").mouseenter(popupItemRateHover).mouseleave(popupItemRateLeave);
 	$(".popup-item-rate ul li").click(popupItemRateClick);
 
+	$(".colorbox.iframe").colorbox({
+		iframe: true, 
+		width: function() { return $(this).data('width'); }, 
+		height: function() { return $(this).data('height'); }
+	});	
 });
 
 /*************************************************************************************************\

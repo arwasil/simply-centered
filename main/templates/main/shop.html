@@ -1,0 +1,72 @@
+{% extends 'main/base.html' %}
+
+{% load media %}
+
+{% block headExtra %}
+  {% include_media 'shop.css' %}
+  {% include_media 'board.js' %}
+{% endblock %}
+
+{% block aside %}
+<div id="aside">
+  <h4>SC Market</h4>
+  <ul>
+    <li><a href="{% url shop %}" alt="Featured">Featured</a></li>
+    {% for category in categories %}
+    <li><a href="{% url shop_category category.slug %}" alt="{{ category.name|slice:"7:" }}">{{ category.name|slice:"7:" }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}
+
+{% block content %}
+<section id="board-container">
+
+
+  <!-- BOARD HEADER ============================================================-->
+  <div class="row board-shop" id="board-header">
+    {% comment %}
+    <div id="board-breadcumb">
+      <a href="{% url shop %}">SC Market</a>
+      {% for parent in category.parent_categories %}
+      <a href="{% url shop_category parent.slug %}">{{ parent.name }}</a>
+      {% endfor %}    
+    </div>
+    {% endcomment %}
+    {% if category.name == 'Market' %}<h1 id="board-title">Market</h1>{% endif %}
+    <h1 id="board-title">{% if category %}{{ category.name|slice:"7:" }}{% else %}SC Market{% endif %}</h1>
+  </div>
+
+  <!-- BOARD CONTENT1 ==========================================================-->
+  {% for item in data %}
+  {% if forloop.counter0|divisibleby:'4'%}
+  <div class="row content">
+    <ul class="board-items">
+  {% endif %}
+      <li class="board-item {% if forloop.counter0|divisibleby:'4' or forloop.counter|divisibleby:'4' %}small{% else %}large{% endif %}">
+        <div class="item-nav">
+          <h2 class="item-nav-header">{{ item.Title }}</h2>
+          <ul class="item-nav-links">
+            <li>
+              <a href="{{ item.Link }}" title='{{ item.Title }}' target='_blank' class="item-nav-link-articles">{{category}}</a>
+            </li>
+            <li>
+              <a href="{{ item.Link }}" title='{{ item.Title }}' target='_blank' class="item-nav-link-price">{{item.ExtraText}}</a>
+            </li>
+          </ul>
+        </div>
+        <a href="{{ item.Link }}" title='{{ item.Title }}' target='_blank'>
+          {% if forloop.counter0|divisibleby:'4' or forloop.counter|divisibleby:'4' %}
+          <img class="item-img" src="{{ item.thumbnails.140x300 }}">
+          {% else %}
+          <img class="item-img" src="{{ item.thumbnails.300x300 }}">
+          {% endif %}
+        </a>
+      </li>
+  {% if forloop.counter|divisibleby:'4' %}
+    </ul>
+  </div>
+  {% endif %}
+  {% endfor %}
+</section>
+{% endblock %}

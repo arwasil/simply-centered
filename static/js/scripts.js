@@ -13,7 +13,17 @@ var SUBMENU_ONHOVER;
 var SUBMENU_PARENT_ONHOVER;
 var CHILD_ONHOVER;
 
+var is_safari = false;
+if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) is_safari = true;
+
 $(document).ready(function() {
+
+	if (is_safari) {
+		$("#mandala").addClass("circle-clip-hack");
+		$("#carousel-bg").addClass("circle-clip-hack");
+		$(".carousel-bg").addClass("circle-clip-hack");
+
+	}
 
 	$("#popup-bg-overlay").hide();
 	$(".main-popup").hide();
@@ -72,12 +82,6 @@ $(document).ready(function() {
 		});
 
 		console.log("UL Leave");
-	});
-
-	///////////////////////////////////////////////////////////////////////////////////////////////
-
-	$("#facet-health,#facet-food,#facet-lifestyle,#facet-fitness").click(function() {
-		window.location = $(this).find('a').attr('href');
 	});
 
 	///////////////////////////////////////////////////////////////////////////////////////////////
@@ -184,7 +188,7 @@ $(document).ready(function() {
 	$("#carousel-2").fadeOut(0);
 	$("#carousel-3").fadeOut(0);
 	$("#carousel-4").fadeOut(0);
-	//carousel();
+	carousel();
 
 	$(".facet-btn").mouseenter(function() {
 		var pie_class = $(this).attr("data-pie");
@@ -303,7 +307,7 @@ function animate() {
 
 	$("#mandala-border").delay(1200).fadeTo(300, 0.7);
 	$(".facet-btn").delay(1500).fadeTo(300, 0.9);
-	//$("#carousel-bg").delay(3000).fadeOut(1000);
+	$("#carousel-bg").delay(3000).fadeOut(1000);
 
 	/*$("#mandala ul li:nth-child(3)").delay(3400).animate({ backgroundColor: "#f2796b" }, 200, function() {
 		$("#mandala ul li:nth-child(4)").animate({ backgroundColor: "#f2796b" }, 200, function() {
@@ -661,19 +665,3 @@ function rightSubmenuLeave() {
 	var parent_menu = $(this).parent().children("a");
 	parent_menu.removeClass("active");
 }
-
-$(document).bind("spling:navigate", function(e, url){
-
-  pattern = /user\/NewSimplyCentered\/splingboards\/(.*)/;
-  match = url.match(pattern);
-
-  patternBlog = /7gportal.com/;
-  patternAmazon = /amazon.com/;
-  
-  if (match && match[1])
-    window.location += match[1];
-  // else if(!url.match(patternBlog) && !url.match(patternAmazon))
-  //   // Remove widget from start of url
-  //   window.location = 'spling?url='+url.slice(7)
-
-});

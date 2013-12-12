@@ -1,0 +1,74 @@
+{% load media %}
+{% load header %}
+{% get_root_categories %}
+
+<header id="site-header">
+  <div id="header-left">
+    <a href="{% url index %}"><img src="{% media_url 'img/logo.png' %}"></a>
+  </div>
+  <div id="header-center">
+    <h1 id="site-title">
+      <a href="{% url index %}">Trust Your Source</a>
+    </h1>
+    <nav id="site-nav">
+      <ul>
+        {% for category in root_menu %}
+        <li>
+          <a href="{{ category.full_url }}"
+             class="{{ category.name|lower }}_b">{{ category.name }}</a>
+          <div class="submenu">
+            <div class="submenu-triangle"></div>
+            <ul class="parent">
+              {% for sub_category in category.sub_menu %}
+              <li>
+                <a href="{{ sub_category.full_url }}" 
+                   id="parent-{{ sub_category.slug }}" 
+                   data-dropdown="#child-{{ sub_category.slug }}">{{ sub_category.name }}</a>
+                <div class="parent-triangle"></div>
+              </li>
+              {% endfor %}
+            </ul>
+            {% for sub_category in category.sub_menu %}
+            <ul class="child " 
+                id="child-{{ sub_category.slug }}" 
+                data-parent="#parent-{{ sub_category.slug }}">
+              {% for sub_sub_category in sub_category.sub_menu %}
+              <li>
+                <a href="{{ sub_sub_category.full_url }}">{{ sub_sub_category.name }}</a>
+              </li>
+              {% endfor %}
+            </ul>
+            {% endfor %}
+          </div>
+        </li>
+        {% endfor %}
+        <li><a href="{% url shop %}" class="col1">SC Market</a></li>
+        {% comment %}
+          <li><a href="http://vimeo.com/user18580146">Videos</a></li>
+        {% endcomment %}
+      </ul>
+    </nav>
+  </div>
+  <div id="header-right">
+    <ul class="row">
+      <li><a href="{% url shop %}" class="col1">SC Market</a></li>
+      <li><a href="#" class="col2" id="menu-join">Join</a></li>
+    </ul>
+    <ul class="row">
+      <li id="menu-blogs-wrapper">
+        <a href="#" class="col1" id="menu-blogs">Blogs</a>
+        <div id="menu-blogs-submenu">
+          <div class="right-submenu-triangle"></div>
+          <ul class="right-submenu">
+            <li><a href="http://s165963.gridserver.com/blog/elaine/">Elaine Gavalas</a></li>
+            <li><a href="http://s165963.gridserver.com/off_the_grid_global/">Off The Grid: Global</a></li>
+            <li><a href="http://s165963.gridserver.com/off_the_grid_us/">Off The Grid: U.S.</a></li>
+            <li><a href="http://s165963.gridserver.com/cloister_code/ ">Cloister Code</a></li>
+            <li><a href="http://s165963.gridserver.com/simply_centered/">Simply Centered</a></li>
+          </ul>
+        </div>
+      </li>
+      <li><a href="#" class="col2" id="login-menu">Login</a></li>
+    </ul>
+  </div>
+</header>

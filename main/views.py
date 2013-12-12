@@ -1,34 +1,36 @@
-from django.shortcuts import render
+from itertools import chain, repeat
+
+from django.shortcuts import render, get_object_or_404, redirect
+
+from models import *
+from api.spling import recommendations
+
 
 def index(request):
-  return render(request, 'main/index.html')
+    menu = Category.objects.filter(parent=None, show_in_menu=True).order_by('pk')[0:4]
+    return render(request, 'main/index.html', {'menu': menu})
 
 def board(request, *slugs):
-  
-  def name(slug):
-    # Turn a slug into a name
-    return " ".join([v.capitalize() for v in slug.split("-")])
-
-  # How many layers of nesting are there
-  max_depth = 2
-  # Zero index the section
-  section = max(min(len(slugs)-1, max_depth), 0)
-
-  context = {
-    'section' : section,
-    'names' : map(name, slugs),
-    'slugs' : slugs
-  }
-
-  return render(request, 'main/board.html', context)
+    category = get_object_or_404(Category, slug=slugs[-1])
+    data =  chain(recommendations(category, 'menu'), repeat(None))
+    
+    return render(request, 'main/board.html', {'category': category, 'data': data})
 
 def spling(request):
+    context = {
+        'url' : request.GET.get('url')
+    }
 
-  context = {
-    'url' : request.GET.get('url')
-  }
+    return render(request, 'main/spling.html', context)
 
-  return render(request, 'main/spling.html', context)
+def market(request, category='market'):
+    try:
+        category = Category.objects.get(slug=category, show_in_shop=True)
+    except Category.DoesNotExist:
+        return redirect('shop')
 
-def shop(request):
-  return render(request, 'main/shop.html', {})
+    sub_cats = Category.objects.filter(show_in_shop=True).exclude(slug='market')
+    data = recommendations(category, 'market', 8)[:8]
+
+    context = {'category': category, 'categories': sub_cats, 'data': data}
+    return render(request, 'main/shop.html', context)
