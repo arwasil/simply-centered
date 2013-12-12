@@ -1,310 +1,1154 @@
 [
     {
-        "pk": 1,
+        "pk": 45,
         "model": "main.category",
         "fields": {
-            "spling_code": 272,
+            "slug": "video-natural-health",
+            "show_in_menu": false,
+            "position": 0,
+            "skyscraper_mode": false,
             "background": "",
-            "name": "Health",
-            "parent": null,
-            "slug": "health"
-        }
-    },
-    {
-        "pk": 2,
-        "model": "main.category",
-        "fields": {
-            "spling_code": 265,
-            "background": "",
-            "name": "Food",
-            "parent": null,
-            "slug": "food"
-        }
-    },
-    {
-        "pk": 3,
-        "model": "main.category",
-        "fields": {
             "spling_code": 0,
-            "background": "",
-            "name": "Lifestyle",
-            "parent": null,
-            "slug": "lifestyle"
+            "full_url": "/health/natural-health/video-natural-health/",
+            "article": "",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Video Natural Health",
+            "parent": 6
         }
     },
     {
-        "pk": 4,
+        "pk": 36,
         "model": "main.category",
         "fields": {
-            "spling_code": 279,
+            "slug": "market-books",
+            "show_in_menu": false,
+            "position": 0,
+            "skyscraper_mode": false,
             "background": "",
-            "name": "Fitness",
-            "parent": null,
-            "slug": "fitness"
+            "spling_code": 0,
+            "full_url": "/market/market-books/",
+            "article": "",
+            "show_in_video": false,
+            "show_in_shop": true,
+            "name": "Market Books",
+            "parent": 29
         }
     },
     {
-        "pk": 5,
+        "pk": 37,
         "model": "main.category",
         "fields": {
-            "spling_code": 273,
+            "slug": "market-media",
+            "show_in_menu": false,
+            "position": 0,
+            "skyscraper_mode": false,
             "background": "",
-            "name": "Beauty",
-            "parent": 1,
-            "slug": "beauty"
+            "spling_code": 0,
+            "full_url": "/market/market-media/",
+            "article": "",
+            "show_in_video": false,
+            "show_in_shop": true,
+            "name": "Market Media",
+            "parent": 29
+        }
+    },
+    {
+        "pk": 38,
+        "model": "main.category",
+        "fields": {
+            "slug": "market-music",
+            "show_in_menu": false,
+            "position": 0,
+            "skyscraper_mode": false,
+            "background": "",
+            "spling_code": 0,
+            "full_url": "/market/market-music/",
+            "article": "",
+            "show_in_video": false,
+            "show_in_shop": true,
+            "name": "Market Music",
+            "parent": 29
+        }
+    },
+    {
+        "pk": 39,
+        "model": "main.category",
+        "fields": {
+            "slug": "market-literary-arts",
+            "show_in_menu": false,
+            "position": 0,
+            "skyscraper_mode": false,
+            "background": "",
+            "spling_code": 0,
+            "full_url": "/market/market-literary-arts/",
+            "article": "",
+            "show_in_video": false,
+            "show_in_shop": true,
+            "name": "Market Literary Arts",
+            "parent": 29
+        }
+    },
+    {
+        "pk": 40,
+        "model": "main.category",
+        "fields": {
+            "slug": "market-abes",
+            "show_in_menu": false,
+            "position": 0,
+            "skyscraper_mode": false,
+            "background": "",
+            "spling_code": 0,
+            "full_url": "/market/market-abes/",
+            "article": "",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Market Abes",
+            "parent": 29
+        }
+    },
+    {
+        "pk": 41,
+        "model": "main.category",
+        "fields": {
+            "slug": "market-health",
+            "show_in_menu": false,
+            "position": 0,
+            "skyscraper_mode": false,
+            "background": "",
+            "spling_code": 0,
+            "full_url": "/market/market-health/",
+            "article": "",
+            "show_in_video": false,
+            "show_in_shop": true,
+            "name": "Market Health",
+            "parent": 29
+        }
+    },
+    {
+        "pk": 42,
+        "model": "main.category",
+        "fields": {
+            "slug": "market-food",
+            "show_in_menu": false,
+            "position": 0,
+            "skyscraper_mode": false,
+            "background": "",
+            "spling_code": 0,
+            "full_url": "/market/market-food/",
+            "article": "",
+            "show_in_video": false,
+            "show_in_shop": true,
+            "name": "Market Food",
+            "parent": 29
+        }
+    },
+    {
+        "pk": 43,
+        "model": "main.category",
+        "fields": {
+            "slug": "market-fitness",
+            "show_in_menu": false,
+            "position": 0,
+            "skyscraper_mode": false,
+            "background": "",
+            "spling_code": 0,
+            "full_url": "/market/market-fitness/",
+            "article": "",
+            "show_in_video": false,
+            "show_in_shop": true,
+            "name": "Market Fitness",
+            "parent": 29
+        }
+    },
+    {
+        "pk": 44,
+        "model": "main.category",
+        "fields": {
+            "slug": "market-lifestyle",
+            "show_in_menu": false,
+            "position": 0,
+            "skyscraper_mode": false,
+            "background": "",
+            "spling_code": 0,
+            "full_url": "/market/market-lifestyle/",
+            "article": "",
+            "show_in_video": false,
+            "show_in_shop": true,
+            "name": "Market Lifestyle",
+            "parent": 29
+        }
+    },
+    {
+        "pk": 57,
+        "model": "main.category",
+        "fields": {
+            "slug": "video-music",
+            "show_in_menu": false,
+            "position": 0,
+            "skyscraper_mode": false,
+            "background": "",
+            "spling_code": 0,
+            "full_url": "/video-music/",
+            "article": "",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Video Music",
+            "parent": null
+        }
+    },
+    {
+        "pk": 67,
+        "model": "main.category",
+        "fields": {
+            "slug": "video-beauty",
+            "show_in_menu": false,
+            "position": 0,
+            "skyscraper_mode": false,
+            "background": "",
+            "spling_code": 0,
+            "full_url": "/health/beauty/video-beauty/",
+            "article": "",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Video Beauty",
+            "parent": 5
+        }
+    },
+    {
+        "pk": 56,
+        "model": "main.category",
+        "fields": {
+            "slug": "video-yoga",
+            "show_in_menu": false,
+            "position": 0,
+            "skyscraper_mode": false,
+            "background": "",
+            "spling_code": 0,
+            "full_url": "/fitness/mindful-fitness/yoga/video-yoga/",
+            "article": "",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Video Yoga",
+            "parent": 25
+        }
+    },
+    {
+        "pk": 66,
+        "model": "main.category",
+        "fields": {
+            "slug": "video-inner-beauty",
+            "show_in_menu": false,
+            "position": 0,
+            "skyscraper_mode": false,
+            "background": "",
+            "spling_code": 0,
+            "full_url": "/health/beauty/inner-beauty/video-inner-beauty/",
+            "article": "",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Video Inner Beauty",
+            "parent": 7
+        }
+    },
+    {
+        "pk": 63,
+        "model": "main.category",
+        "fields": {
+            "slug": "video-natural-kitchen",
+            "show_in_menu": false,
+            "position": 0,
+            "skyscraper_mode": false,
+            "background": "",
+            "spling_code": 0,
+            "full_url": "/food/cooking/natural-kitchen/video-natural-kitchen/",
+            "article": "",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Video Natural Kitchen",
+            "parent": 14
+        }
+    },
+    {
+        "pk": 62,
+        "model": "main.category",
+        "fields": {
+            "slug": "video-eco-products",
+            "show_in_menu": false,
+            "position": 0,
+            "skyscraper_mode": false,
+            "background": "",
+            "spling_code": 0,
+            "full_url": "/lifestyle/eco-living/eco-products/video-eco-products/",
+            "article": "",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Video Eco Products",
+            "parent": 22
+        }
+    },
+    {
+        "pk": 61,
+        "model": "main.category",
+        "fields": {
+            "slug": "video-eco-fashion",
+            "show_in_menu": false,
+            "position": 0,
+            "skyscraper_mode": false,
+            "background": "",
+            "spling_code": 0,
+            "full_url": "/lifestyle/eco-living/eco-fashion/video-eco-fashion/",
+            "article": "",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Video Eco-Fashion",
+            "parent": 21
+        }
+    },
+    {
+        "pk": 59,
+        "model": "main.category",
+        "fields": {
+            "slug": "video-superfoods",
+            "show_in_menu": false,
+            "position": 0,
+            "skyscraper_mode": false,
+            "background": "",
+            "spling_code": 0,
+            "full_url": "/food/healthy-diets/superfoods/video-superfoods/",
+            "article": "",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Video Superfoods",
+            "parent": 16
+        }
+    },
+    {
+        "pk": 58,
+        "model": "main.category",
+        "fields": {
+            "slug": "video-arts",
+            "show_in_menu": false,
+            "position": 0,
+            "skyscraper_mode": false,
+            "background": "",
+            "spling_code": 0,
+            "full_url": "/lifestyle/arts/video-arts/",
+            "article": "",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Video Arts",
+            "parent": 17
+        }
+    },
+    {
+        "pk": 54,
+        "model": "main.category",
+        "fields": {
+            "slug": "video-longevity",
+            "show_in_menu": false,
+            "position": 0,
+            "skyscraper_mode": false,
+            "background": "",
+            "spling_code": 0,
+            "full_url": "/health/natural-health/longevity/video-longevity/",
+            "article": "",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Video Longevity",
+            "parent": 10
+        }
+    },
+    {
+        "pk": 53,
+        "model": "main.category",
+        "fields": {
+            "slug": "video-wellness",
+            "show_in_menu": false,
+            "position": 0,
+            "skyscraper_mode": false,
+            "background": "",
+            "spling_code": 0,
+            "full_url": "/health/natural-health/wellness/video-wellness/",
+            "article": "",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Video Wellness",
+            "parent": 9
+        }
+    },
+    {
+        "pk": 52,
+        "model": "main.category",
+        "fields": {
+            "slug": "video-best-body",
+            "show_in_menu": false,
+            "position": 0,
+            "skyscraper_mode": false,
+            "background": "",
+            "spling_code": 0,
+            "full_url": "/fitness/optimum-body/best-body/video-best-body/",
+            "article": "",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Video Best Body",
+            "parent": 28
+        }
+    },
+    {
+        "pk": 64,
+        "model": "main.category",
+        "fields": {
+            "slug": "video-healthy-recipes",
+            "show_in_menu": false,
+            "position": 0,
+            "skyscraper_mode": false,
+            "background": "",
+            "spling_code": 0,
+            "full_url": "/food/cooking/recipes/video-healthy-recipes/",
+            "article": "",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Video Healthy Recipes",
+            "parent": 13
+        }
+    },
+    {
+        "pk": 65,
+        "model": "main.category",
+        "fields": {
+            "slug": "video-outer-beauty",
+            "show_in_menu": false,
+            "position": 0,
+            "skyscraper_mode": false,
+            "background": "",
+            "spling_code": 0,
+            "full_url": "/health/beauty/outer-beauty/video-outer-beauty/",
+            "article": "",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Video Outer Beauty",
+            "parent": 8
+        }
+    },
+    {
+        "pk": 60,
+        "model": "main.category",
+        "fields": {
+            "slug": "video-diets",
+            "show_in_menu": false,
+            "position": 0,
+            "skyscraper_mode": false,
+            "background": "",
+            "spling_code": 0,
+            "full_url": "/food/healthy-diets/diets/video-diets/",
+            "article": "",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Video Diets",
+            "parent": 15
+        }
+    },
+    {
+        "pk": 55,
+        "model": "main.category",
+        "fields": {
+            "slug": "video-alternative-exercise",
+            "show_in_menu": false,
+            "position": 0,
+            "skyscraper_mode": false,
+            "background": "",
+            "spling_code": 0,
+            "full_url": "/fitness/mindful-fitness/alternative-exercise/video-alternative-exercise/",
+            "article": "",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Video Alternative Exercise",
+            "parent": 26
+        }
+    },
+    {
+        "pk": 51,
+        "model": "main.category",
+        "fields": {
+            "slug": "video-weight-management",
+            "show_in_menu": false,
+            "position": 0,
+            "skyscraper_mode": false,
+            "background": "",
+            "spling_code": 0,
+            "full_url": "/fitness/optimum-body/weight-management/video-weight-management/",
+            "article": "",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Video Weight Management",
+            "parent": 27
+        }
+    },
+    {
+        "pk": 50,
+        "model": "main.category",
+        "fields": {
+            "slug": "video-cooking",
+            "show_in_menu": false,
+            "position": 0,
+            "skyscraper_mode": false,
+            "background": "",
+            "spling_code": 0,
+            "full_url": "/food/cooking/video-cooking/",
+            "article": "",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Video Cooking",
+            "parent": 11
+        }
+    },
+    {
+        "pk": 49,
+        "model": "main.category",
+        "fields": {
+            "slug": "video-healthy-diets",
+            "show_in_menu": false,
+            "position": 0,
+            "skyscraper_mode": false,
+            "background": "",
+            "spling_code": 0,
+            "full_url": "/food/healthy-diets/video-healthy-diets/",
+            "article": "",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Video Healthy Diets",
+            "parent": 12
+        }
+    },
+    {
+        "pk": 48,
+        "model": "main.category",
+        "fields": {
+            "slug": "video-eco-living",
+            "show_in_menu": false,
+            "position": 0,
+            "skyscraper_mode": false,
+            "background": "",
+            "spling_code": 0,
+            "full_url": "/lifestyle/eco-living/video-eco-living/",
+            "article": "",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Video Eco Living",
+            "parent": 18
+        }
+    },
+    {
+        "pk": 47,
+        "model": "main.category",
+        "fields": {
+            "slug": "video-mindful-fitness",
+            "show_in_menu": false,
+            "position": 0,
+            "skyscraper_mode": false,
+            "background": "",
+            "spling_code": 0,
+            "full_url": "/fitness/mindful-fitness/video-mindful-fitness/",
+            "article": "",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Video Mindful Fitness",
+            "parent": 23
+        }
+    },
+    {
+        "pk": 46,
+        "model": "main.category",
+        "fields": {
+            "slug": "video-optimum-body",
+            "show_in_menu": false,
+            "position": 0,
+            "skyscraper_mode": false,
+            "background": "",
+            "spling_code": 0,
+            "full_url": "/fitness/optimum-body/video-optimum-body/",
+            "article": "",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Video Optimum Body",
+            "parent": 24
         }
     },
     {
         "pk": 6,
         "model": "main.category",
         "fields": {
+            "slug": "natural-health",
+            "show_in_menu": true,
+            "position": 1,
+            "skyscraper_mode": false,
+            "background": "categories/naturalhealth.jpg",
             "spling_code": 274,
-            "background": "",
+            "full_url": "/health/natural-health/",
+            "article": "http://s165963.gridserver.com/blog/elaine/food/cooking/natural-kitchen/",
+            "show_in_video": false,
+            "show_in_shop": false,
             "name": "Natural Health",
-            "parent": 1,
-            "slug": "natural-health"
-        }
-    },
-    {
-        "pk": 7,
-        "model": "main.category",
-        "fields": {
-            "spling_code": 275,
-            "background": "",
-            "name": "Inner Beauty",
-            "parent": 5,
-            "slug": "inner-beauty"
-        }
-    },
-    {
-        "pk": 8,
-        "model": "main.category",
-        "fields": {
-            "spling_code": 276,
-            "background": "",
-            "name": "Outer Beauty",
-            "parent": 5,
-            "slug": "outer-beauty"
-        }
-    },
-    {
-        "pk": 9,
-        "model": "main.category",
-        "fields": {
-            "spling_code": 277,
-            "background": "",
-            "name": "Wellness",
-            "parent": 6,
-            "slug": "wellness"
-        }
-    },
-    {
-        "pk": 10,
-        "model": "main.category",
-        "fields": {
-            "spling_code": 278,
-            "background": "",
-            "name": "Longevity",
-            "parent": 6,
-            "slug": "longevity"
+            "parent": 1
         }
     },
     {
         "pk": 11,
         "model": "main.category",
         "fields": {
+            "slug": "cooking",
+            "show_in_menu": true,
+            "position": 1,
+            "skyscraper_mode": false,
+            "background": "categories/Cooking.jpg",
             "spling_code": 266,
-            "background": "",
+            "full_url": "/food/cooking/",
+            "article": "http://s165963.gridserver.com/blog/elaine/food/cooking/",
+            "show_in_video": false,
+            "show_in_shop": false,
             "name": "Cooking",
-            "parent": 2,
-            "slug": "cooking"
-        }
-    },
-    {
-        "pk": 12,
-        "model": "main.category",
-        "fields": {
-            "spling_code": 267,
-            "background": "",
-            "name": "Healthy Diets",
-            "parent": 2,
-            "slug": "healthy-diets"
-        }
-    },
-    {
-        "pk": 13,
-        "model": "main.category",
-        "fields": {
-            "spling_code": 268,
-            "background": "",
-            "name": "Recipes",
-            "parent": 11,
-            "slug": "recipes"
-        }
-    },
-    {
-        "pk": 14,
-        "model": "main.category",
-        "fields": {
-            "spling_code": 269,
-            "background": "",
-            "name": "Natural Kitchen",
-            "parent": 11,
-            "slug": "natural-kitchen"
-        }
-    },
-    {
-        "pk": 15,
-        "model": "main.category",
-        "fields": {
-            "spling_code": 270,
-            "background": "",
-            "name": "Diets",
-            "parent": 12,
-            "slug": "diets"
-        }
-    },
-    {
-        "pk": 16,
-        "model": "main.category",
-        "fields": {
-            "spling_code": 271,
-            "background": "",
-            "name": "Superfoods",
-            "parent": 12,
-            "slug": "superfoods"
-        }
-    },
-    {
-        "pk": 17,
-        "model": "main.category",
-        "fields": {
-            "spling_code": 0,
-            "background": "",
-            "name": "Culture",
-            "parent": 3,
-            "slug": "culture"
-        }
-    },
-    {
-        "pk": 18,
-        "model": "main.category",
-        "fields": {
-            "spling_code": 0,
-            "background": "",
-            "name": "Green",
-            "parent": 3,
-            "slug": "green"
-        }
-    },
-    {
-        "pk": 19,
-        "model": "main.category",
-        "fields": {
-            "spling_code": 0,
-            "background": "",
-            "name": "Art",
-            "parent": 17,
-            "slug": "art"
-        }
-    },
-    {
-        "pk": 20,
-        "model": "main.category",
-        "fields": {
-            "spling_code": 0,
-            "background": "",
-            "name": "Fashion",
-            "parent": 17,
-            "slug": "fashion"
-        }
-    },
-    {
-        "pk": 21,
-        "model": "main.category",
-        "fields": {
-            "spling_code": 0,
-            "background": "",
-            "name": "Eco Living",
-            "parent": 18,
-            "slug": "eco-living"
-        }
-    },
-    {
-        "pk": 22,
-        "model": "main.category",
-        "fields": {
-            "spling_code": 0,
-            "background": "",
-            "name": "Eco Products",
-            "parent": 18,
-            "slug": "eco-products"
-        }
-    },
-    {
-        "pk": 23,
-        "model": "main.category",
-        "fields": {
-            "spling_code": 280,
-            "background": "",
-            "name": "Mindful Fitness",
-            "parent": 4,
-            "slug": "mindful-fitness"
+            "parent": 2
         }
     },
     {
         "pk": 24,
         "model": "main.category",
         "fields": {
+            "slug": "optimum-body",
+            "show_in_menu": true,
+            "position": 1,
+            "skyscraper_mode": false,
+            "background": "categories/optimalbody.jpg",
             "spling_code": 281,
-            "background": "",
+            "full_url": "/fitness/optimum-body/",
+            "article": "http://s165963.gridserver.com/blog/elaine/fitness/optimum-body/",
+            "show_in_video": false,
+            "show_in_shop": false,
             "name": "Optimum Body",
-            "parent": 4,
-            "slug": "optimum-body"
+            "parent": 4
         }
     },
     {
-        "pk": 25,
+        "pk": 8,
         "model": "main.category",
         "fields": {
-            "spling_code": 282,
-            "background": "",
-            "name": "Yoga",
-            "parent": 23,
-            "slug": "yoga"
+            "slug": "outer-beauty",
+            "show_in_menu": true,
+            "position": 1,
+            "skyscraper_mode": false,
+            "background": "categories/outerbeauty.jpg",
+            "spling_code": 276,
+            "full_url": "/health/beauty/outer-beauty/",
+            "article": "http://s165963.gridserver.com/blog/elaine/health/beauty/outer-beauty/",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Outer Beauty",
+            "parent": 5
+        }
+    },
+    {
+        "pk": 10,
+        "model": "main.category",
+        "fields": {
+            "slug": "longevity",
+            "show_in_menu": true,
+            "position": 1,
+            "skyscraper_mode": false,
+            "background": "categories/longevity.jpg",
+            "spling_code": 278,
+            "full_url": "/health/natural-health/longevity/",
+            "article": "http://s165963.gridserver.com/blog/elaine/health/natural-health/longevity/",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Longevity",
+            "parent": 6
+        }
+    },
+    {
+        "pk": 14,
+        "model": "main.category",
+        "fields": {
+            "slug": "natural-kitchen",
+            "show_in_menu": true,
+            "position": 1,
+            "skyscraper_mode": false,
+            "background": "categories/natualkitchen.jpg",
+            "spling_code": 269,
+            "full_url": "/food/cooking/natural-kitchen/",
+            "article": "http://s165963.gridserver.com/blog/elaine/food/cooking/natural-kitchen/",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Natural Kitchen",
+            "parent": 11
+        }
+    },
+    {
+        "pk": 22,
+        "model": "main.category",
+        "fields": {
+            "slug": "eco-products",
+            "show_in_menu": true,
+            "position": 1,
+            "skyscraper_mode": false,
+            "background": "categories/ecoproducts.jpg",
+            "spling_code": 0,
+            "full_url": "/lifestyle/eco-living/eco-products/",
+            "article": "http://s165963.gridserver.com/blog/elaine/lifestyle/green-lifestyle/",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Eco Products",
+            "parent": 18
         }
     },
     {
         "pk": 26,
         "model": "main.category",
         "fields": {
+            "slug": "alternative-exercise",
+            "show_in_menu": true,
+            "position": 1,
+            "skyscraper_mode": false,
+            "background": "categories/taichi.jpg",
             "spling_code": 283,
-            "background": "",
+            "full_url": "/fitness/mindful-fitness/alternative-exercise/",
+            "article": "http://s165963.gridserver.com/blog/elaine/fitness/mindfull-fitness/alternartive-exercise/",
+            "show_in_video": false,
+            "show_in_shop": false,
             "name": "Alternative Exercise",
-            "parent": 23,
-            "slug": "alternative-exercise"
-        }
-    },
-    {
-        "pk": 27,
-        "model": "main.category",
-        "fields": {
-            "spling_code": 0,
-            "background": "",
-            "name": "Weight Management",
-            "parent": 24,
-            "slug": "weight-management"
+            "parent": 23
         }
     },
     {
         "pk": 28,
         "model": "main.category",
         "fields": {
+            "slug": "best-body",
+            "show_in_menu": true,
+            "position": 1,
+            "skyscraper_mode": false,
+            "background": "categories/bestbody.jpg",
             "spling_code": 0,
-            "background": "",
+            "full_url": "/fitness/optimum-body/best-body/",
+            "article": "http://s165963.gridserver.com/blog/elaine/fitness/optimum-body/best-body/",
+            "show_in_video": false,
+            "show_in_shop": false,
             "name": "Best Body",
-            "parent": 24,
-            "slug": "best-body"
+            "parent": 24
+        }
+    },
+    {
+        "pk": 17,
+        "model": "main.category",
+        "fields": {
+            "slug": "arts",
+            "show_in_menu": true,
+            "position": 1,
+            "skyscraper_mode": false,
+            "background": "categories/culture.jpg",
+            "spling_code": 406,
+            "full_url": "/lifestyle/arts/",
+            "article": "http://s165963.gridserver.com/blog/elaine/lifestyle/culture/arts",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Arts",
+            "parent": 3
+        }
+    },
+    {
+        "pk": 16,
+        "model": "main.category",
+        "fields": {
+            "slug": "superfoods",
+            "show_in_menu": true,
+            "position": 1,
+            "skyscraper_mode": false,
+            "background": "categories/superfoods.JPG",
+            "spling_code": 271,
+            "full_url": "/food/healthy-diets/superfoods/",
+            "article": "http://s165963.gridserver.com/blog/elaine/food/healthy-diet/superfoods/",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Superfoods",
+            "parent": 12
+        }
+    },
+    {
+        "pk": 1,
+        "model": "main.category",
+        "fields": {
+            "slug": "health",
+            "show_in_menu": true,
+            "position": 1,
+            "skyscraper_mode": false,
+            "background": "",
+            "spling_code": 272,
+            "full_url": "/health/",
+            "article": "http://s165963.gridserver.com/blog/elaine/health/",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Health",
+            "parent": null
+        }
+    },
+    {
+        "pk": 30,
+        "model": "main.category",
+        "fields": {
+            "slug": "karen",
+            "show_in_menu": true,
+            "position": 2,
+            "skyscraper_mode": true,
+            "background": "categories/art1.jpg",
+            "spling_code": 0,
+            "full_url": "/lifestyle/arts/visual-arts/karen/",
+            "article": "",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Karen",
+            "parent": 19
+        }
+    },
+    {
+        "pk": 25,
+        "model": "main.category",
+        "fields": {
+            "slug": "yoga",
+            "show_in_menu": true,
+            "position": 2,
+            "skyscraper_mode": false,
+            "background": "categories/yoga.jpg",
+            "spling_code": 282,
+            "full_url": "/fitness/mindful-fitness/yoga/",
+            "article": "http://s165963.gridserver.com/blog/elaine/fitness/mindfull-fitness/yoga/",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Yoga",
+            "parent": 23
+        }
+    },
+    {
+        "pk": 7,
+        "model": "main.category",
+        "fields": {
+            "slug": "inner-beauty",
+            "show_in_menu": true,
+            "position": 2,
+            "skyscraper_mode": false,
+            "background": "categories/innerbeauty.jpg",
+            "spling_code": 275,
+            "full_url": "/health/beauty/inner-beauty/",
+            "article": "http://s165963.gridserver.com/blog/elaine/health/beauty/inner-beauty/",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Inner Beauty",
+            "parent": 5
+        }
+    },
+    {
+        "pk": 5,
+        "model": "main.category",
+        "fields": {
+            "slug": "beauty",
+            "show_in_menu": true,
+            "position": 2,
+            "skyscraper_mode": false,
+            "background": "categories/beauty.jpg",
+            "spling_code": 273,
+            "full_url": "/health/beauty/",
+            "article": "http://google.com/",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Beauty",
+            "parent": 1
+        }
+    },
+    {
+        "pk": 9,
+        "model": "main.category",
+        "fields": {
+            "slug": "wellness",
+            "show_in_menu": true,
+            "position": 2,
+            "skyscraper_mode": false,
+            "background": "categories/wellness.jpg",
+            "spling_code": 277,
+            "full_url": "/health/natural-health/wellness/",
+            "article": "http://s165963.gridserver.com/blog/elaine/health/natural-health/wellness/",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Wellness",
+            "parent": 6
+        }
+    },
+    {
+        "pk": 12,
+        "model": "main.category",
+        "fields": {
+            "slug": "healthy-diets",
+            "show_in_menu": true,
+            "position": 2,
+            "skyscraper_mode": false,
+            "background": "categories/Healthydiet.jpg",
+            "spling_code": 267,
+            "full_url": "/food/healthy-diets/",
+            "article": "http://s165963.gridserver.com/blog/elaine/food/healthy-diet/",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Healthy Diets",
+            "parent": 2
+        }
+    },
+    {
+        "pk": 15,
+        "model": "main.category",
+        "fields": {
+            "slug": "diets",
+            "show_in_menu": true,
+            "position": 2,
+            "skyscraper_mode": false,
+            "background": "categories/diets.jpg",
+            "spling_code": 270,
+            "full_url": "/food/healthy-diets/diets/",
+            "article": "http://s165963.gridserver.com/blog/elaine/food/healthy-diet/diets/",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Diets",
+            "parent": 12
+        }
+    },
+    {
+        "pk": 19,
+        "model": "main.category",
+        "fields": {
+            "slug": "visual-arts",
+            "show_in_menu": true,
+            "position": 2,
+            "skyscraper_mode": true,
+            "background": "categories/art.jpg",
+            "spling_code": 0,
+            "full_url": "/lifestyle/arts/visual-arts/",
+            "article": "",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Visual Arts",
+            "parent": 17
+        }
+    },
+    {
+        "pk": 27,
+        "model": "main.category",
+        "fields": {
+            "slug": "weight-management",
+            "show_in_menu": true,
+            "position": 2,
+            "skyscraper_mode": false,
+            "background": "categories/weightmanagement.jpg",
+            "spling_code": 0,
+            "full_url": "/fitness/optimum-body/weight-management/",
+            "article": "http://s165963.gridserver.com/blog/elaine/fitness/optimum-body/weight-management/",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Weight Management",
+            "parent": 24
+        }
+    },
+    {
+        "pk": 18,
+        "model": "main.category",
+        "fields": {
+            "slug": "eco-living",
+            "show_in_menu": true,
+            "position": 2,
+            "skyscraper_mode": false,
+            "background": "categories/green.jpg",
+            "spling_code": 0,
+            "full_url": "/lifestyle/eco-living/",
+            "article": "http://s165963.gridserver.com/blog/elaine/lifestyle/green-lifestyle/",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Eco Living",
+            "parent": 3
+        }
+    },
+    {
+        "pk": 13,
+        "model": "main.category",
+        "fields": {
+            "slug": "recipes",
+            "show_in_menu": true,
+            "position": 2,
+            "skyscraper_mode": false,
+            "background": "categories/recipes1.jpg",
+            "spling_code": 268,
+            "full_url": "/food/cooking/recipes/",
+            "article": "http://s165963.gridserver.com/blog/elaine/food/cooking/healthy-recipes/",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Recipes",
+            "parent": 11
+        }
+    },
+    {
+        "pk": 21,
+        "model": "main.category",
+        "fields": {
+            "slug": "eco-fashion",
+            "show_in_menu": true,
+            "position": 2,
+            "skyscraper_mode": false,
+            "background": "categories/fashion.jpg",
+            "spling_code": 0,
+            "full_url": "/lifestyle/eco-living/eco-fashion/",
+            "article": "http://s165963.gridserver.com/blog/elaine/lifestyle/green-lifestyle/",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Eco Fashion",
+            "parent": 18
+        }
+    },
+    {
+        "pk": 23,
+        "model": "main.category",
+        "fields": {
+            "slug": "mindful-fitness",
+            "show_in_menu": true,
+            "position": 2,
+            "skyscraper_mode": false,
+            "background": "categories/mindfulfitness.jpg",
+            "spling_code": 280,
+            "full_url": "/fitness/mindful-fitness/",
+            "article": "http://s165963.gridserver.com/blog/elaine/fitness/mindfull-fitness/",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Mindful Fitness",
+            "parent": 4
+        }
+    },
+    {
+        "pk": 2,
+        "model": "main.category",
+        "fields": {
+            "slug": "food",
+            "show_in_menu": true,
+            "position": 2,
+            "skyscraper_mode": false,
+            "background": "",
+            "spling_code": 265,
+            "full_url": "/food/",
+            "article": "http://s165963.gridserver.com/blog/elaine/food/",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Food",
+            "parent": null
+        }
+    },
+    {
+        "pk": 3,
+        "model": "main.category",
+        "fields": {
+            "slug": "lifestyle",
+            "show_in_menu": true,
+            "position": 3,
+            "skyscraper_mode": false,
+            "background": "",
+            "spling_code": 0,
+            "full_url": "/lifestyle/",
+            "article": "http://s165963.gridserver.com/blog/elaine/lifestyle/",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Lifestyle",
+            "parent": null
+        }
+    },
+    {
+        "pk": 31,
+        "model": "main.category",
+        "fields": {
+            "slug": "ben",
+            "show_in_menu": true,
+            "position": 3,
+            "skyscraper_mode": true,
+            "background": "categories/art2.jpg",
+            "spling_code": 0,
+            "full_url": "/lifestyle/arts/visual-arts/ben/",
+            "article": "",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Ben",
+            "parent": 19
+        }
+    },
+    {
+        "pk": 4,
+        "model": "main.category",
+        "fields": {
+            "slug": "fitness",
+            "show_in_menu": true,
+            "position": 4,
+            "skyscraper_mode": false,
+            "background": "",
+            "spling_code": 279,
+            "full_url": "/fitness/",
+            "article": "http://s165963.gridserver.com/blog/elaine/fitness/",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Fitness",
+            "parent": null
+        }
+    },
+    {
+        "pk": 29,
+        "model": "main.category",
+        "fields": {
+            "slug": "market",
+            "show_in_menu": false,
+            "position": 5,
+            "skyscraper_mode": false,
+            "background": "",
+            "spling_code": 0,
+            "full_url": "/market/",
+            "article": "",
+            "show_in_video": false,
+            "show_in_shop": true,
+            "name": "Market",
+            "parent": null
+        }
+    },
+    {
+        "pk": 32,
+        "model": "main.category",
+        "fields": {
+            "slug": "daru-jung",
+            "show_in_menu": true,
+            "position": 6,
+            "skyscraper_mode": true,
+            "background": "categories/art3.jpg",
+            "spling_code": 0,
+            "full_url": "/lifestyle/arts/visual-arts/daru-jung/",
+            "article": "",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Daru Jung",
+            "parent": 19
+        }
+    },
+    {
+        "pk": 35,
+        "model": "main.category",
+        "fields": {
+            "slug": "anna",
+            "show_in_menu": true,
+            "position": 7,
+            "skyscraper_mode": true,
+            "background": "categories/art4.jpg",
+            "spling_code": 0,
+            "full_url": "/lifestyle/arts/visual-arts/anna/",
+            "article": "",
+            "show_in_video": false,
+            "show_in_shop": false,
+            "name": "Anna",
+            "parent": 19
         }
     }
 ]
