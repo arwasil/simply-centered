@@ -132,7 +132,8 @@ MEDIA_BUNDLES = (
       'css/animate.css',
       'css/mandala.css',),
     ('board.css',
-      'css/innerboard.css'),
+      'css/innerboard.css',
+      'css/colorbox.css',),
     ('shop.css',
       'css/shop.css',),
 
@@ -143,7 +144,8 @@ MEDIA_BUNDLES = (
     ('index.js',
      'js/jquery.color.js',),
     ('board.js',
-     'js/innerboard.js',),
+     'js/innerboard.js',
+     'js/jquery.colorbox-min.js',),
 )
 
 INSTALLED_APPS = (
@@ -187,7 +189,6 @@ DEV_MEDIA_URL = PRODUCTION_MEDIA_URL = STATIC_URL = S3_URL
 
 STATIC_URL = S3_URL + 'static/'
 PRODUCTION_MEDIA_URL = STATIC_URL
-
 
 try:
     from settings_local import *

@@ -30,7 +30,7 @@
           {% include 'main/partial/_board_promotion_item.html' with item=category.promotion_set.all.0 %}
         {% else %}
           <!-- item -->
-          {% include 'main/partial/_board_skyscraper_item.html' with item=data.next %}
+          {% include 'main/partial/_board_item.html' with item=data.next size='skyscraper' %}
         {% endif %}
       </ul>
     </div>
@@ -48,7 +48,7 @@
             {% include 'main/partial/_board_promotion_item.html' with item=category.promotion_set.all.0 %}
           {% else %}
             <!-- item -->
-            {% include 'main/partial/_board_small_item.html' with item=data.next %}
+            {% include 'main/partial/_board_item.html' with item=data.next size='small' %}
           {% endif %}
         {% endif %}
 
@@ -57,7 +57,7 @@
           {% include 'main/partial/_board_category_item.html' with item=category.sub_menu.0 %}
         {% else %}
           <!-- item -->
-          {% include 'main/partial/_board_large_item.html' with item=data.next %}
+          {% include 'main/partial/_board_item.html' with item=data.next size='large' %}
         {% endif %}
 
         {% if category.sub_menu.count >= 2 %}
@@ -65,7 +65,7 @@
           {% include 'main/partial/_board_category_item.html' with item=category.sub_menu.1 %}
         {% else %}
           <!-- item -->
-          {% include 'main/partial/_board_large_item.html' with item=data.next %}
+          {% include 'main/partial/_board_item.html' with item=data.next size='large' %}
         {% endif %}
 
         {% if not category.skyscraper_mode %}
@@ -73,7 +73,7 @@
             {% include 'main/partial/_board_promotion_item.html' with item=category.promotion_set.all.1 %}
           {% else %}
             <!-- item -->
-            {% include 'main/partial/_board_small_item.html' with item=data.next %}
+            {% include 'main/partial/_board_item.html' with item=data.next size='small' %}
           {% endif %}
         {% endif %}
       </ul>
@@ -87,7 +87,7 @@
             {% include 'main/partial/_board_promotion_item.html' with item=category.promotion_set.all.1 %}
           {% else %}
             <!-- item -->
-            {% include 'main/partial/_board_small_item.html' with item=data.next %}
+            {% include 'main/partial/_board_item.html' with item=data.next size='small' %}
           {% endif %}
         {% endif %}
 
@@ -96,7 +96,7 @@
           {% include 'main/partial/_board_category_item.html' with item=category.sub_menu.2 %}
         {% else %}
           <!-- item -->
-          {% include 'main/partial/_board_large_item.html' with item=data.next %}
+          {% include 'main/partial/_board_item.html' with item=data.next size='large' %}
         {% endif %}
 
         {% if category.sub_menu.count >= 4 %}
@@ -104,7 +104,7 @@
           {% include 'main/partial/_board_category_item.html' with item=category.sub_menu.3 %}
         {% else %}
           <!-- item -->
-          {% include 'main/partial/_board_large_item.html' with item=data.next %}
+          {% include 'main/partial/_board_item.html' with item=data.next size='large' %}
         {% endif %}
 
         {% if not category.skyscraper_mode %}
@@ -112,7 +112,7 @@
             {% include 'main/partial/_board_promotion_item.html' with item=category.promotion_set.all.3 %}
           {% else %}
             <!-- item -->
-            {% include 'main/partial/_board_small_item.html' with item=data.next %}
+            {% include 'main/partial/_board_item.html' with item=data.next size='small' %}
           {% endif %}
         {% endif %}
 
@@ -130,7 +130,7 @@
           {% include 'main/partial/_board_promotion_item.html' with item=category.promotion_set.all.1 %}
         {% else %}
           <!-- item -->
-          {% include 'main/partial/_board_skyscraper_item.html' with item=data.next %}
+          {% include 'main/partial/_board_item.html' with item=data.next size='skyscraper' %}
         {% endif %}
       </ul>
     </div>
