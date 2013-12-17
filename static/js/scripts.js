@@ -34,6 +34,11 @@ $(document).ready(function() {
 
 	$("#menu-blogs-submenu").hide();
 
+	$(".tooltip.first").hide();
+	$(".tooltip.second").hide();
+
+
+
 	init();
 
 	animate();
@@ -665,3 +670,94 @@ function rightSubmenuLeave() {
 	var parent_menu = $(this).parent().children("a");
 	parent_menu.removeClass("active");
 }
+
+
+	//ToolTip/////////////////////////////////////////////////////////////////////////////////////////////
+
+$('.person-second').mouseenter(function(){
+	$('.tooltip.first').fadeTo('slow',1);
+});
+
+$('.person-second').mouseleave(function(){
+	$('.tooltip.first').fadeTo('slow',0);
+});
+
+
+$('.person-first').mouseenter(function(){
+	$('.tooltip.second').fadeTo('slow',1);
+});
+
+$('.person-first').mouseleave(function(){
+	$('.tooltip.second').fadeTo('slow',0);
+});
+
+
+
+
+
+	///////////////////////////////////////////////////////////////////////////////////////////////
+
+// function getScrollTop(){
+//         if(typeof pageYOffset!= 'undefined'){
+//           return pageYOffset;
+//         }
+//         else{
+//           var b = document.body; //IE 'quirks'
+//           var d = document.documentElement; //IE with doctype
+//           d = (d.clientHeight)? d : b;
+//           return d.scrollTop;
+//         }
+//       }    
+          
+//       $(window).on("scroll", function(){
+//         if(getScrollTop() >= 4500){
+//           $(window).off("scroll");
+//        		$('#lnav').hide();   
+//         };
+//       });
+
+
+$(window).on('scroll', function() {
+    var y_scroll_pos = window.pageYOffset;
+    var scroll_pos_test = 4500;             // set to whatever you want it to be
+
+    if(y_scroll_pos > scroll_pos_test) {
+        $('#lnav').fadeOut('fast');  //do stuff
+    }
+    else{
+    	$('#lnav').fadeIn('fast');  //do stuff
+    }
+});
+
+$(window).on('scroll', function() {
+    var y_scroll_pos = window.pageYOffset;
+    var scroll_pos_test2 = 500;             // set to whatever you want it to be
+
+    if(y_scroll_pos > scroll_pos_test2) {
+        $('#social-btn').fadeTo('fast',0);  //do stuff
+    }
+    else{
+    	$('#social-btn').fadeTo('fast',1);  //do stuff
+    }
+});
+
+// $('#lnav').waypoint(function() {
+//   notify('100 pixels from the top');
+//   $('#lnav').fadeTo('slow',0);
+// }, { offset: 100 });
+
+
+// $(window).scroll(function(){
+//   // get the height of #wrap
+//   var h = $('#site-footer').height();
+//   var y = $(window).scrollTop();
+//   if( y > (h*.25) && y < (h*.75) ){
+//    // if we are show keyboardTips
+//    $("#lnav").fadeIn("slow");
+//   } else {
+//    $('#lnav').fadeOut('slow');
+//   }
+//  });
+
+
+
