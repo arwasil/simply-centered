@@ -26,9 +26,14 @@ def recommendations(category, area, spec_limit=None):
         except:
             pass
 
-        # fix link for youtube items
+        
         for data in spling_data:
+            # fix link for youtube items
             if data['EmbedlyType'] in [0, 1, 2]:
                 data['Link'] = data['Link'].replace('watch?v=', 'embed/').replace('&feature=', '?feature=')
+            
+            data['type'] = data['MediaType']['name']
+            data['lightbox'] = data['type'] in ['Video', 'Picture']
+
 
     return spling_data
