@@ -1,0 +1,43 @@
+{% extends 'main/base.html' %}
+
+{% load media %}
+
+{% block headExtra %}
+  {% include_media 'board.css' %}
+  {% include_media 'board.js' %}
+{% endblock %}
+
+{% block content %}
+<section id="board-container">
+
+  <!-- BOARD HEADER ============================================================-->
+  <div class="row board-title-health" id="board-header">
+    <div id="board-breadcumb" class="breadcumb-health">
+      <a href=".">Search</a>
+    </div>
+    <h1 id="board-title">Search</h1>
+  </div>
+
+  <!-- CENTER ==========================================================-->
+  <div class="center-column">
+    <div class="row content">
+      <ul class="board-items">
+        {% for item in data %}
+        <!-- item -->
+        {% include 'main/partial/_board_item.html' with item=item size='large' %}
+
+        {% if forloop.counter|divisibleby:'3' and not forloop.last %}
+      </ul>
+    </div>
+    <div class="row content">
+      <ul class="board-items">
+        {% endif %}
+
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class=clear></div>
+
+</section>
+{% endblock %}
