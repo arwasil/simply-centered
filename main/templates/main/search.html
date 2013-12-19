@@ -26,7 +26,7 @@
         <!-- item -->
         {% include 'main/partial/_board_item.html' with item=item size='large' %}
 
-        {% if forloop.counter|divisibleby:'3'  and not forloop.last %}
+        {% if forloop.counter|divisibleby:'3' and not forloop.last %}
       </ul>
     </div>
     <div class="row content">
