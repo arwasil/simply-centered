@@ -14,9 +14,10 @@ urlpatterns = patterns('',
     url(r'^market/$', 'main.views.market', name='shop'),
     url(r'^market/([\w-]+)/$', 'main.views.market', name='shop_category'),
     
-    # video pages - temporary link to shop
     url(r'^video/$', 'main.views.market', name='video'),
     url(r'^video/([\w-]+)/$', 'main.views.market', name='video_category'),
+
+    url(r'^search/$', 'main.views.search', name='search'),
 
     url(r'^backend/$', 'backend.views.list', name='list'),
     url(r'^backend/bundle/(?P<id>.+)/$', 'backend.views.bundle', name='bundle'),
