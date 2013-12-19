@@ -17,7 +17,7 @@ def recommendations(category, area, spec_limit=None):
             'limit': limit,
             'format': 'json',
             'tags': [category.name],
-            'thumbnails': ['300x300', '140x300', '140x620']
+            'thumbnails[]': ['300x300', '140x300', '140x620']
         }
 
         url = 'http://7gportal.spling.com/api/2/recommendation/'
