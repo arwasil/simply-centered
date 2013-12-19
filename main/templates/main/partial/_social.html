@@ -28,7 +28,10 @@
 <div id="social-btn-hover">
   <ul>
     <li>
-      <input type="text" id="search">
+      <form action='{% url search %}' method=post>
+        {% csrf_token %}
+        <input name='query' type="text" id="search">
+      </form>
     </li>
     <li>
       <a href="https://www.facebook.com/pages/Simply-Centered/722884644395135" id="facebook" target='_blank'><img src="{% media_url 'img/btn-facebook-hover.png' %}"></a>
