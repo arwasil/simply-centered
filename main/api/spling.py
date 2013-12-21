@@ -13,11 +13,19 @@ def get_spling_data(params):
         data['type'] = data['MediaType']['name']
 
         # show lightbox for videos and pictures
-        data['lightbox'] = data['type'] in ['Video', 'Picture']
+        data['lightbox'] = data['type'] in ['Video', 'Picture'] or data['EmbedlyType'] in [0, 1, 2, 3]
+
+        data['iframe'] = data['type'] in ['Video'] or data['EmbedlyType'] in [0, 1, 2, 3]
 
         # fix link for youtube items
         if data['type'] == 'Video':
             data['Link'] = data['Link'].replace('watch?v=', 'embed/').replace('&feature=', '?feature=')
+
+        # fix link for scribd items
+        if data['Link'].startswith('http://www.scribd.com/'):
+            s = data['Link']
+            id = s[s.find("/doc/")+5:s.rfind("/")]
+            data['Link'] = 'http://www.scribd.com/embeds/%s/content?start_page=1&view_mode=slideshow&access_key=key-15707q7n2uwsr4xdylqs&show_recommendations=false' % id
 
     return spling_data
 
