@@ -12,11 +12,15 @@
       </ul>
     </div>
     <div class="item-overlay item-overlay-{{ category.root.slug }}"></div>
+
     <div class="item-featured-link">
-      <img class="item-featured-link-icon" src="{% media_url 'img/featured-link-icon.png' %}">
       <a href="{{ item.Link }}" title='{{ item.Title }}' 
-          data-width='{{ item.EmbedlyWidth|default:"80%" }}' data-height='{{ item.EmbedlyHeight|default:"80%" }}' target='_blank' class='{% if item.lightbox %}colorbox {% endif %}{% if item.type == "Video" %}iframe {% endif %}'>{{ item.Title }}</a>
+            data-width='{{ item.EmbedlyWidth|default:"80%" }}' data-height='{{ item.EmbedlyHeight|default:"80%" }}' target='_blank' class='{% if item.lightbox %}colorbox {% endif %}{% if item.type == "Video" %}iframe {% endif %}'>
+        <img class="item-featured-link-icon" src="{% media_url 'img/featured-link-icon.png' %}">
+        {{ item.Title }}
+      </a>
     </div>
+
     {% if size == 'large' %}
     <img class="item-img" src="{{ item.thumbnails.300x300 }}">
     {% else %}{% if size == 'small' %}

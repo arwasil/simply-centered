@@ -168,15 +168,18 @@
 
 .small .item-featured-link-icon {
 	display: block;
-	margin: 130px 51px 0 51px;
+	padding: 130px 51px 0 51px;
 }
 
 .large .item-featured-link-icon {
 	display: block;
-	margin: 130px 122px 0 122px;
+	padding: 130px 122px 0 122px;
 }
 
 .item-featured-link a {
+	display: block;
+	width: 100%;
+	height: 100%;
 	font-size: 16px;
 	font-weight: 600;
 }
