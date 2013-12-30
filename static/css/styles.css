@@ -24,6 +24,7 @@ body {
 
 a {
 	text-decoration: none;
+	
 }
 
 /*************************************************************************************************\
@@ -34,6 +35,10 @@ a {
 	width: 100%;
 	background-color: #f3f4f4;
 }
+
+/*#site-container{
+	background-color: #f3f4f4;
+}*/
 
 #site-header {
 	position: relative;
@@ -741,6 +746,13 @@ Add New Content
 
 
 /*----------------------------*/
+
+#who{
+	height: 150px;
+}
+
+/*----------------------------*/
+
   
 
 #site-who{
@@ -800,6 +812,8 @@ Add New Content
 	position: absolute;
 	z-index: 1;
 	left: 638px;
+	left: 290px;
+
 
 	box-shadow: 132px 0 0px -55px #e9e9e9,
 				215px 0 0px -55px #f4cc53,
@@ -815,14 +829,20 @@ Add New Content
 
 	position: relative;
 	left: 638px;
+	left: 290px;
+
 	
-	box-shadow: 0 0 0 37px #d36b3c, 0 0 0 37px rgba(233,233,233,1),
-				0 0 0 111px #d36b3c, 0 0 0 111px rgba(233,233,233,1),
-				0 0 0 200px #d36b3c, 0 0 0 200px rgba(233,233,233,1),
-				0 0 0 280px #d36b3c, 0 0 0 280px rgba(233,233,233,1),
-				0 0 0 350px #d36b3c, 0 0 0 350px rgba(233,233,233,1),
-				0 0 0 420px #d36b3c, 0 0 0 420px rgba(233,233,233,1) ;
+	box-shadow: 0 0 0 37px #d36b3c, 0 0 1px 37px rgba(233,233,233,1),
+				0 0 0 111px #d36b3c, 0 0 1px 111px rgba(233,233,233,1),
+				0 0 0 200px #d36b3c, 0 0 1px 200px rgba(233,233,233,1),
+				0 0 0 280px #d36b3c, 0 0 1px 280px rgba(233,233,233,1),
+				0 0 0 350px #d36b3c, 0 0 1px 350px rgba(233,233,233,1),
+				0 0 0 420px #d36b3c, 0 0 1px 420px rgba(233,233,233,1) ;
 	
+	-webkit-transform:rotate(90deg);
+		-moz-transform:rotate(90deg);
+		-ms-transform:rotate(90deg);
+		-o-transform:rotate(90deg);
 
 }
 
@@ -1157,8 +1177,13 @@ Add New Content
 
 #tooltip{
 	position: absolute;
-	top: 3980px;
+/*	top: 3980px;
 	left: 540px;
+*/
+	/*top: 4120px;*/
+	top: 4160px;
+
+	left: 38.4%;
 
 }
 
@@ -1174,7 +1199,7 @@ Add New Content
 
 		background-color: #595959;
 
-		box-shadow: 0 0 10px 1px rgba(0,0,0,.26);
+		/*box-shadow: 0 0 10px 1px rgba(0,0,0,.26);*/
 		border-radius: 5px;
 	}
 
@@ -1242,11 +1267,15 @@ Add New Content
 
 	.tooltip.first{
 		z-index: 1;
+		position: absolute;
+		left: -10px;
+		top: -25px;
 	}
 
 	.tooltip.second{
 		position: absolute;
-		top: 0px;
+		top: -25px;
+		left: -10px;
 
 		z-index: 2;
 
@@ -1257,7 +1286,7 @@ Add New Content
 			/*top: 200px;*/
 		}
 
-			.tooltip.second .pinched:before{
+			.tooltip.second .pinched:before, .tooltip.third .pinched:before{
 				/*background: yellow;*/
 
 				-webkit-border-bottom-left-radius:0px;
@@ -1268,7 +1297,7 @@ Add New Content
 				-moz-border-radius-bottomright:65px;
 				border-bottom-right-radius:65px;
 			}
-			.tooltip.second .pinched:after{
+			.tooltip.second .pinched:after, .tooltip.third .pinched:after{
 				/*background: blue;*/
 
 				-webkit-border-top-left-radius:0px;
@@ -1279,6 +1308,57 @@ Add New Content
 				-moz-border-radius-topright:65px;
 				border-top-right-radius:65px;
 			}
+
+	.tooltip.third{
+		position: absolute;
+		top: 300px;
+		left: -10px;
+		
+
+		z-index: 3;
+	}
+		.tooltip.third .pinched{
+			left: -25px;
+			top: 30px;
+		}
+
+
+/* 	New Tooltip--------------------*/
+
+
+
+.toolp{
+	color: white !important; 
+}
+
+.person-second .tooltip.first{
+	left: -360px;
+	top: -30px;
+}
+
+	.person-second .tooltip.first .pinched{
+		top:70px;
+	}
+
+.person-first .tooltip.second{
+	left: 260px;
+	top: -30px;
+}
+
+	.person-first .tooltip.second .pinched{
+		top:70px;
+	}
+
+.person-third .tooltip.third{
+	left: 220px;
+	top: 10px;
+}
+
+	.person-third .tooltip.third .pinched{
+		top:30px;
+	}
+
+/* 	End of New Tooltip-------------*/
 
 
 /* 	End of Tooltip----------------------------*/
@@ -1293,6 +1373,8 @@ Add New Content
 	position: fixed;
 	top: 260px;
 	left: 0;
+
+	z-index: 100;
 
 	font-family: Cabin, sans-serif;
 	font-weight: 900;

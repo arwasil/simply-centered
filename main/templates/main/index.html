@@ -68,6 +68,7 @@
   <div id="facet-{{ category.slug }}-shadow" class="facet-shadow"></div>
   {% endfor %}
 </section>
+{% comment %}
 <section id="lnav">
   <section id="lnav-cont">
     <ul>
@@ -87,6 +88,7 @@
     <div class="horz5"></div>
   </section>
 </section>
+{% endcomment %}
 
 <div id="learnmore">
   <div class="content-wrapper">Learn More
@@ -106,7 +108,7 @@
   </div>
 </section>
 
-<section id="facet-process">
+<section id="facet-process" class="section">
   <div class="content-wrapper">
 
     <div id="fig-process">
@@ -163,12 +165,19 @@
 </div>
 </section>
 
+<section id="who" class="section"></section>
+
 <section id="site-who">
-  <div class="ver"></div>
-  <div id="sonar"></div>
-  <div id="sonar2"></div>
+  <div class="content-wrapper">
+    <div class="ver"></div>
+    <div id="sonar"></div>
+    <div id="sonar2"></div>
+  </div>
   
   <div class="content-wrapper">
+    <!-- <div class="ver"></div>
+    <div id="sonar"></div>
+    <div id="sonar2"></div> -->
     
     
     <h1 class="head1">Who are trusted Sources ?</h1>
@@ -176,7 +185,7 @@
   </div>
 </section>
 
-<section id="facet-integrity">
+<section id="facet-integrity" class="section">
   <div class="content-wrapper">
 
     <div id="fig-integrity">
@@ -213,7 +222,7 @@
   </div>
 </section>
 
-<section id="site-about">
+<section id="site-about" class="section">
   <div class="content-wrapper">
 
     <div id="fig-about">
@@ -228,16 +237,34 @@
       <div class="circle"></div>
       <h3 class="underl crew">Elaine Gavalas</h3>
       <p>Title - Principal, Co-founder, and Publishing Lead</p>
+      <div class="tooltip second">
+        <div class="pinched"></div>
+        <p class="toolp">
+          Principal, Co-founder, and Publishing Lead, is a health expert, acclaimed author, and popular speaker. Elaine is an exercise physiologist, sports nutritionist, yoga therapist and weight management specialist, and received her Master's degree and Certification from Columbia University. Elaine’s researched based approach to healthy living knowledge is anchored by her postgraduate medical studies at Columbia University and California College of Podiatric Medicine.
+        </p>
+      </div>
     </div>
     <div class="person-second">
       <div class="circle"></div>
       <h3 class="underl crew">Debra Apruzzese</h3>
       <p>Principal, Founder, and Business Lead</p>
+      <div class="tooltip first">
+        <div class="pinched"></div>
+        <p class="toolp">
+          Principal, Founder, and Business Lead, was raised in a Mediterranean household where living simply and organically was the way of life. Maintaining health and well-being while balancing family, a full-time career, and volunteerism led to her commitment to natural alternative solutions. An accomplished Fortune 500 business executive, Debra has worked across multiple global industries providing leadership in strategic and operational activities. Debra is married and has two daughters; she holds an Engineering degree from Bucknell University. She is passionate about bringing awareness to natural paths to healthy living and well-being.
+        </p>
+      </div>
     </div>
     <div class="person-third">
       <div class="circle"></div>
       <h3 class="underl crew">Stuart Katz</h3>
       <p>Principal, Founder, and Business Lead</p>
+      <div class="tooltip third">
+        <div class="pinched"></div>
+        <p class="toolp">
+          Principal, is an educator, author, and innovator.
+        </p>
+      </div>
     </div>
     <div class="person-fourth">
       <div class="circle"></div>
@@ -252,6 +279,7 @@
   </div>
 </section>
 
+{% comment %}
 <section id="tooltip">
   <div class="tooltip first">
     <div class="pinched"></div>
@@ -266,4 +294,24 @@
     </p>
   </div>
 </section>
+{% endcomment %}
+<div id="lnav">
+  <section id="lnav-cont" class="pageScrollerNav">
+    <ul>
+      <li><a href="#site-header">Home</a></li>
+      <li><a href="#facet-process">Our Process</a></li>
+      <li><a href="#">Trusted Sources</a></li>
+      <li><a href="#facet-integrity">Integrity Pledge</a></li>
+      <li><a href="#site-about">About Us</a></li>
+    </ul>
+  </section>
+  <section id="lnav-line">
+    <div class="horz"></div>
+    <div class="horz1"></div>
+    <div class="horz2"></div>
+    <div class="horz3"></div>
+    <div class="horz4"></div>
+    <div class="horz5"></div>
+  </section>
+</div>
 {% endblock %}

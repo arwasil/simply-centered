@@ -36,6 +36,8 @@ $(document).ready(function() {
 
 	$(".tooltip.first").hide();
 	$(".tooltip.second").hide();
+	$(".tooltip.third").hide();
+
 
 
 
@@ -672,23 +674,43 @@ function rightSubmenuLeave() {
 }
 
 
+	//Underline about/////////////////////////////////////////////////////////////////////////////////////////////
+
+// $('#site-about .underl').css("border-bottom-color","rgba(0,0,0,0)");
+
+$('#site-about .underl').hover(function(){
+	$(this).css("text-decoration","underline");
+}, 	function(){
+	$(this).css("text-decoration","none");
+}
+);
+
+
 	//ToolTip/////////////////////////////////////////////////////////////////////////////////////////////
 
-$('.person-second').mouseenter(function(){
+$('.person-second .circle').mouseenter(function(){
 	$('.tooltip.first').fadeTo('slow',1);
 });
 
-$('.person-second').mouseleave(function(){
+$('.person-second .circle').mouseleave(function(){
 	$('.tooltip.first').fadeTo('slow',0);
 });
 
 
-$('.person-first').mouseenter(function(){
+$('.person-first .circle').mouseenter(function(){
 	$('.tooltip.second').fadeTo('slow',1);
 });
 
-$('.person-first').mouseleave(function(){
+$('.person-first .circle').mouseleave(function(){
 	$('.tooltip.second').fadeTo('slow',0);
+});
+
+$('.person-third .circle').mouseenter(function(){
+	$('.tooltip.third').fadeTo('slow',1);
+});
+
+$('.person-third .circle').mouseleave(function(){
+	$('.tooltip.third').fadeTo('slow',0);
 });
 
 
@@ -731,33 +753,36 @@ $(window).on('scroll', function() {
 
 $(window).on('scroll', function() {
     var y_scroll_pos = window.pageYOffset;
-    var scroll_pos_test2 = 500;             // set to whatever you want it to be
+    var scroll_pos_tet2 = 500;          
 
-    if(y_scroll_pos > scroll_pos_test2) {
-        $('#social-btn').fadeTo('fast',0);  //do stuff
+    if(y_scroll_pos > scroll_pos_tet2) {
+        // $('#social-btn').fadeTo('fast',0);  
+        // $('#social-btn-hover').fadeTo('fast',0);  
+
+        $('#social-btn').hide();  
+
+
     }
     else{
-    	$('#social-btn').fadeTo('fast',1);  //do stuff
+    	// $('#social-btn').fadeTo('fast',1); 
+    	// $('#social-btn-hover').fadeTo('fast',1); 
+
+        $('#social-btn').show();  
+
+
     }
 });
 
-// $('#lnav').waypoint(function() {
-//   notify('100 pixels from the top');
-//   $('#lnav').fadeTo('slow',0);
-// }, { offset: 100 });
+
+	///////////////////////////////////////////////////////////////////////////////////////////////
 
 
-// $(window).scroll(function(){
-//   // get the height of #wrap
-//   var h = $('#site-footer').height();
-//   var y = $(window).scrollTop();
-//   if( y > (h*.25) && y < (h*.75) ){
-//    // if we are show keyboardTips
-//    $("#lnav").fadeIn("slow");
-//   } else {
-//    $('#lnav').fadeOut('slow');
-//   }
-//  });
+$('body').pageScroller({
+			navigation: '#lnav-cont'
+		});
+
+
+
 
 
 

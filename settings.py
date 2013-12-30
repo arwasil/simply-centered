@@ -140,6 +140,7 @@ MEDIA_BUNDLES = (
     ('libraries.js',
      'js/jquery-1.7.2.min.js',
      'js/jquery-ui.min.js',
+     'js/jquery.pagescroller.lite.js',
      'js/scripts.js',),
     ('index.js',
      'js/jquery.color.js',),
