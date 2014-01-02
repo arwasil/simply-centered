@@ -4,13 +4,13 @@ MEDIA_DEV_MODE = False
 AWS_ACCESS_KEY_ID = 'AKIAJUJOSEZZBFTNDUFA'
 AWS_SECRET_ACCESS_KEY = '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'
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'simplycentered',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT': '',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'simplycentered',
+#         'USER': 'root',
+#         'PASSWORD': '',
+#         'HOST': '',
+#         'PORT': '',
+#     }
+# }

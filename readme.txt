@@ -1,4 +1,20 @@
-Workflow, have compass compiling to the css dir
-Run generatemedia locally (heroku B.S)
-Add _generated_media to git
-Push and collectstatic
+# Readme
+
+## Setup
+```bash
+pip install -r requirements.txt
+cp settings_local.template settings_local.py
+cp pre-commit.template .git/hooks/pre-commit
+```
+
+## Working locally
+```bash
+python manage.py runserver
+```
+
+## Deploying
+```bash
+git add .
+git commit -m 'changes!'
+git push
+```
